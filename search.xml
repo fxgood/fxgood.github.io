@@ -65,7 +65,7 @@
       <link href="2021/01/10/%E5%8D%9A%E6%96%87%E7%AE%A1%E7%90%86/"/>
       <url>2021/01/10/%E5%8D%9A%E6%96%87%E7%AE%A1%E7%90%86/</url>
       
-        <content type="html"><![CDATA[<ol><li>更新后，需在Blog根目录下右击<code>Git bash here</code>，输入<code>hexo g&amp;&amp;hexo d</code></li><li>在<code>Blog\themes\next\layout\index.swig</code>下可以调整主页显示方式</li><li>在<code>\Blog\source\_posts</code>下写文章</li><li>调整hexo设置在<code>Blog\_config.yml</code>文件中</li><li>调整next主题设置在<code>Blog\themes\next\_config.yml</code>文件中</li><li>添加图片的方式<code>![提示](/images/图片名)</code><ul><li>图片位置在<code>Blog\source\images</code></li></ul></li></ol>]]></content>
+        <content type="html"><![CDATA[<ol><li>更新后，需在Blog根目录下右击<code>Git bash here</code>，输入<code>hexo g&amp;&amp;hexo d</code></li><li>在<code>Blog\themes\next\layout\index.swig</code>下可以调整主页显示方式</li><li>在<code>\Blog\source\_posts</code>下写文章</li><li>调整hexo设置在<code>Blog\_config.yml</code>文件中</li><li>调整next主题设置在<code>Blog\themes\next\_config.yml</code>文件中</li><li>添加图片的方式<code>![提示](/images/图片名)</code><ul><li>图片位置在<code>Blog\source\images</code></li></ul></li><li>注意某些语法会和hexo中冲突<ul><li>比如vue中的<code>&#123;&#123;</code>，改成<code>&#123; &#123;</code>中间加个空格即可避免冲突</li></ul></li></ol>]]></content>
       
       
       
