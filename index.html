@@ -155,7 +155,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/10/%E5%8D%9A%E6%96%87%E7%AE%A1%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/10/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -169,7 +169,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/10/%E5%8D%9A%E6%96%87%E7%AE%A1%E7%90%86/" class="post-title-link" itemprop="url">Hexo博客管理</a>
+            <a href="/2021/01/10/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Django学习笔记</a>
         </h2>
 
         <div class="post-meta">
@@ -180,7 +180,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-01-10 09:27:50 / 修改时间：15:19:41" itemprop="dateCreated datePublished" datetime="2021-01-10T09:27:50+08:00">2021-01-10</time>
+              <time title="创建时间：2021-01-10 13:03:15 / 修改时间：15:40:22" itemprop="dateCreated datePublished" datetime="2021-01-10T13:03:15+08:00">2021-01-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
             </span>
 
           
@@ -194,17 +203,110 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ol>
-<li>更新后，需在Blog根目录下右击<code>Git bash here</code>，输入<code>hexo g&amp;&amp;hexo d</code></li>
-<li>在<code>Blog\themes\next\layout\index.swig</code>下可以调整主页显示方式</li>
-<li>在<code>\Blog\source\_posts</code>下写文章</li>
-<li>调整hexo设置在<code>Blog\_config.yml</code>文件中</li>
-<li>调整next主题设置在<code>Blog\themes\next\_config.yml</code>文件中</li>
-<li>添加图片的方式<code>![提示](/images/图片名)</code><ul>
-<li>图片位置在<code>Blog\source\images</code></li>
+          <h1 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h1><ul>
+<li>使用<code>django-admin startproject mysite</code>命令创建django项目</li>
+<li>创建的文件目录如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysite&#x2F;</span><br><span class="line">  manage.py</span><br><span class="line">  mysite&#x2F;</span><br><span class="line">      __init__.py</span><br><span class="line">      settings.py</span><br><span class="line">      urls.py</span><br><span class="line">      asgi.py</span><br><span class="line">      wsgi.py</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其中最外层的mysite/对django项目没影响，可以随便换名字</li>
 </ul>
 </li>
-</ol>
+<li>在外层mysite/目录下运行<code>python manage.py runserver</code>命令，可以跑起来<ul>
+<li>或者<code>python manage.py runserver 8080</code>可以指定端口</li>
+</ul>
+</li>
+<li>项目和应用的区别:<ul>
+<li>应用是一个专门做某件事的网络应用程序——比如博客系统，或者公共记录的数据库，或者小型的投票程序。项目则是一个网站使用的配置和应用的集合。项目可以包含很多个应用。应用可以被很多个项目使用。</li>
+</ul>
+</li>
+<li>创建一个投票应用<ul>
+<li>在<code>manage.py</code>所在目录下，运行命令<code>python manage.py startapp polls</code><h2 id="编写视图"><a href="#编写视图" class="headerlink" title="编写视图"></a>编写视图</h2></li>
+</ul>
+</li>
+<li>在polls/views.py中输入<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&quot;Hello, world. You&#x27;re at the polls index.&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>需要将一个URL映射到此视图<ul>
+<li>在polls目录中新建一个urls.py文件<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;&#x27;</span>, views.index, name=<span class="string">&#x27;index&#x27;</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></li>
+<li>然后要在<strong>根URLconf</strong>文件中指定我们创建的polls.urls模块。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> include, path</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;polls/&#x27;</span>, include(<span class="string">&#x27;polls.urls&#x27;</span>)),</span><br><span class="line">    path(<span class="string">&#x27;admin/&#x27;</span>, admin.site.urls),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>函数 include()允许引用其它URLconfs。每当Django遇到include()时，它会截断与此项匹配的 URL 的部分，并将剩余的字符串发送到 URLconf 以供进一步处理。<br>设计include()的理念是使其可以即插即用。因为投票应用有它自己的URLconf(polls/urls.py)，他们能够被放在”/polls/“，”/fun_polls/“ ，”/content/polls/“，或者其他任何路径下，这个应用都能够正常工作。</p>
+</blockquote>
+</li>
+<li>然后访问在在<code>manage.py</code>所在目录下运行<code>python manage.py runserver</code>，浏览器访问’ <a target="_blank" rel="noopener" href="http://localhost:8000/polls/&#39;">http://localhost:8000/polls/&#39;</a><h2 id="path-参数"><a href="#path-参数" class="headerlink" title="path()参数"></a>path()参数</h2>如<code>path(&#39;&#39;,views.index,name=&#39;index&#39;)</code></li>
+</ul>
+</li>
+<li>第一个参数<code>route</code><ul>
+<li>它是一个匹配URL的准则（类似正则表达式）。当Django响应一个请求时，它会从<code>urlpatterns</code>的第一项开始，按顺序依次匹配列表中的项，直到找到它匹配的项</li>
+<li>这些准则不会匹配 GET 和 POST 参数或域名。例如，URLconf 在处理请求 <a target="_blank" rel="noopener" href="https://www.example.com/myapp/">https://www.example.com/myapp/</a> 时，它会尝试匹配 myapp/ 。处理请求 <a target="_blank" rel="noopener" href="https://www.example.com/myapp/?page=3">https://www.example.com/myapp/?page=3</a> 时，也只会尝试匹配 myapp/。</li>
+</ul>
+</li>
+<li>第二个参数<code>view</code><ul>
+<li>当Django找到了一个匹配的准则，就会调用这个特定的视图函数，并传入一个HttpRequest对象作为第一个参数，被”捕获“的参数以关键字参数的形式传入。</li>
+</ul>
+</li>
+<li>第三个参数<code>kwargs</code><ul>
+<li>任意个关键字参数可以作为一个字典传递给目标视图函数（此教程不会使用这一特性）</li>
+</ul>
+</li>
+<li>第四个参数<code>name</code><ul>
+<li>为了URL取名能在Django的任意地方唯一引用它，尤其是在模板中。这个有用的特性允许你只修改一个文件就能全局地修改某个URL模式。</li>
+</ul>
+</li>
+</ul>
+<h1 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h1><ul>
+<li><code>mysite/settings.py</code>包含了Django项目设置的Python模块，默认使用SQLite作为数据库</li>
+<li>其中的<code>INSTALLED_APPS</code>包括了已启用的<strong>应用</strong>，这些应用可以在多个项目中使用。django默认自带以下应用：<ul>
+<li><code>django.contrib.admin</code>：管理员站点</li>
+<li><code>django.contrib.auth</code>：认证授权系统</li>
+<li><code>django.contrib.contenttypes</code>：内容类型框架</li>
+<li><code>django.contrib.sessions</code>：会话框架</li>
+<li><code>django.contrib.messages</code>：消息框架</li>
+<li><code>django.contrib.staticfiles</code>：管理静态文件的框架</li>
+</ul>
+</li>
+<li>默认开启的某些应用至少需要一个数据表，所以，在使用他们之前需要在数据库中创建一些表，执行以下命令<ul>
+<li><code>python manage.py migrate</code></li>
+<li>这个命令会检查<code>INSTALLED_APPS</code>设置，为其中的每个应用创建需要的数据表（创建内容取决于mysite/settings.py设置文件和每个应用的数据库迁移文件）<h2 id="创建模型"><a href="#创建模型" class="headerlink" title="创建模型"></a>创建模型</h2>在Django里写一个数据库驱动的Web应用的第一步就是定义模型-也就是数据库结构设计和附加的其他元数据。在这个投票应用中，需要创建两个模型：问题Question和选项Choice。Question模型包括问题描述和发布时间。Choice模型有两个字段，选项描述和当前得票数。每个选项属于一个问题。这些概念可以通过一个Python类来描述。编辑<code>polls/models.py</code>文件：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Question</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    question_text = models.CharField(max_length=<span class="number">200</span>)</span><br><span class="line">    pub_date = models.DateTimeField(<span class="string">&#x27;date published&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Choice</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    question = models.ForeignKey(Question, on_delete=models.CASCADE)</span><br><span class="line">    choice_text = models.CharField(max_length=<span class="number">200</span>)</span><br><span class="line">    votes = models.IntegerField(default=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+每个模型被表示为<code>django.db.models.Model</code>类的子类。有个模型都有许多类变量，它们表示模型里的一个数据库字段。每个字段都是<code>Field</code>类的实例<h2 id="激活模型"><a href="#激活模型" class="headerlink" title="激活模型"></a>激活模型</h2><blockquote>
+<p>设计哲学：Django应用是“可拔插”的，可以在多个项目中使用同一个应用</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>首先把polls应用安装到项目里。为了在我们的工程中包含这个应用，我们需要在配置类INSTALLED_APPS中添加配置。因为PollsConfig类写在文件polls/apps.py中，所以它的点式路径是<code>polls.apps.PollsConfig</code>。在文件<code>mysite/settings.py</code>中INSTALLED_APPS子项添加点式路径后，他们看起来像这样：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">&#x27;polls.apps.PollsConfig&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.admin&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.auth&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.contenttypes&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.sessions&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.messages&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.staticfiles&#x27;</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure></li>
+<li>现在django项目中会包含polls应用，然后运行以下命令:<ul>
+<li><code>python manage.py makemigrations polls</code></li>
+<li>通过运行<code>makemigrations</code>命令，Django会检测对模型文件的修改，并且把修改的部分存储为一次迁移。</li>
+<li>迁移是Django对模型定义（即数据库结构）的变化的存储形式</li>
+<li>Django有一个自动执行数据库迁移并同步管理数据库结构的命令<code>migrate</code></li>
+<li><code>sqlmigrate</code>命令可以接收一个迁移的名称，然后返回对应的SQL<ul>
+<li><code>python manage.py sqlmigrate polls 0001</code>会得出以下SQL<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BEGIN</span>;</span><br><span class="line"><span class="comment">--</span></span><br><span class="line"><span class="comment">-- Create model Question</span></span><br><span class="line"><span class="comment">--</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> &quot;polls_question&quot; (&quot;id&quot; <span class="type">integer</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">PRIMARY</span> <span class="keyword">KEY</span> AUTOINCREMENT,</span><br><span class="line">&quot;question_text&quot; <span class="type">varchar</span>(<span class="number">200</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>, &quot;pub_date&quot; datetime <span class="keyword">NOT</span> <span class="keyword">NULL</span>);</span><br><span class="line"><span class="comment">--</span></span><br><span class="line"><span class="comment">-- Create model Choice</span></span><br><span class="line"><span class="comment">--</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> &quot;polls_choice&quot; (&quot;id&quot; <span class="type">integer</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">PRIMARY</span> <span class="keyword">KEY</span> AUTOINCREMENT, &quot;c</span><br><span class="line">hoice_text&quot; <span class="type">varchar</span>(<span class="number">200</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>, &quot;votes&quot; <span class="type">integer</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>, &quot;question_id&quot; integ</span><br><span class="line">er <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">REFERENCES</span> &quot;polls_question&quot; (&quot;id&quot;) DEFERRABLE INITIALLY DEFERRED);</span><br><span class="line"><span class="keyword">CREATE</span> INDEX &quot;polls_choice_question_id_c5b4b260&quot; <span class="keyword">ON</span> &quot;polls_choice&quot; (&quot;question_id</span><br><span class="line">&quot;);</span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>再次运行<code>migrate</code>命令，在数据库里创建新定义的模型的数据表。</li>
+<li>这个migrate命令选中所有还没有执行过的迁移（Django通过在数据库中创建一个特殊表django_migrations来跟踪执行过哪些迁移）并应用在数据库上，也就是将你对模型的更改同步到数据库结构上。</li>
+<li>迁移是非常强大的功能，他能让你在开发过程中持续地改变数据库结构而不需重新删除和创建表，它专注于使数据库平滑升级而不会丢失数据。</li>
+<li><strong>改变模型需要这三步</strong><ul>
+<li>编辑models.py文件，改变模型</li>
+<li>运行<code>python manage.py makemigrations</code>为模型的改变生成迁移文件</li>
+<li>运行<code>python manage.py migrate</code>来应用数据库迁移<blockquote>
+<p>数据库迁移被分解成生成和应用两个命令是为了能够在代码控制系统上提交迁移数据并使其能够在多个应用里使用；这不仅仅会让开发更简单，也给别的开发者和生产环境中的使用带来方便</p>
+</blockquote>
+<h2 id="初始API"><a href="#初始API" class="headerlink" title="初始API"></a>初始API</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Django为我们创建了各种API，通过以下命令打开Python命令行：<ul>
+<li><code>python manage.py shell</code></li>
+<li>使用这个命令不是简单地使用”Python”，是因为manage.py会设置<code>DJANGO_SETTINGS_MODULE</code>环境变量，这个变量会让Django根据<code>mysite/settings.py</code>文件来设置Python包的导入路径。</li>
+</ul>
+</li>
+<li>创建实例的过程<ul>
+<li>进入python shell</li>
+<li><code>from polls.models import Choice,Question</code> 导入模型</li>
+<li></li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -220,6 +322,7 @@
   
   
 
+    
     
 
   
@@ -287,14 +390,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -330,7 +433,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.4k字</span>
+  <span class="post-count">博客全站共12.5k字</span>
 </div>
 
 
