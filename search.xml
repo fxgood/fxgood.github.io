@@ -27,7 +27,7 @@
       <link href="2021/01/10/hello-world/"/>
       <url>2021/01/10/hello-world/</url>
       
-        <content type="html"><![CDATA[<ol><li>在<code>Blog\themes\next\layout\index.swig</code>下可以调整主页显示方式</li><li>在<code>\Blog\source\_posts</code>下写文章</li><li>调整hexo设置在<code>Blog\_config.yml</code>文件中</li><li>调整next主题设置在<code>Blog\themes\next\_config.yml</code>文件中<br><img src="/images/aa.jpg" alt="这是一个好看的图片"></li></ol>]]></content>
+        <content type="html"><![CDATA[<ol><li>在<code>Blog\themes\next\layout\index.swig</code>下可以调整主页显示方式</li><li>在<code>\Blog\source\_posts</code>下写文章</li><li>调整hexo设置在<code>Blog\_config.yml</code>文件中</li><li>调整next主题设置在<code>Blog\themes\next\_config.yml</code>文件中</li><li>添加图片的方式<code>![提示](/images/图片名)</code><ul><li>图片位置在<code>Blog\source\images</code></li></ul></li></ol>]]></content>
       
       
       
