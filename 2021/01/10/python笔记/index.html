@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://example.com/images/python_2.png">
 <meta property="og:image" content="http://example.com/images/python_3.png">
 <meta property="article:published_time" content="2021-01-10T07:21:18.705Z">
-<meta property="article:modified_time" content="2021-01-10T08:49:31.159Z">
+<meta property="article:modified_time" content="2021-01-11T10:34:06.679Z">
 <meta property="article:author" content="余丰旭">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/python_1.png">
@@ -181,10 +181,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-01-10 15:21:18 / 修改时间：16:49:31" itemprop="dateCreated datePublished" datetime="2021-01-10T15:21:18+08:00">2021-01-10</time>
+              <time title="创建时间：2021-01-10 15:21:18" itemprop="dateCreated datePublished" datetime="2021-01-10T15:21:18+08:00">2021-01-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-11 18:34:06" itemprop="dateModified" datetime="2021-01-11T18:34:06+08:00">2021-01-11</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -519,27 +525,461 @@
 <li>使用<code>import 包名</code>可以一次性导入包中所有的模块</li>
 </ul>
 <h2 id="init-py"><a href="#init-py" class="headerlink" title="__init__.py"></a>__init__.py</h2><ul>
-<li><p>要在外界使用<strong>包</strong>中的模块，需要在<code>__init_——。py</code>中指定对外界提供的模块列表</p>
+<li>要在外界使用<strong>包</strong>中的模块，需要在<code>__init_——。py</code>中指定对外界提供的模块列表</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从当前目录 导入 模块列表</span></span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> send_message</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> receive_message</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="发布模块和安装模块"><a href="#发布模块和安装模块" class="headerlink" title="发布模块和安装模块"></a>发布模块和安装模块</h1><p>建议百度，不同平台不一样</p>
+<hr>
+<h1 id="高级变量类型"><a href="#高级变量类型" class="headerlink" title="高级变量类型"></a>高级变量类型</h1><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li><p>尽管python的列表<strong>可以存储不同类型的数据</strong>，但是在开发中，更多的应用场景是列表<strong>存储相同类型的数据</strong></p>
 </li>
-<li><pre><code class="python"># 从当前目录 导入 模块列表
-from . import send_message
-from . import receive_message
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line"># 发布模块和安装模块</span><br><span class="line"></span><br><span class="line">建议百度，不同平台不一样</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line"># 高级变量类型</span><br><span class="line"></span><br><span class="line">## 列表</span><br><span class="line"></span><br><span class="line">* 尽管python的列表**可以存储不同类型的数据**，但是在开发中，更多的应用场景是列表**存储相同类型的数据**</span><br><span class="line"></span><br><span class="line">* 定义一个列表: &#96;list01&#x3D;[]&#96;</span><br><span class="line">* 输入&#96;list.&#96;按下&#96;TAB&#96;键，ipython会提示**列表**能够使用的方法</span><br><span class="line"></span><br><span class="line">| 分类 | 关键字&#x2F;函数&#x2F;方法   | 说明                     |</span><br><span class="line">| ---- | ------------------ | ------------------------ |</span><br><span class="line">| 增加 | insert(索引，数据) | 指定位置插入数据         |</span><br><span class="line">|      | append(数据)       | 末尾追加数据             |</span><br><span class="line">|      | extend(列表2)      | 将列表2的数据追加到列表  |</span><br><span class="line">| 修改 | 列表[索引]&#x3D;数据    |                          |</span><br><span class="line">| 删除 | del 列表[索引]     | 删除指定索引的数据       |</span><br><span class="line">|      | remove[数据]       | 删除第一个出现的指定数据 |</span><br><span class="line">|      | pop                | 删除末尾数据             |</span><br><span class="line">|      | clear              | 清空列表                 |</span><br><span class="line">| 统计 | len(列表)          | 列表长度                 |</span><br><span class="line">|      | 列表.count(数据)   | 数据在列表中出现的次数   |</span><br><span class="line">| 排序 | sort()             | 升序排序                 |</span><br><span class="line">|      | sort(reverse&#x3D;True) | 降序排序                 |</span><br><span class="line">|      | reverse()          | 逆序，反序               |</span><br><span class="line">| 索引 | .index(数据)       | 查找数据所在的索引       |</span><br><span class="line"></span><br><span class="line">### 列表的循环遍历</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-for name in list_:
-  print(name)
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 元组</span><br><span class="line"></span><br><span class="line">* &#96;Tuple&#96;元组与列表类似，不同之处在于元组**不能修改**</span><br><span class="line">  * **元组**表示多个元素组成的序列</span><br><span class="line">  * **元组**在python开发中，有特定的应用场景</span><br><span class="line">* tuple_1&#x3D;(&quot;zhangsan&quot;, 18, 1.75)</span><br><span class="line">* **只有一个元素的元组需要加逗号**  &#96;tuple01&#x3D;(5,)&#96;</span><br><span class="line"></span><br><span class="line">### 元组的常用操作</span><br><span class="line"></span><br><span class="line">* count</span><br><span class="line">* index</span><br><span class="line"></span><br><span class="line">### 元组的应用场景</span><br><span class="line"></span><br><span class="line">* **函数的参数和返回值**，使一个函数可以接收任意多个参数，或者一次返回多个数据</span><br><span class="line">* **格式字符串**，格式化字符串后面的&#96;()&#96;本质上就是一个元组</span><br><span class="line">* **让列表不可以被修改**，以保护字符串</span><br><span class="line"></span><br><span class="line">### 元组和列表之间的转换</span><br><span class="line"></span><br><span class="line">* &#96;list&#96;函数可以把元组转换为列表</span><br><span class="line">* &#96;tuple&#96;函数可以把列表转换为元组</span><br><span class="line"></span><br><span class="line">### 元组作为返回值</span><br><span class="line"></span><br><span class="line">* 可以省略括号</span><br><span class="line"></span><br><span class="line">* 接收时可以写成</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-def func():
-    return 1,2
-a,b=func()
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">## 字典</span><br><span class="line"></span><br><span class="line">### 字典的定义</span><br><span class="line"></span><br><span class="line">* &#96;dictionary&#96;（字典）是除列表以外&#96;python&#96;之中最灵活的数据类型</span><br><span class="line">* 字典同样可以用来存储多个数据</span><br><span class="line">  * 通常用于存储描述一个&#96;物体&#96;的相关信息</span><br><span class="line">* 和列表的区别</span><br><span class="line">  * 列表是**有序**的对象集合</span><br><span class="line">  * 字典是**无序**的对象集合</span><br><span class="line">* 字典用&#96;&#123;&#125;&#96;来定义</span><br><span class="line">* 字典使用**键值对**存储数据，键值对之间用&#96;,&#96;分隔</span><br><span class="line">  * 键&#96;key&#96;是索引</span><br><span class="line">  * 值&#96;value&#96;是数据</span><br><span class="line">  * 键和值之间使用&#96;:&#96;分隔</span><br><span class="line">  * 键必须是唯一的 </span><br><span class="line">  * 值可以取任何数据类型，但&#96;键&#96;只能使用字符串、数字或元组</span><br><span class="line">* 字典的取值 &#96;dict[键]&#96;</span><br><span class="line">* 字典的增加&#x2F;修改 dict[键]&#x3D;值</span><br><span class="line">* 字典的删除dict.pop(键)</span><br><span class="line">* 统计键值对数量 &#96;len&#96;</span><br><span class="line">* 合并字典 &#96;dict.update(新的字典)&#96;</span><br><span class="line">* 清空字典 &#96;dict.clear()&#96;</span><br><span class="line"></span><br><span class="line">### 字典的循环遍历</span><br><span class="line"></span><br><span class="line">&gt; 在实际开发中，由于字典中每一个键值对保存数据的类型是不同的，所以针对字典的循环遍历需求并不是很多</span><br><span class="line"></span><br><span class="line">方法：for循环遍历键，通过键找到值</span><br><span class="line"></span><br><span class="line">## 字符串</span><br><span class="line"></span><br><span class="line">### 字符串常用操作</span><br><span class="line"></span><br><span class="line">* &#96;len&#96;</span><br><span class="line">* &#96;count(字符串)&#96;统计小字符串在大字符串中出现的次数</span><br><span class="line">* &#96;index(字符串)&#96;某一个子字符串出现的位置</span><br><span class="line"></span><br><span class="line">1. 判断类型</span><br><span class="line"></span><br><span class="line">| 方法             | 说明                                                         |</span><br><span class="line">| ---------------- | ------------------------------------------------------------ |</span><br><span class="line">| string.isspace() | 如果string中只包含空格（包括\n\t\r)，则返回True              |</span><br><span class="line">| string.isalnum() | 如果string至少有一个字符并且所有字符都是字母或数字，返回True |</span><br><span class="line">| string.isalpha() | 判断是否全是字母                                             |</span><br><span class="line">| isdecimal()      | 判断是否只包含数字，全角数字                                 |</span><br><span class="line">| isdigit()        | 判断是否只包含数字，全角数字,(1),\u00b2                      |</span><br><span class="line">| isnumeric()      | 判断是否只包含数字，全角数字，**汉字数字**                   |</span><br><span class="line">| istitle()        | 判断是否是标题化字符串（每个单词首字母大写）                 |</span><br><span class="line">| islower()        | 至少包含一个区分大小写的字符，并且都是小写                   |</span><br><span class="line">| isupper()        | 至少包含一个区分大小写的字符，并且都是大写                   |</span><br><span class="line"></span><br><span class="line">2. 查找和替换</span><br><span class="line"></span><br><span class="line">| 方法                                           | 说明                                                         |</span><br><span class="line">| ---------------------------------------------- | ------------------------------------------------------------ |</span><br><span class="line">| startswith(str)                                | 是否以str开头                                                |</span><br><span class="line">| endswith(str)                                  | 是否以str结尾                                                |</span><br><span class="line">| find(str,start&#x3D;0,end&#x3D;len(string))              | 检测str是否包含在string中，如果start和end指定范围，则检查是否包含在指定范围内，如果是返回开始的索引值，否则返回-1 |</span><br><span class="line">| rfind()                                        | 从右边开始查找                                               |</span><br><span class="line">| index()                                        | 与find类似，不过str不在string中会报错                        |</span><br><span class="line">| rindex()                                       | 从右边开始查找                                               |</span><br><span class="line">| replace(old_str,new_str,num&#x3D;string.count(old)) | 把string中的old_str替换成new_str，如果num指定，则替换不超过num次 |</span><br><span class="line"></span><br><span class="line">3. 文本对齐</span><br><span class="line"></span><br><span class="line">| 方法          | 说明                        |</span><br><span class="line">| ------------- | --------------------------- |</span><br><span class="line">| ljust(width)  | 左对齐,&#96;ctrl+Q&#96;查看具体用法 |</span><br><span class="line">| rjust(width)  | 右对齐                      |</span><br><span class="line">| center(width) | 居中                        |</span><br><span class="line"></span><br><span class="line">4. 大小写转换</span><br><span class="line"></span><br><span class="line">| 方法         | 说明               |</span><br><span class="line">| ------------ | ------------------ |</span><br><span class="line">| capitalize() | 第一个字符大写     |</span><br><span class="line">| title()      | 每个单词首字母大写 |</span><br><span class="line">| lower()      |                    |</span><br><span class="line">| upper()      |                    |</span><br><span class="line">| swapcase()   | 大小写翻转         |</span><br><span class="line"></span><br><span class="line">5. 去除空白字符</span><br><span class="line"></span><br><span class="line">| 方法     | 说明                   |</span><br><span class="line">| -------- | ---------------------- |</span><br><span class="line">| lstrip() | 裁掉左边开始的空白字符 |</span><br><span class="line">| rstrip() | 裁掉右边开始的空白字符 |</span><br><span class="line">| strip()  | 裁掉两边的空白字符     |</span><br><span class="line"></span><br><span class="line">6. 拆分和连接</span><br><span class="line"></span><br><span class="line">| 方法             | 说明                                                         |</span><br><span class="line">| ---------------- | ------------------------------------------------------------ |</span><br><span class="line">| partition(str)   | 将string分成str前面，str，str后面三部分                      |</span><br><span class="line">| rpartition(str)  | 同上，不过从右边开始查找                                     |</span><br><span class="line">| split()          |                                                              |</span><br><span class="line">| splitlines()     | 按照\r  \n  \r\n分隔                                         |</span><br><span class="line">| string.join(seq) | 以string作为分隔符，将seq中所有的元素（的字符串表示）合并为一个新的字符串 |</span><br><span class="line"></span><br><span class="line">### 字符串的切片</span><br><span class="line"></span><br><span class="line">* 切片方法适用于：字符串、列表、元组</span><br><span class="line">* **字符串逆序**</span><br><span class="line">  * &#96;str[-1::-1]&#96;或者&#96;str[::-1]&#96;</span><br><span class="line"></span><br><span class="line">## 公共方法</span><br><span class="line"></span><br><span class="line">### Python内置函数</span><br><span class="line"></span><br><span class="line">&gt; 内置函数：无需import可以直接使用的函数</span><br><span class="line"></span><br><span class="line">| 函数             | 描述                           | 备注                      |</span><br><span class="line">| ---------------- | ------------------------------ | ------------------------- |</span><br><span class="line">| len(item)        | 计算容器中元素个数             |                           |</span><br><span class="line">| del(item)        | 删除扮靓                       | del有两种方式             |</span><br><span class="line">| max(item)        | 返回容器中元素最大值           | 如果是字典，只针对key比较 |</span><br><span class="line">| min(item)        | 返回容器中元素最小值           | 如果是字典，只针对key比较 |</span><br><span class="line">| cmo(item1,item2) | 比较两个值，-1小于&#x2F;0等于&#x2F;1大于 | python3取消了cmp函数      |</span><br><span class="line"></span><br><span class="line">**注意**</span><br><span class="line"></span><br><span class="line">* 字符串比较符合以下规则：&#39;0&#39;&lt;&#39;A&#39;&lt;&#39;a&#39;</span><br><span class="line"></span><br><span class="line">## 切片</span><br><span class="line"></span><br><span class="line">切片是左闭右开的</span><br><span class="line"></span><br><span class="line">字典是无序的，不能进行切片</span><br><span class="line"></span><br><span class="line">### 对比列表追加方法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-list1=[1,2,3]
-</code></pre>
+<li><p>定义一个列表: <code>list01=[]</code></p>
+</li>
+<li><p>输入<code>list.</code>按下<code>TAB</code>键，ipython会提示<strong>列表</strong>能够使用的方法</p>
 </li>
 </ul>
-<p>list1+[4,5]和list1.extend([4,5])的区别是<br>extend改变了list1，而<code>+</code>返回新的list</p>
-<p>list1.append(6)<br>list1.append([7,8])</p>
-<p>list1=[1,2,3,4,5,6,[7,8]]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 成员运算符</span><br><span class="line"></span><br><span class="line">&#96;in&#96;和&#96;not in&#96;</span><br><span class="line"></span><br><span class="line">对字典使用时，针对的是键</span><br><span class="line"></span><br><span class="line">### 完整的for循环语法</span><br><span class="line"></span><br><span class="line">for 变量 in 集合:</span><br><span class="line"></span><br><span class="line">​	循环体代码</span><br><span class="line"></span><br><span class="line">else:</span><br><span class="line"></span><br><span class="line">​	for循环完整地执行完成后（没有中途break），执行else语句代码</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line"># 类和对象</span><br><span class="line"></span><br><span class="line">## 类的设计</span><br><span class="line"></span><br><span class="line">* 类名使用**大驼峰命名法**：&#96;GoodPerson&#96;</span><br><span class="line">* 内置函数&#96;dir&#96;</span><br><span class="line">  * 使用&#96;dir&#96;传入**标识符&#x2F;数据**，可以查看对象内的所有**属性和方法**</span><br><span class="line">  * **变量，数据，函数都是对象**</span><br><span class="line"></span><br><span class="line">## self参数</span><br><span class="line"></span><br><span class="line">&gt; 由**哪一个对象**调用的方法，方法内部的**self**就是哪个对象的引用（类似C++&#x2F;Java的this）</span><br><span class="line"></span><br><span class="line">* 在类封装的方法内部，&#96;self&#96;就表示**当前调用方法的对象自己**</span><br><span class="line">* 调用方法时，程序员不需要传递&#96;self&#96;参数</span><br><span class="line">* 在方法内部</span><br><span class="line">  * 可以通过&#96;self&#96;访问对象属性</span><br><span class="line">  * 也可以通过&#96;self&#96;，调用其他对象的方法</span><br><span class="line"></span><br><span class="line">## 给对象增加属性</span><br><span class="line"></span><br><span class="line">* 在类外，对对象直接添加，**不推荐**</span><br><span class="line">  * &#96;tom.name&#x3D;&#39;TOM&#39;&#96;</span><br><span class="line"></span><br><span class="line">## 初始化方法</span><br><span class="line"></span><br><span class="line">* 当使用类名()创建对象时，会自动执行以下操作</span><br><span class="line">  1. 为对象在内存中分配空间——创建对象</span><br><span class="line">  2. 为对象的属性设置初始值——初始化方法&#96;init&#96;</span><br><span class="line">* 这个初始化方法就是&#96;_init_&#96;方法，该方法是对象的**内置方法**</span><br><span class="line"></span><br><span class="line">&gt; &#96;_init_&#96;**方法是专门用来定义一个类具有哪些属性的方法！**</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">def __init__(self,name,age):</span><br><span class="line">	self.name&#x3D;name</span><br><span class="line">	self.age&#x3D;age</span><br><span class="line">def show(self):</span><br><span class="line">	print(&#39;My name is %s&#39;%self.name)</span><br><span class="line">	print(&#39;My age is %s&#39;%self.age)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>关键字/函数/方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>增加</td>
+<td>insert(索引，数据)</td>
+<td>指定位置插入数据</td>
+</tr>
+<tr>
+<td></td>
+<td>append(数据)</td>
+<td>末尾追加数据</td>
+</tr>
+<tr>
+<td></td>
+<td>extend(列表2)</td>
+<td>将列表2的数据追加到列表</td>
+</tr>
+<tr>
+<td>修改</td>
+<td>列表[索引]=数据</td>
+<td></td>
+</tr>
+<tr>
+<td>删除</td>
+<td>del 列表[索引]</td>
+<td>删除指定索引的数据</td>
+</tr>
+<tr>
+<td></td>
+<td>remove[数据]</td>
+<td>删除第一个出现的指定数据</td>
+</tr>
+<tr>
+<td></td>
+<td>pop</td>
+<td>删除末尾数据</td>
+</tr>
+<tr>
+<td></td>
+<td>clear</td>
+<td>清空列表</td>
+</tr>
+<tr>
+<td>统计</td>
+<td>len(列表)</td>
+<td>列表长度</td>
+</tr>
+<tr>
+<td></td>
+<td>列表.count(数据)</td>
+<td>数据在列表中出现的次数</td>
+</tr>
+<tr>
+<td>排序</td>
+<td>sort()</td>
+<td>升序排序</td>
+</tr>
+<tr>
+<td></td>
+<td>sort(reverse=True)</td>
+<td>降序排序</td>
+</tr>
+<tr>
+<td></td>
+<td>reverse()</td>
+<td>逆序，反序</td>
+</tr>
+<tr>
+<td>索引</td>
+<td>.index(数据)</td>
+<td>查找数据所在的索引</td>
+</tr>
+</tbody></table>
+<h3 id="列表的循环遍历"><a href="#列表的循环遍历" class="headerlink" title="列表的循环遍历"></a>列表的循环遍历</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for name in list_:</span><br><span class="line">	print(name)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><ul>
+<li><code>Tuple</code>元组与列表类似，不同之处在于元组<strong>不能修改</strong><ul>
+<li><strong>元组</strong>表示多个元素组成的序列</li>
+<li><strong>元组</strong>在python开发中，有特定的应用场景</li>
+</ul>
+</li>
+<li>tuple_1=(“zhangsan”, 18, 1.75)</li>
+<li><strong>只有一个元素的元组需要加逗号</strong>  <code>tuple01=(5,)</code></li>
+</ul>
+<h3 id="元组的常用操作"><a href="#元组的常用操作" class="headerlink" title="元组的常用操作"></a>元组的常用操作</h3><ul>
+<li>count</li>
+<li>index</li>
+</ul>
+<h3 id="元组的应用场景"><a href="#元组的应用场景" class="headerlink" title="元组的应用场景"></a>元组的应用场景</h3><ul>
+<li><strong>函数的参数和返回值</strong>，使一个函数可以接收任意多个参数，或者一次返回多个数据</li>
+<li><strong>格式字符串</strong>，格式化字符串后面的<code>()</code>本质上就是一个元组</li>
+<li><strong>让列表不可以被修改</strong>，以保护字符串</li>
+</ul>
+<h3 id="元组和列表之间的转换"><a href="#元组和列表之间的转换" class="headerlink" title="元组和列表之间的转换"></a>元组和列表之间的转换</h3><ul>
+<li><code>list</code>函数可以把元组转换为列表</li>
+<li><code>tuple</code>函数可以把列表转换为元组</li>
+</ul>
+<h3 id="元组作为返回值"><a href="#元组作为返回值" class="headerlink" title="元组作为返回值"></a>元组作为返回值</h3><ul>
+<li><p>可以省略括号</p>
+</li>
+<li><p>接收时可以写成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def func():</span><br><span class="line">	return 1,2</span><br><span class="line">a,b&#x3D;func()</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="字典的定义"><a href="#字典的定义" class="headerlink" title="字典的定义"></a>字典的定义</h3><ul>
+<li><code>dictionary</code>（字典）是除列表以外<code>python</code>之中最灵活的数据类型</li>
+<li>字典同样可以用来存储多个数据<ul>
+<li>通常用于存储描述一个<code>物体</code>的相关信息</li>
+</ul>
+</li>
+<li>和列表的区别<ul>
+<li>列表是<strong>有序</strong>的对象集合</li>
+<li>字典是<strong>无序</strong>的对象集合</li>
+</ul>
+</li>
+<li>字典用<code>&#123;&#125;</code>来定义</li>
+<li>字典使用<strong>键值对</strong>存储数据，键值对之间用<code>,</code>分隔<ul>
+<li>键<code>key</code>是索引</li>
+<li>值<code>value</code>是数据</li>
+<li>键和值之间使用<code>:</code>分隔</li>
+<li>键必须是唯一的 </li>
+<li>值可以取任何数据类型，但<code>键</code>只能使用字符串、数字或元组</li>
+</ul>
+</li>
+<li>字典的取值 <code>dict[键]</code></li>
+<li>字典的增加/修改 dict[键]=值</li>
+<li>字典的删除dict.pop(键)</li>
+<li>统计键值对数量 <code>len</code></li>
+<li>合并字典 <code>dict.update(新的字典)</code></li>
+<li>清空字典 <code>dict.clear()</code></li>
+</ul>
+<h3 id="字典的循环遍历"><a href="#字典的循环遍历" class="headerlink" title="字典的循环遍历"></a>字典的循环遍历</h3><blockquote>
+<p>在实际开发中，由于字典中每一个键值对保存数据的类型是不同的，所以针对字典的循环遍历需求并不是很多</p>
+</blockquote>
+<p>方法：for循环遍历键，通过键找到值</p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="字符串常用操作"><a href="#字符串常用操作" class="headerlink" title="字符串常用操作"></a>字符串常用操作</h3><ul>
+<li><code>len</code></li>
+<li><code>count(字符串)</code>统计小字符串在大字符串中出现的次数</li>
+<li><code>index(字符串)</code>某一个子字符串出现的位置</li>
+</ul>
+<ol>
+<li>判断类型</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>string.isspace()</td>
+<td>如果string中只包含空格（包括\n\t\r)，则返回True</td>
+</tr>
+<tr>
+<td>string.isalnum()</td>
+<td>如果string至少有一个字符并且所有字符都是字母或数字，返回True</td>
+</tr>
+<tr>
+<td>string.isalpha()</td>
+<td>判断是否全是字母</td>
+</tr>
+<tr>
+<td>isdecimal()</td>
+<td>判断是否只包含数字，全角数字</td>
+</tr>
+<tr>
+<td>isdigit()</td>
+<td>判断是否只包含数字，全角数字,(1),\u00b2</td>
+</tr>
+<tr>
+<td>isnumeric()</td>
+<td>判断是否只包含数字，全角数字，<strong>汉字数字</strong></td>
+</tr>
+<tr>
+<td>istitle()</td>
+<td>判断是否是标题化字符串（每个单词首字母大写）</td>
+</tr>
+<tr>
+<td>islower()</td>
+<td>至少包含一个区分大小写的字符，并且都是小写</td>
+</tr>
+<tr>
+<td>isupper()</td>
+<td>至少包含一个区分大小写的字符，并且都是大写</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>查找和替换</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>startswith(str)</td>
+<td>是否以str开头</td>
+</tr>
+<tr>
+<td>endswith(str)</td>
+<td>是否以str结尾</td>
+</tr>
+<tr>
+<td>find(str,start=0,end=len(string))</td>
+<td>检测str是否包含在string中，如果start和end指定范围，则检查是否包含在指定范围内，如果是返回开始的索引值，否则返回-1</td>
+</tr>
+<tr>
+<td>rfind()</td>
+<td>从右边开始查找</td>
+</tr>
+<tr>
+<td>index()</td>
+<td>与find类似，不过str不在string中会报错</td>
+</tr>
+<tr>
+<td>rindex()</td>
+<td>从右边开始查找</td>
+</tr>
+<tr>
+<td>replace(old_str,new_str,num=string.count(old))</td>
+<td>把string中的old_str替换成new_str，如果num指定，则替换不超过num次</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>文本对齐</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ljust(width)</td>
+<td>左对齐,<code>ctrl+Q</code>查看具体用法</td>
+</tr>
+<tr>
+<td>rjust(width)</td>
+<td>右对齐</td>
+</tr>
+<tr>
+<td>center(width)</td>
+<td>居中</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>大小写转换</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>capitalize()</td>
+<td>第一个字符大写</td>
+</tr>
+<tr>
+<td>title()</td>
+<td>每个单词首字母大写</td>
+</tr>
+<tr>
+<td>lower()</td>
+<td></td>
+</tr>
+<tr>
+<td>upper()</td>
+<td></td>
+</tr>
+<tr>
+<td>swapcase()</td>
+<td>大小写翻转</td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li>去除空白字符</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lstrip()</td>
+<td>裁掉左边开始的空白字符</td>
+</tr>
+<tr>
+<td>rstrip()</td>
+<td>裁掉右边开始的空白字符</td>
+</tr>
+<tr>
+<td>strip()</td>
+<td>裁掉两边的空白字符</td>
+</tr>
+</tbody></table>
+<ol start="6">
+<li>拆分和连接</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>partition(str)</td>
+<td>将string分成str前面，str，str后面三部分</td>
+</tr>
+<tr>
+<td>rpartition(str)</td>
+<td>同上，不过从右边开始查找</td>
+</tr>
+<tr>
+<td>split()</td>
+<td></td>
+</tr>
+<tr>
+<td>splitlines()</td>
+<td>按照\r  \n  \r\n分隔</td>
+</tr>
+<tr>
+<td>string.join(seq)</td>
+<td>以string作为分隔符，将seq中所有的元素（的字符串表示）合并为一个新的字符串</td>
+</tr>
+</tbody></table>
+<h3 id="字符串的切片"><a href="#字符串的切片" class="headerlink" title="字符串的切片"></a>字符串的切片</h3><ul>
+<li>切片方法适用于：字符串、列表、元组</li>
+<li><strong>字符串逆序</strong><ul>
+<li><code>str[-1::-1]</code>或者<code>str[::-1]</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="公共方法"><a href="#公共方法" class="headerlink" title="公共方法"></a>公共方法</h2><h3 id="Python内置函数"><a href="#Python内置函数" class="headerlink" title="Python内置函数"></a>Python内置函数</h3><blockquote>
+<p>内置函数：无需import可以直接使用的函数</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>len(item)</td>
+<td>计算容器中元素个数</td>
+<td></td>
+</tr>
+<tr>
+<td>del(item)</td>
+<td>删除扮靓</td>
+<td>del有两种方式</td>
+</tr>
+<tr>
+<td>max(item)</td>
+<td>返回容器中元素最大值</td>
+<td>如果是字典，只针对key比较</td>
+</tr>
+<tr>
+<td>min(item)</td>
+<td>返回容器中元素最小值</td>
+<td>如果是字典，只针对key比较</td>
+</tr>
+<tr>
+<td>cmo(item1,item2)</td>
+<td>比较两个值，-1小于/0等于/1大于</td>
+<td>python3取消了cmp函数</td>
+</tr>
+</tbody></table>
+<p><strong>注意</strong></p>
+<ul>
+<li>字符串比较符合以下规则：’0’&lt;’A’&lt;’a’</li>
+</ul>
+<h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><p>切片是左闭右开的</p>
+<p>字典是无序的，不能进行切片</p>
+<h3 id="对比列表追加方法"><a href="#对比列表追加方法" class="headerlink" title="对比列表追加方法"></a>对比列表追加方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">list1&#x3D;[1,2,3]</span><br><span class="line"></span><br><span class="line">list1+[4,5]和list1.extend([4,5])的区别是</span><br><span class="line">extend改变了list1，而&#96;+&#96;返回新的list</span><br><span class="line"></span><br><span class="line">list1.append(6)</span><br><span class="line">list1.append([7,8])</span><br><span class="line"></span><br><span class="line">list1&#x3D;[1,2,3,4,5,6,[7,8]]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="成员运算符"><a href="#成员运算符" class="headerlink" title="成员运算符"></a>成员运算符</h3><p><code>in</code>和<code>not in</code></p>
+<p>对字典使用时，针对的是键</p>
+<h3 id="完整的for循环语法"><a href="#完整的for循环语法" class="headerlink" title="完整的for循环语法"></a>完整的for循环语法</h3><p>for 变量 in 集合:</p>
+<p>​    循环体代码</p>
+<p>else:</p>
+<p>​    for循环完整地执行完成后（没有中途break），执行else语句代码</p>
+<hr>
+<h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h1><h2 id="类的设计"><a href="#类的设计" class="headerlink" title="类的设计"></a>类的设计</h2><ul>
+<li>类名使用<strong>大驼峰命名法</strong>：<code>GoodPerson</code></li>
+<li>内置函数<code>dir</code><ul>
+<li>使用<code>dir</code>传入<strong>标识符/数据</strong>，可以查看对象内的所有<strong>属性和方法</strong></li>
+<li><strong>变量，数据，函数都是对象</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="self参数"><a href="#self参数" class="headerlink" title="self参数"></a>self参数</h2><blockquote>
+<p>由<strong>哪一个对象</strong>调用的方法，方法内部的<strong>self</strong>就是哪个对象的引用（类似C++/Java的this）</p>
+</blockquote>
+<ul>
+<li>在类封装的方法内部，<code>self</code>就表示<strong>当前调用方法的对象自己</strong></li>
+<li>调用方法时，程序员不需要传递<code>self</code>参数</li>
+<li>在方法内部<ul>
+<li>可以通过<code>self</code>访问对象属性</li>
+<li>也可以通过<code>self</code>，调用其他对象的方法</li>
+</ul>
+</li>
+</ul>
+<h2 id="给对象增加属性"><a href="#给对象增加属性" class="headerlink" title="给对象增加属性"></a>给对象增加属性</h2><ul>
+<li>在类外，对对象直接添加，<strong>不推荐</strong><ul>
+<li><code>tom.name=&#39;TOM&#39;</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="初始化方法"><a href="#初始化方法" class="headerlink" title="初始化方法"></a>初始化方法</h2><ul>
+<li>当使用类名()创建对象时，会自动执行以下操作<ol>
+<li>为对象在内存中分配空间——创建对象</li>
+<li>为对象的属性设置初始值——初始化方法<code>init</code></li>
+</ol>
+</li>
+<li>这个初始化方法就是<code>_init_</code>方法，该方法是对象的<strong>内置方法</strong></li>
+</ul>
+<blockquote>
+<p><code>_init_</code><strong>方法是专门用来定义一个类具有哪些属性的方法！</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,name,age</span>):</span></span><br><span class="line">	self.name=name</span><br><span class="line">	self.age=age</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">self</span>):</span></span><br><span class="line">	print(<span class="string">&#x27;My name is %s&#x27;</span>%self.name)</span><br><span class="line">	print(<span class="string">&#x27;My age is %s&#x27;</span>%self.age)</span><br></pre></td></tr></table></figure>
 <h2 id="内置方法和属性"><a href="#内置方法和属性" class="headerlink" title="内置方法和属性"></a>内置方法和属性</h2><ul>
 <li><code>_del_</code>方法<ul>
 <li>对象被从内存中销毁前，会被自动调用</li>
@@ -1143,7 +1583,7 @@ print(str2)</code></pre>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pip"><span class="nav-number">1.</span> <span class="nav-text">pip</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">3.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">4.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">变量类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-number">4.2.</span> <span class="nav-text">变量的格式化输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">4.3.</span> <span class="nav-text">变量的命名规则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E8%BF%9B%E9%98%B6"><span class="nav-number">5.</span> <span class="nav-text">变量进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%BC%95%E7%94%A8"><span class="nav-number">5.1.</span> <span class="nav-text">变量的引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.2.</span> <span class="nav-text">可变和不可变类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8Chash"><span class="nav-number">5.3.</span> <span class="nav-text">哈希hash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="nav-number">5.4.</span> <span class="nav-text">局部变量和全局变量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A"><span class="nav-number">6.1.</span> <span class="nav-text">函数的文档注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%BA%E7%9C%81%E5%8F%82%E6%95%B0"><span class="nav-number">6.2.</span> <span class="nav-text">缺省参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%80%BC%E5%8F%82%E6%95%B0"><span class="nav-number">6.3.</span> <span class="nav-text">多值参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%94%AF%E6%8C%81%E5%A4%9A%E5%80%BC%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">6.3.1.</span> <span class="nav-text">定义支持多值参数的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84%E5%92%8C%E5%AD%97%E5%85%B8%E7%9A%84%E6%8B%86%E5%8C%85"><span class="nav-number">6.3.2.</span> <span class="nav-text">元组和字典的拆包</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97"><span class="nav-number">7.</span> <span class="nav-text">模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%90%8D%E4%B9%9F%E6%98%AF%E4%B8%80%E4%B8%AA%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-number">7.1.</span> <span class="nav-text">模块名也是一个标识符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">7.2.</span> <span class="nav-text">模块的两种导入方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%EF%BC%9Aimport%E5%AF%BC%E5%85%A5"><span class="nav-number">7.2.1.</span> <span class="nav-text">第一种：import导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%EF%BC%9Afrom%E2%80%A6import%E5%AF%BC%E5%85%A5"><span class="nav-number">7.2.2.</span> <span class="nav-text">第二种：from…import导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D%EF%BC%9Afrom%E2%80%A6import-%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">7.2.3.</span> <span class="nav-text">第三种：from…import* （了解）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E6%90%9C%E7%B4%A2%E9%A1%BA%E5%BA%8F%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">7.3.</span> <span class="nav-text">模块的搜索顺序（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E6%96%87%E4%BB%B6%E7%9A%84%E7%BB%86%E8%8A%82"><span class="nav-number">7.4.</span> <span class="nav-text">导入文件的细节</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8C%85"><span class="nav-number">8.</span> <span class="nav-text">包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#init-py"><span class="nav-number">8.1.</span> <span class="nav-text">__init__.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7"><span class="nav-number">8.2.</span> <span class="nav-text">内置方法和属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BA%AB%E4%BB%BD%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">8.3.</span> <span class="nav-text">身份运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7%E5%92%8C%E7%A7%81%E6%9C%89%E6%96%B9%E6%B3%95"><span class="nav-number">8.4.</span> <span class="nav-text">私有属性和私有方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%AA%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7%E5%92%8C%E7%A7%81%E6%9C%89%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">8.5.</span> <span class="nav-text">伪私有属性和私有方法（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">8.6.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E7%BB%A7%E6%89%BF"><span class="nav-number">8.6.1.</span> <span class="nav-text">单继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E5%86%99"><span class="nav-number">8.6.2.</span> <span class="nav-text">方法的重写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%BB%A7%E6%89%BF"><span class="nav-number">8.6.3.</span> <span class="nav-text">多继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MRO%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E6%90%9C%E7%B4%A2%E9%A1%BA%E5%BA%8F%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">8.6.4.</span> <span class="nav-text">MRO——方法搜索顺序（了解）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BC%8F%E7%B1%BB%E4%B8%8E%E6%97%A7%E5%BC%8F%E7%B1%BB"><span class="nav-number">8.6.5.</span> <span class="nav-text">新式类与旧式类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">8.7.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E6%98%AF%E4%B8%80%E4%B8%AA%E7%89%B9%E6%AE%8A%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-number">8.8.</span> <span class="nav-text">类是一个特殊的对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%B1%9E%E6%80%A7%E5%92%8C%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7"><span class="nav-number">8.8.1.</span> <span class="nav-text">类属性和实例属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E8%8E%B7%E5%8F%96%E6%9C%BA%E5%88%B6%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">8.8.2.</span> <span class="nav-text">属性的获取机制（了解）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="nav-number">8.8.3.</span> <span class="nav-text">类方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="nav-number">8.8.4.</span> <span class="nav-text">静态方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-number">9.</span> <span class="nav-text">单例设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#new-%E6%96%B9%E6%B3%95"><span class="nav-number">9.1.</span> <span class="nav-text">__new__方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">9.2.</span> <span class="nav-text">单例设计模式案例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8"><span class="nav-number">10.</span> <span class="nav-text">异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">10.1.</span> <span class="nav-text">异常的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8"><span class="nav-number">10.2.</span> <span class="nav-text">捕获异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E8%AF%AD%E6%B3%95"><span class="nav-number">10.2.1.</span> <span class="nav-text">简单的捕获异常语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E7%B1%BB%E5%9E%8B%E6%8D%95%E8%8E%B7"><span class="nav-number">10.2.2.</span> <span class="nav-text">错误类型捕获</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AA%E7%9F%A5%E5%BC%82%E5%B8%B8%E6%8D%95%E8%8E%B7"><span class="nav-number">10.2.3.</span> <span class="nav-text">未知异常捕获</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E6%8D%95%E8%8E%B7%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95"><span class="nav-number">10.2.4.</span> <span class="nav-text">异常捕获完整语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E4%BC%A0%E9%80%92"><span class="nav-number">10.2.5.</span> <span class="nav-text">异常的传递</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#raise%E5%BC%82%E5%B8%B8"><span class="nav-number">10.3.</span> <span class="nav-text">raise异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">10.3.1.</span> <span class="nav-text">应用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6"><span class="nav-number">11.</span> <span class="nav-text">文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">11.1.</span> <span class="nav-text">文件的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9A%84%E5%A5%97%E8%B7%AF"><span class="nav-number">11.1.1.</span> <span class="nav-text">1.操作文件的套路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%BD%E6%95%B0-%E6%96%B9%E6%B3%95"><span class="nav-number">11.1.2.</span> <span class="nav-text">2.操作文件的函数&#x2F;方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-read%E6%96%B9%E6%B3%95"><span class="nav-number">11.1.3.</span> <span class="nav-text">3.read方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">11.1.4.</span> <span class="nav-text">4.打开文件的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%8C%89%E8%A1%8C%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">11.1.5.</span> <span class="nav-text">5.按行读取文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95%E7%9A%84%E5%B8%B8%E7%94%A8%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C"><span class="nav-number">11.1.6.</span> <span class="nav-text">6.文件&#x2F;目录的常用管理操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%9A%84%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F"><span class="nav-number">11.1.7.</span> <span class="nav-text">7.文本文件的编码格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ASCII%E7%BC%96%E7%A0%81%E5%92%8CUNICODE%E7%BC%96%E7%A0%81"><span class="nav-number">11.1.7.1.</span> <span class="nav-text">ASCII编码和UNICODE编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UTF-8%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F"><span class="nav-number">11.1.7.2.</span> <span class="nav-text">UTF-8编码格式</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#eval%E5%87%BD%E6%95%B0"><span class="nav-number">12.</span> <span class="nav-text">eval函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E8%A6%81%E6%BB%A5%E7%94%A8eval"><span class="nav-number">12.1.</span> <span class="nav-text">不要滥用eval</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">13.</span> <span class="nav-text">补充知识点</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pip"><span class="nav-number">1.</span> <span class="nav-text">pip</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">算数运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">3.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">4.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.1.</span> <span class="nav-text">变量类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-number">4.2.</span> <span class="nav-text">变量的格式化输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">4.3.</span> <span class="nav-text">变量的命名规则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E8%BF%9B%E9%98%B6"><span class="nav-number">5.</span> <span class="nav-text">变量进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%BC%95%E7%94%A8"><span class="nav-number">5.1.</span> <span class="nav-text">变量的引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.2.</span> <span class="nav-text">可变和不可变类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8Chash"><span class="nav-number">5.3.</span> <span class="nav-text">哈希hash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="nav-number">5.4.</span> <span class="nav-text">局部变量和全局变量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A"><span class="nav-number">6.1.</span> <span class="nav-text">函数的文档注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%BA%E7%9C%81%E5%8F%82%E6%95%B0"><span class="nav-number">6.2.</span> <span class="nav-text">缺省参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%80%BC%E5%8F%82%E6%95%B0"><span class="nav-number">6.3.</span> <span class="nav-text">多值参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%94%AF%E6%8C%81%E5%A4%9A%E5%80%BC%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">6.3.1.</span> <span class="nav-text">定义支持多值参数的函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84%E5%92%8C%E5%AD%97%E5%85%B8%E7%9A%84%E6%8B%86%E5%8C%85"><span class="nav-number">6.3.2.</span> <span class="nav-text">元组和字典的拆包</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97"><span class="nav-number">7.</span> <span class="nav-text">模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%90%8D%E4%B9%9F%E6%98%AF%E4%B8%80%E4%B8%AA%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-number">7.1.</span> <span class="nav-text">模块名也是一个标识符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">7.2.</span> <span class="nav-text">模块的两种导入方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%EF%BC%9Aimport%E5%AF%BC%E5%85%A5"><span class="nav-number">7.2.1.</span> <span class="nav-text">第一种：import导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%EF%BC%9Afrom%E2%80%A6import%E5%AF%BC%E5%85%A5"><span class="nav-number">7.2.2.</span> <span class="nav-text">第二种：from…import导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D%EF%BC%9Afrom%E2%80%A6import-%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">7.2.3.</span> <span class="nav-text">第三种：from…import* （了解）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E6%90%9C%E7%B4%A2%E9%A1%BA%E5%BA%8F%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">7.3.</span> <span class="nav-text">模块的搜索顺序（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E6%96%87%E4%BB%B6%E7%9A%84%E7%BB%86%E8%8A%82"><span class="nav-number">7.4.</span> <span class="nav-text">导入文件的细节</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8C%85"><span class="nav-number">8.</span> <span class="nav-text">包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#init-py"><span class="nav-number">8.1.</span> <span class="nav-text">__init__.py</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E6%A8%A1%E5%9D%97%E5%92%8C%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9D%97"><span class="nav-number">9.</span> <span class="nav-text">发布模块和安装模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="nav-number">10.</span> <span class="nav-text">高级变量类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">10.1.</span> <span class="nav-text">列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86"><span class="nav-number">10.1.1.</span> <span class="nav-text">列表的循环遍历</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%BB%84"><span class="nav-number">10.2.</span> <span class="nav-text">元组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84%E7%9A%84%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="nav-number">10.2.1.</span> <span class="nav-text">元组的常用操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">10.2.2.</span> <span class="nav-text">元组的应用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84%E5%92%8C%E5%88%97%E8%A1%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">10.2.3.</span> <span class="nav-text">元组和列表之间的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-number">10.2.4.</span> <span class="nav-text">元组作为返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-number">10.3.</span> <span class="nav-text">字典</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E5%85%B8%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">10.3.1.</span> <span class="nav-text">字典的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E5%85%B8%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86"><span class="nav-number">10.3.2.</span> <span class="nav-text">字典的循环遍历</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">10.4.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="nav-number">10.4.1.</span> <span class="nav-text">字符串常用操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%87%E7%89%87"><span class="nav-number">10.4.2.</span> <span class="nav-text">字符串的切片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95"><span class="nav-number">10.5.</span> <span class="nav-text">公共方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="nav-number">10.5.1.</span> <span class="nav-text">Python内置函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E7%89%87"><span class="nav-number">10.6.</span> <span class="nav-text">切片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94%E5%88%97%E8%A1%A8%E8%BF%BD%E5%8A%A0%E6%96%B9%E6%B3%95"><span class="nav-number">10.6.1.</span> <span class="nav-text">对比列表追加方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">10.6.2.</span> <span class="nav-text">成员运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%9A%84for%E5%BE%AA%E7%8E%AF%E8%AF%AD%E6%B3%95"><span class="nav-number">10.6.3.</span> <span class="nav-text">完整的for循环语法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="nav-number">11.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">11.1.</span> <span class="nav-text">类的设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#self%E5%8F%82%E6%95%B0"><span class="nav-number">11.2.</span> <span class="nav-text">self参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99%E5%AF%B9%E8%B1%A1%E5%A2%9E%E5%8A%A0%E5%B1%9E%E6%80%A7"><span class="nav-number">11.3.</span> <span class="nav-text">给对象增加属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%B9%E6%B3%95"><span class="nav-number">11.4.</span> <span class="nav-text">初始化方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7"><span class="nav-number">11.5.</span> <span class="nav-text">内置方法和属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BA%AB%E4%BB%BD%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">11.6.</span> <span class="nav-text">身份运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7%E5%92%8C%E7%A7%81%E6%9C%89%E6%96%B9%E6%B3%95"><span class="nav-number">11.7.</span> <span class="nav-text">私有属性和私有方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%AA%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7%E5%92%8C%E7%A7%81%E6%9C%89%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">11.8.</span> <span class="nav-text">伪私有属性和私有方法（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">11.9.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E7%BB%A7%E6%89%BF"><span class="nav-number">11.9.1.</span> <span class="nav-text">单继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E5%86%99"><span class="nav-number">11.9.2.</span> <span class="nav-text">方法的重写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%BB%A7%E6%89%BF"><span class="nav-number">11.9.3.</span> <span class="nav-text">多继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MRO%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E6%90%9C%E7%B4%A2%E9%A1%BA%E5%BA%8F%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">11.9.4.</span> <span class="nav-text">MRO——方法搜索顺序（了解）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BC%8F%E7%B1%BB%E4%B8%8E%E6%97%A7%E5%BC%8F%E7%B1%BB"><span class="nav-number">11.9.5.</span> <span class="nav-text">新式类与旧式类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">11.10.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E6%98%AF%E4%B8%80%E4%B8%AA%E7%89%B9%E6%AE%8A%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-number">11.11.</span> <span class="nav-text">类是一个特殊的对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%B1%9E%E6%80%A7%E5%92%8C%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7"><span class="nav-number">11.11.1.</span> <span class="nav-text">类属性和实例属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E8%8E%B7%E5%8F%96%E6%9C%BA%E5%88%B6%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">11.11.2.</span> <span class="nav-text">属性的获取机制（了解）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="nav-number">11.11.3.</span> <span class="nav-text">类方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="nav-number">11.11.4.</span> <span class="nav-text">静态方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-number">12.</span> <span class="nav-text">单例设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#new-%E6%96%B9%E6%B3%95"><span class="nav-number">12.1.</span> <span class="nav-text">__new__方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A1%88%E4%BE%8B"><span class="nav-number">12.2.</span> <span class="nav-text">单例设计模式案例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8"><span class="nav-number">13.</span> <span class="nav-text">异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">13.1.</span> <span class="nav-text">异常的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8"><span class="nav-number">13.2.</span> <span class="nav-text">捕获异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E8%AF%AD%E6%B3%95"><span class="nav-number">13.2.1.</span> <span class="nav-text">简单的捕获异常语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E7%B1%BB%E5%9E%8B%E6%8D%95%E8%8E%B7"><span class="nav-number">13.2.2.</span> <span class="nav-text">错误类型捕获</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AA%E7%9F%A5%E5%BC%82%E5%B8%B8%E6%8D%95%E8%8E%B7"><span class="nav-number">13.2.3.</span> <span class="nav-text">未知异常捕获</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E6%8D%95%E8%8E%B7%E5%AE%8C%E6%95%B4%E8%AF%AD%E6%B3%95"><span class="nav-number">13.2.4.</span> <span class="nav-text">异常捕获完整语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E4%BC%A0%E9%80%92"><span class="nav-number">13.2.5.</span> <span class="nav-text">异常的传递</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#raise%E5%BC%82%E5%B8%B8"><span class="nav-number">13.3.</span> <span class="nav-text">raise异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">13.3.1.</span> <span class="nav-text">应用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6"><span class="nav-number">14.</span> <span class="nav-text">文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">14.1.</span> <span class="nav-text">文件的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9A%84%E5%A5%97%E8%B7%AF"><span class="nav-number">14.1.1.</span> <span class="nav-text">1.操作文件的套路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9A%84%E5%87%BD%E6%95%B0-%E6%96%B9%E6%B3%95"><span class="nav-number">14.1.2.</span> <span class="nav-text">2.操作文件的函数&#x2F;方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-read%E6%96%B9%E6%B3%95"><span class="nav-number">14.1.3.</span> <span class="nav-text">3.read方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">14.1.4.</span> <span class="nav-text">4.打开文件的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%8C%89%E8%A1%8C%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">14.1.5.</span> <span class="nav-text">5.按行读取文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95%E7%9A%84%E5%B8%B8%E7%94%A8%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C"><span class="nav-number">14.1.6.</span> <span class="nav-text">6.文件&#x2F;目录的常用管理操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E7%9A%84%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F"><span class="nav-number">14.1.7.</span> <span class="nav-text">7.文本文件的编码格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ASCII%E7%BC%96%E7%A0%81%E5%92%8CUNICODE%E7%BC%96%E7%A0%81"><span class="nav-number">14.1.7.1.</span> <span class="nav-text">ASCII编码和UNICODE编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UTF-8%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F"><span class="nav-number">14.1.7.2.</span> <span class="nav-text">UTF-8编码格式</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#eval%E5%87%BD%E6%95%B0"><span class="nav-number">15.</span> <span class="nav-text">eval函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E8%A6%81%E6%BB%A5%E7%94%A8eval"><span class="nav-number">15.1.</span> <span class="nav-text">不要滥用eval</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">16.</span> <span class="nav-text">补充知识点</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
