@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://example.com/images/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97_1.png">
 <meta property="og:image" content="http://example.com/images/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97_2.png">
 <meta property="article:published_time" content="2021-01-11T05:04:18.214Z">
-<meta property="article:modified_time" content="2021-01-12T14:42:01.414Z">
+<meta property="article:modified_time" content="2021-03-04T05:18:58.468Z">
 <meta property="article:author" content="余丰旭">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97_3.png">
@@ -189,7 +189,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-12 22:42:01" itemprop="dateModified" datetime="2021-01-12T22:42:01+08:00">2021-01-12</time>
+                <time title="修改时间：2021-03-04 13:18:58" itemprop="dateModified" datetime="2021-03-04T13:18:58+08:00">2021-03-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -223,14 +223,17 @@
 </ul>
 <h2 id="2020-12-24"><a href="#2020-12-24" class="headerlink" title="2020/12/24"></a>2020/12/24</h2><ul>
 <li>python判断是否是字母或者数字的函数<code>isalnum</code></li>
-<li>动态规划的精髓在于找到<code>第i项</code>和<code>前i-1项</code>（或<code>第i-1项</code>)的关系</li>
+<li><strong>动态规划的精髓在于找到<code>第i项</code>和<code>前i-1项</code>（或<code>第i-1项</code>)的关系</strong><ul>
+<li><strong>动态规划是由规模较小的问题不断得到较大规模问题解的过程</strong>，关键在于<strong>状态转移方程</strong></li>
+</ul>
+</li>
 <li>异或<code>^</code>在单个位上<code>相同为0，不同为1</code>的性质使之<ul>
 <li>任意数字和0异或，等于自身</li>
 <li>任意数字和自身异或，等于0</li>
 <li>异或满足交换律和结合律</li>
 </ul>
 </li>
-<li>python <code>reduce</code>函数的作用是将序列所有元素<strong>以一定的规则</strong>累积起来<ul>
+<li>python <code>reduce</code>函数的作用是将序列所有元素<em>以一定的规则</em>累积起来<ul>
 <li>如<code>recude(lambda x,y:x+y,[1,2,3,4])</code> 是对序列进行求和</li>
 </ul>
 </li>
@@ -240,14 +243,14 @@
 <li>哈希可以降低时间复杂度（以空间换时间）</li>
 <li>两条相交链表找交点，使用拼接链表的方式<br><img src="/images/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97_1.png"></li>
 <li>对于有序序列，可以使用二分查找降低时间复杂度</li>
-<li>双指针向中间扫描，可以解决<strong>有序</strong>数列找两数和的问题</li>
+<li>双指针向中间扫描，可以解决<em>有序</em>数列找两数和的问题</li>
 <li>python实现ASCII操作的函数:<code>ord():字符转ASCII</code>，<code>chr():ASCII数字转字符</code></li>
 <li>列表推导式表示字母表<code>[chr(ord(&#39;A&#39;)+c) for c in range(26)]</code></li>
 </ul>
 <h2 id="2021-1-4"><a href="#2021-1-4" class="headerlink" title="2021/1/4"></a>2021/1/4</h2><ul>
 <li>快慢指针的精髓在于：快指针最终会追上慢指针，以证明链上有环存在</li>
 <li>为什么判断质数的时候只需要验证[2,floor(n<sup>1/2</sup>)]  <code>注意右边是闭区间</code>中数是否能被n整除，因为大于n<sup>1/2</sup>的数不可能被n整除</li>
-<li>找n以内的质数个数，更优的方法：<strong>筛质数</strong><ul>
+<li>找n以内的质数个数，更优的方法：<em>筛质数</em><ul>
 <li><img src="/images/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97_2.png"></li>
 <li>从2开始，每次将2的所有倍数做<code>False</code>标记，然后是3，将3的所有倍数做<code>False</code>标记…最终从2开始所有没有标记到的就是质数的合集</li>
 </ul>
@@ -271,7 +274,7 @@
 </li>
 <li>遇到一个复杂问题的时候，首先想能不能分解成多个子问题</li>
 <li>快慢指针可以快速找到链表的中间节点</li>
-<li>找最近公共祖先的方法就是，从头遍历，找到第一个分裂的点，即是<strong>最近公共祖先</strong></li>
+<li>找最近公共祖先的方法就是，从头遍历，找到第一个分裂的点，即是<em>最近公共祖先</em></li>
 <li>在链表中可以通过指向某个节点（非末尾节点，且链表长度&gt;1）的指针，直接将这个节点删除<ul>
 <li>方法：将下一个节点的所有内容复制到这个节点即可。</li>
 </ul>
@@ -279,13 +282,211 @@
 </ul>
 <h2 id="2021-1-12"><a href="#2021-1-12" class="headerlink" title="2021/1/12"></a>2021/1/12</h2><ul>
 <li>单线程完成尽可能多的任务（每个任务工作时长不同），每次选择最早结束的任务即可！</li>
+<li>对于等差数列求和，用求和公式速度更快</li>
 </ul>
-<h1 id="语言笔记"><a href="#语言笔记" class="headerlink" title="语言笔记"></a>语言笔记</h1><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h3><ul>
+<h2 id="2021-1-13"><a href="#2021-1-13" class="headerlink" title="2021/1/13"></a>2021/1/13</h2><ul>
+<li>子串不同于子序列，子串是连续的而子序列可以不连续</li>
+<li>对于题目给定问题规模不那么大的时候，完全可以使用复杂度较高的暴力方法进行解题，如-字符串长度小于1000-，用O(n<sup>3</sup>)的算法也能够在规定时间内完成。</li>
+<li>最长回文子串(-子串是连续的-)的解法<ul>
+<li>暴力枚举</li>
+<li>中心枚举法</li>
+<li>动态规划</li>
+</ul>
+</li>
+<li>字符串转数字，用<code>Integer.parseInt()</code> </li>
+</ul>
+<h2 id="2021-1-22"><a href="#2021-1-22" class="headerlink" title="2021/1/22"></a>2021/1/22</h2><ul>
+<li>java自定义元组数据类型（不可变）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tuple</span>&lt;<span class="title">A</span>,<span class="title">B</span>&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> A a;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> B b;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Tuple</span><span class="params">(A a,B b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.a=a;</span><br><span class="line">        <span class="keyword">this</span>.b=b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2021-1-25"><a href="#2021-1-25" class="headerlink" title="2021/1/25"></a>2021/1/25</h2><ul>
+<li><p>动态规划的思想</p>
+<ul>
+<li>如果要解决规模为n的问题的最优解，每一步记录规模为1、2、3…n-1、n的问题的最优解，每一步都利用前面一项或者前面所有项的信息。</li>
+<li>如<code>三角形最小路径和</code>一题中，记录三角形中对应每个节点的最小路径和，最终可获得最后一行的最小路径和。</li>
+</ul>
+</li>
+<li><p>java中截取字符串是消耗性能的，因此一般采取传递索引的方式来表示子串。</p>
+</li>
+<li><p>java中的<code>==</code></p>
+<ul>
+<li><p>对于基本数据类型<code>byte,short,int,long,float,double,char,boolean</code>，是比较其值</p>
+</li>
+<li><p>对于引用数据类型，比较其内存地址</p>
+</li>
+<li><p>用“==”运算符，该运算符表示指向字符串的引用是否相同，比如: String a=”abc”;String b=”abc”，</p>
+<p>那么a==b将返回true。<strong>这是因为在java中字符串的值是不可改变的，相同的字符串在内存中只会存</strong></p>
+<p><strong>一份，所以a和b指向的是同一个对象</strong>；再比如：String a=<strong>new String(“abc”)</strong>; String b=<strong>new String(“abc”)</strong>;</p>
+<p>那么a==b将返回false，因为a和b指向不同的对象。</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String a=<span class="string">&quot;abc&quot;</span>,b=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">String c=<span class="keyword">new</span> String(<span class="string">&quot;abc&quot;</span>),d=<span class="keyword">new</span> String(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">System.out.println(a==b);</span><br><span class="line">System.out.println(c==d);</span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"><span class="comment">//true</span></span><br><span class="line"><span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><p>java中的StringBuilder的<code>reverse()</code>方法，是原地逆置（在自身上逆置）</p>
+</li>
+<li><p>Java官方推荐使用Deque替代Stack使用,Deque堆栈操作方法：push()、pop()、peek()。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deque&lt;String&gt;stack=<span class="keyword">new</span> ArrayDeque&lt;&gt;();</span><br></pre></td></tr></table></figure></li>
+<li><p>java中将数组转化为ArrayList的方法,<strong>注意不能使用基本数据类型</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer[]arr=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">List&lt;Integer&gt; lst=<span class="keyword">new</span> ArrayList&lt;&gt;(Arrays.asList(arr));</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">List&lt;String&gt;l=<span class="keyword">new</span> ArrayList&lt;&gt;(Arrays.asList(<span class="string">&quot;aaaa&quot;</span>,<span class="string">&quot;aaa&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="2021-1-26"><a href="#2021-1-26" class="headerlink" title="2021/1/26"></a>2021/1/26</h2><ul>
+<li>java中可以直接将List转化为HashSet<ul>
+<li><code>List&lt;String&gt; wordDict</code></li>
+<li><code>Set&lt;String&gt;wordDictHashSet=new HashSet&lt;&gt;(wordDict)</code></li>
+</ul>
+</li>
+<li>动态规划不仅仅局限于dp数组的形式，由一个变量或者多个变量，记录变化亦可。</li>
+<li>java数组切片用<code>int[]arr_1=Arrays.copyOfRange(arr,0,arr.length-1);</code></li>
+</ul>
+<h2 id="2021-1-27"><a href="#2021-1-27" class="headerlink" title="2021/1/27"></a>2021/1/27</h2><ul>
+<li>java中<code>int</code>类型数据有时可能会出现中间结果溢出，用<code>long</code>即可</li>
+</ul>
+<h2 id="2021-1-28"><a href="#2021-1-28" class="headerlink" title="2021/1/28"></a>2021/1/28</h2><ul>
+<li>如果动态规划中一维或者二维数组的开始点不好处理，可以让其加长一位，遍历时从1开始<ul>
+<li><code>int[][]dp=new int[m+1][n+1];</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="2021-1-29"><a href="#2021-1-29" class="headerlink" title="2021/1/29"></a>2021/1/29</h2><ul>
+<li>DP不仅对求解最优问题有效，对于各种排列组合的个数、概率或者期望之类的计算同样很有用。</li>
+</ul>
+<h2 id="2021-2-17"><a href="#2021-2-17" class="headerlink" title="2021/2/17"></a>2021/2/17</h2><ul>
+<li><p>涉及2的多少次方的问题，可以使用移位运算<code>&lt;&lt;</code>和<code>&gt;&gt;</code>，能够大大加快运算</p>
+</li>
+<li><p>对一个数组进行逆置（或者其他半数的操作），for循环如此<code>for(int i=0;i&lt;len/2;i++)</code>就对了</p>
+</li>
+<li><p>快速排序的代码</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[]arr,<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(left&gt;=right)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> l=left,r=right;</span><br><span class="line">        <span class="keyword">int</span> p=l;</span><br><span class="line">        <span class="keyword">int</span> pivot=arr[left];</span><br><span class="line">        <span class="keyword">while</span>(p&lt;=r)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[p]&gt;pivot)&#123;</span><br><span class="line">                <span class="keyword">int</span> temp=arr[p];</span><br><span class="line">                arr[p]=arr[r];</span><br><span class="line">                arr[r]=temp;</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(arr[p]&lt;pivot)&#123;</span><br><span class="line">                <span class="keyword">int</span> temp=arr[p];</span><br><span class="line">                arr[p]=arr[l];</span><br><span class="line">                arr[l]=temp;</span><br><span class="line">                l++;</span><br><span class="line">                p++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                p++;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;l=&quot;</span>+l+<span class="string">&quot;,r=&quot;</span>+r);</span><br><span class="line">        quickSort(arr,left,l-<span class="number">1</span>);</span><br><span class="line">        quickSort(arr,r+<span class="number">1</span>,right);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>其中标志l左侧的都小于基准，标指r右侧的都大于基准，故递归时使用范围[left,l-1]和[r+1,right]</p>
+</blockquote>
+<ul>
+<li>Java中注意，用<code>Scanner</code>先输入一个数字，再输入一行，会报错<ul>
+<li>因为输入数字后，会产生一个换行符</li>
+<li>输入一个sc.nextLine()，把换行符吃掉就行了</li>
+</ul>
+</li>
+<li>Java中，判断对象内容是否相等，只能用equals，否则编程比赛中会扣分</li>
+<li>两个数互质指的是两个数只有公因数1</li>
+<li>快速求最大公因数：辗转相除</li>
+<li>java使用<code>BigInteger</code>来求最大公因数GreatestCommonFactor（GCF）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">BigInteger two=BigInteger.valueOf(<span class="number">2</span>);</span><br><span class="line">BigInteger a=two.pow(<span class="number">20</span>).subtract(BigInteger.ONE);</span><br><span class="line">BigInteger b=two.pow(<span class="number">19</span>);</span><br><span class="line">BigInteger gcd=a.gcd(b);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>快速幂Java实现</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">quickPower</span><span class="params">(<span class="keyword">long</span> base,<span class="keyword">long</span> power)</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> result=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(power&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(power%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">            power/=<span class="number">2</span>;</span><br><span class="line">            base*=base;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            power/=<span class="number">2</span>;</span><br><span class="line">            result*=base;   <span class="comment">//都在这一步乘到结果中了</span></span><br><span class="line">            base*=base;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>快速幂java实现，位运算优化版</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">normalPower</span><span class="params">(<span class="keyword">long</span> base,<span class="keyword">long</span> power)</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> result=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(power&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>((power &amp; <span class="number">1</span>)==<span class="number">1</span> ) result*=base;   <span class="comment">//这里与运算相当于判断二进制形式下最后一位是否是1，即是否是奇数</span></span><br><span class="line">        power&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        base*=base;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>java int类型最大值约为*<em>21</em>10<sup>8</sup>**</li>
+<li><code>&amp;与运算</code>:二进制形式下，只有相同位置上都为1，才为1，否则为0</li>
+</ul>
+<h2 id="2021-2-19"><a href="#2021-2-19" class="headerlink" title="2021/2/19"></a>2021/2/19</h2><ul>
+<li>C++中<code>union</code>类型中，赋值时，各成员只能有一个被赋值，即各成分互斥。</li>
+<li><code>union</code>类型只能赋值一个成员，具有互斥性</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">union</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> cls;</span><br><span class="line">    <span class="keyword">char</span> position[<span class="number">10</span>];</span><br><span class="line">&#125;category;</span><br></pre></td></tr></table></figure>
+<h2 id="2021-2-21"><a href="#2021-2-21" class="headerlink" title="2021/2/21"></a>2021/2/21</h2><ul>
+<li>对于多个时间区间的任务，要想完成尽量多的任务（不能中断某个任务），每次选取（可选任务中）结束时间最早的即可。<strong>即贪心算法</strong>。</li>
+<li>如果<code>(left+right)/2</code>产生溢出，那么可以写成<code>left+(right-left)/2</code></li>
+<li>二分查找尽量用非递归写法 </li>
+<li>一般的OJ，其能承受的时间复杂度在每秒**10<sup>8</sup>**以内，所以O(n<sup>2</sup>)复杂度的问题，当n=10<sup>5</sup>，时间复杂度就变得不可接受</li>
+<li><strong>二路归并排序</strong><ul>
+<li>流程：<ul>
+<li>先将两个一组进行排序</li>
+<li>然后四个一组排序，八个一组排序…直到所有都被排序</li>
+<li>其中涉及到两个顺序序列合并的问题，用双指针即可</li>
+</ul>
+</li>
+<li>使用递归实现，倒过来思考<ul>
+<li>将原始数组分为左边和右边</li>
+<li>对左右分别进行归并排序</li>
+<li>再将左右两个顺序序列合并为一个顺序序列</li>
+</ul>
+</li>
+<li>时间复杂度O(nlogn)<ul>
+<li>logn是因为每次step*2</li>
+<li>n是因为双指针合并两个有序序列，宏观上需要进行O(n)级别次操作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>编程时将一些变量视为更容易理解的事物，比如归并排序中将step理解为区间长度远远比步长来的更容易理解。</li>
+</ul>
+<h2 id="2021-2-24"><a href="#2021-2-24" class="headerlink" title="2021/2/24"></a>2021/2/24</h2><ul>
+<li>处理日期问题时，不仅要注意闰年闰月的问题，在进行函数编写时要注意，传入的月份是1-12，编程中的通常是0-11，传入时要转换为机器友好形式，输出时也要再转回人类阅读友好形式。</li>
+</ul>
+<h2 id="2021-3-1"><a href="#2021-3-1" class="headerlink" title="2021/3/1"></a>2021/3/1</h2><ul>
+<li>判断一个乘式末尾有多少个0，答案就是min(因子2的个数,因子5的个数)。<ul>
+<li>即使某个乘子末尾本身就用0也不用考虑，因为10本身就是2和5的积。</li>
+</ul>
+</li>
+<li>丑数（因数只有2，3，5）类似的题，都可以用三指针来做<ul>
+<li>开始时三个指针都指向dp数组0位置，每次满足条件+1;</li>
+</ul>
+</li>
+<li>C++的set和map具有排序功能</li>
+<li>注意：在接收字符或字符串后，再接收一行字符，在此之前需要吸收到回车</li>
+</ul>
+<h2 id="2021-3-2"><a href="#2021-3-2" class="headerlink" title="2021/3/2"></a>2021/3/2</h2><ul>
+<li>对于<strong>联通块</strong>问题，常采用计数的方法解决<ul>
+<li>此外，规模较小的可以采用深度优先遍历，规模大的采用宽度优先遍历，否则会栈溢出</li>
+</ul>
+</li>
+<li>int类型大小约为21*10<sup>8</sup>这么大，4字节，32位。</li>
+<li>一般来说OJ，1秒能承受的运算次数在10<sup>7</sup>~10<sup>8</sup></li>
+<li>对于多层循环，如何降低时间复杂度<ul>
+<li>减少层数</li>
+<li>减少范围</li>
+<li>二分法</li>
+<li>空间换时间，提前存储好部分信息以便访问</li>
+</ul>
+</li>
+<li>关于多个数组合成某个数的倍数的问题，考虑用根据余数分组来做。</li>
+<li>对于<strong>多括号嵌套问题</strong>，<strong>先处理最小的括号</strong>，再递归</li>
+</ul>
+<h2 id="2021-3-3"><a href="#2021-3-3" class="headerlink" title="2021/3/3"></a>2021/3/3</h2><ul>
+<li>遇到题目说从某种初始状态到达终态最少需要多少步，这种题型，一般都是BFS宽度优先搜索来解决。</li>
+<li>定义静态二维数组时，第二维的长度须确定。</li>
+<li>所谓回溯就是<ul>
+<li>执行某种行为</li>
+<li>递归</li>
+<li>撤销第一步的行为</li>
+</ul>
+</li>
+<li>深刻体会这种DFS的不同剪枝方法</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*a个字母A，b个字母B，c个字母C，能组成多少种不同的长度位固定n的字符串*/</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 这种DFS的题目，其需要求出的是DFS能走要正确终点的路径数*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c,<span class="keyword">int</span> n)</span></span>&#123;   <span class="comment">//这是我的思路，有某个字母数量还有才能递归下去</span></span><br><span class="line">    <span class="comment">//给出两种终止条件</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(a&gt;<span class="number">0</span>)</span><br><span class="line">        res+=DFS(a<span class="number">-1</span>,b,c,n<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">if</span>(b&gt;<span class="number">0</span>)</span><br><span class="line">        res+=DFS(a,b<span class="number">-1</span>,c,n<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">if</span>(c&gt;<span class="number">0</span>)</span><br><span class="line">        res+=DFS(a,b,c<span class="number">-1</span>,n<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> c, <span class="keyword">int</span> n)</span> </span>&#123;   <span class="comment">//这是答案的思路：先递归下来，如果字母数量由0变成-1，那就剪枝return 0</span></span><br><span class="line">    <span class="comment">//终止条件</span></span><br><span class="line">    <span class="keyword">if</span> (a &lt; <span class="number">0</span> || b &lt; <span class="number">0</span> || c &lt; <span class="number">0</span>)	</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//递归</span></span><br><span class="line">    <span class="keyword">return</span> cal(a - <span class="number">1</span>, b, c, n - <span class="number">1</span>) + cal(a, b - <span class="number">1</span>, c, n - <span class="number">1</span>) + cal(a, b, c - <span class="number">1</span>, n - <span class="number">1</span>);	</span><br><span class="line">    <span class="comment">//这里的返回值代表的是，选择A作为当前位置字母的话后续共有多少种方案+选择B...+选择C...</span></span><br><span class="line">    <span class="comment">//cal(a-1...)说明该方案选择A作为当前位置的字母，其返回值代表的是当前位置选择了A这种方案一共有多少种不同方法走到底，若下一步中判断出了a-1是&lt;0的，那么返回值是0，相当于对这个方案做了剪枝</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,DFS(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,cal(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="语言笔记"><a href="#语言笔记" class="headerlink" title="语言笔记"></a>语言笔记</h1><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="一般问题"><a href="#一般问题" class="headerlink" title="一般问题"></a>一般问题</h3><ul>
+<li>BigInteger的使用</li>
+</ul>
+<h3 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h3><ul>
 <li>java.lang.String是在堆内存中创建的，创建后不可改变。<ul>
-<li>删除或替换某部分，需要用<code>.substring()</code>方法，或者使用StringBuilder实现</li>
+<li>删除或替换某部分，需要用<code>.substring()</code>方法，或者使用StringBuil</li>
+<li>der实现</li>
 </ul>
 </li>
 <li>比较字符串的<em>字典序</em>，使用<code>compareTo()</code>方法</li>
+<li>字符串转数字，用<code>Integer.parseInt()</code><h3 id="数组处理"><a href="#数组处理" class="headerlink" title="数组处理"></a>数组处理</h3></li>
+<li>截取数组<code>Arrays.copyOfRange()</code></li>
+<li>java boolean数组默认为false</li>
+<li>算法题<code>丑数</code>（质因数只能是2、3、5的数）中，使用<strong>三指针</strong>，不断将*<em>2<sup>a</sup>\</em>3<sup>b</sup>*5<sup>c</sup>**里最小的值添加到dp数组中。</li>
 </ul>
 <h3 id="序列处理"><a href="#序列处理" class="headerlink" title="序列处理"></a>序列处理</h3><ul>
 <li>快速高效求和<ul>
@@ -297,13 +498,135 @@
 </li>
 </ul>
 </li>
-<li>stream与reduce<ul>
-<li>求和并打印<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;Integer&gt;stream=Arrays.stream(<span class="keyword">new</span> Integer[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;);</span><br><span class="line">stream.reduce((i,j)-&gt;i+j).ifPresent(System.out::println);</span><br></pre></td></tr></table></figure></li>
-<li>求最大值<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stream.reduce(Integer::max).ifPresent(System.out::println);</span><br></pre></td></tr></table></figure></li>
+<li>求最大值<code>return Arrays.stream(dp).reduce(0,Integer::max)</code></li>
+<li>求累积<ul>
+<li><code>Arrays.stream(arr).reduce(1,(i,j)-&gt;i*j)</code></li>
 </ul>
 </li>
-<li>对于等差数列求和，用求和公式速度更快</li>
+<li>stream与reduce<ul>
+<li>求和并打印<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Stream&lt;Integer&gt;stream=Arrays.stream(<span class="keyword">new</span> Integer[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;);</span><br><span class="line">stream.reduce((i,j)-&gt;i+j).ifPresent(System.out::println);</span><br></pre></td></tr></table></figure></li>
+<li>求最大值<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stream.reduce(Integer::max).ifPresent(System.out::println);</span><br></pre></td></tr></table></figure>
+<h3 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h3></li>
 </ul>
+</li>
+</ul>
+<ul>
+<li>在Calendar中，1月是0，周日是1、周一是2，以下表示2000年12月25日</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Calendar calendar=Calendar.getInstance();</span><br><span class="line">calendar.set(Calendar.YEAR,<span class="number">2000</span>);</span><br><span class="line">calendar.set(Calendar.MONTH,<span class="number">11</span>);</span><br><span class="line">calendar.set(Calendar.DAY_OF_MONTH,<span class="number">25</span>);</span><br><span class="line">System.out.println(calendar.get(Calendar.DAY_OF_WEEK));</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><h2 id="一般问题-1"><a href="#一般问题-1" class="headerlink" title="一般问题"></a>一般问题</h2><ul>
+<li><p>以数组为参数的函数内部，无法正确用<code>sizeof(arr)/sizeof(arr[0])</code>计算出数组长度，因为这时的数组名arr已经退化为普通的指针，失去了原来作为数组名的特殊数据结构，所以只能在外边计算完len，作为参数传入才可。</p>
+</li>
+<li><p>使用<code>memset</code>需要添加<code>&lt;cstring&gt;</code>头文件，只能赋值0或者1，因为它是以字节为单位进行赋值的，如果赋其他值，可能会出错，赋其他值可以用<strong>fill函数</strong>，但更慢</p>
+<ul>
+<li><code>memeset(数组名，值，sizeof(数组名))</code><ul>
+<li><strong>注意：这里sizeof（数组名）是计算出这个数组有多少个字节！</strong>，直接写数组的长度会出错</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>C++中的随机数</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line">srand((<span class="keyword">unsigned</span>)time(<span class="literal">NULL</span>));</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,rand());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其范围是<code>[0,RAND_MAX]</code>，RAND_MAX是stdlib头文件中的一个常数<ul>
+<li>故如果要输出[a,b]范围内的随机数，需要使用rand()%(b-a+1)+a,</li>
+</ul>
+</li>
+<li>C++全排列的写法，<strong>注意，next_permutation第二个参数要多一位</strong></li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> arr[]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d\n&quot;</span>,arr[<span class="number">0</span>],arr[<span class="number">1</span>],arr[<span class="number">2</span>]);</span><br><span class="line">    &#125;<span class="keyword">while</span>(next_permutation(arr,arr+<span class="number">3</span>));		<span class="comment">//注意这里是arr+3！！</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>C++动态创建多维数组的方法</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a,b,c,m;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>,&amp;a,&amp;b,&amp;c,&amp;m);</span><br><span class="line"><span class="keyword">int</span> *ships=<span class="keyword">new</span> <span class="keyword">int</span>[a*b*c];</span><br><span class="line"><span class="keyword">int</span> (*attack)[<span class="number">7</span>]=<span class="keyword">new</span> <span class="keyword">int</span>[m][<span class="number">7</span>];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>二维数组初始化<ul>
+<li><code>bool mark[N][N]=&#123;false&#125;;</code></li>
+</ul>
+</li>
+<li>set集合添加基本数据类型以外的数据，需要添加比较器，如添加char*</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cmp</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">char</span>*a,<span class="keyword">char</span>*b)</span></span>&#123;	<span class="comment">//必须重载()括号运算符</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">strcmp</span>(a,b)&lt;<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">char</span> *,cmp&gt; record_digits;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>结构体作为vector、set、que等的参数可以直接写成这样</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span>*s;</span><br><span class="line">    <span class="keyword">int</span> key;</span><br><span class="line">    Node(<span class="keyword">char</span>*_s,<span class="keyword">int</span> _key):s(_s),key(_key)&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">queue</span>&lt;Node&gt;que;</span><br><span class="line">    <span class="keyword">char</span>*s=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    que.push(&#123;s,<span class="number">2</span>&#125;);</span><br><span class="line">    que.push(Node(s,<span class="number">1</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="输入输出问题"><a href="#输入输出问题" class="headerlink" title="输入输出问题"></a>输入输出问题</h2><ul>
+<li>scanf中<ul>
+<li>float是<code>%f</code>，double是<code>%lf</code></li>
+<li>long long是<code>%lld</code></li>
+</ul>
+</li>
+<li>printf中<ul>
+<li>float和double都是<code>%f</code></li>
+<li>long long仍然是<code>%lld</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="字符和字符串处理"><a href="#字符和字符串处理" class="headerlink" title="字符和字符串处理"></a>字符和字符串处理</h2><ul>
+<li><p>手动拷贝字符数组（字符串）时，要在末尾加<code>\0</code></p>
+</li>
+<li><p>关于字符和字符串的输入，某些情况下，要注意用getchar()吸收回车</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a,b;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;a);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,&amp;b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;a=%c,b=%c&quot;</span>,a,b);</span><br><span class="line"><span class="comment">//控制台如下</span></span><br><span class="line">a 	<span class="comment">//输入a然后enter，没等输入b直接出了结果，把回车（换行符）赋给了b</span></span><br><span class="line">a=a,b=</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>数字转字符串</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">intToStr</span><span class="params">(<span class="keyword">int</span> x,<span class="built_in">string</span>&amp;res)</span></span>&#123;</span><br><span class="line">    <span class="built_in">stringstream</span> ss;</span><br><span class="line">    ss&lt;&lt;x;</span><br><span class="line">    ss&gt;&gt;res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    intToStr(<span class="number">123</span>,s);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;s&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>字符串查找子串</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> a=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line"><span class="keyword">if</span>(a.find(<span class="string">&quot;d&quot;</span>)==<span class="built_in">string</span>::npos)</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;There is no &#x27;d&#x27;&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="comment">//如果找到了</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>sscanf的用法（在C标准库中,&lt;cstdio&gt;或者&lt;stdio.h&gt;）</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ss[]=<span class="string">&quot;10:12:32&quot;</span>;</span><br><span class="line"><span class="keyword">int</span> h,m,s;</span><br><span class="line"><span class="built_in">sscanf</span>(ss,<span class="string">&quot;%d:%d:%d&quot;</span>,&amp;h,&amp;m,&amp;s);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d,%d,%d&quot;</span>,h,m,s);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>结构体作为参数时的快捷写法</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">int</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">	<span class="built_in">queue</span>&lt;Point&gt;que;</span><br><span class="line">	que.push(&#123;i,j&#125;);    </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>应该是编译器做了优化，对两个内容相同的字符串指针进行比较，结果是true</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span>*a=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    <span class="keyword">char</span>*b=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> c=<span class="number">1</span>,d=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> *cc=&amp;c;</span><br><span class="line">    <span class="keyword">int</span> *dd=&amp;d;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>*&gt;s1;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">char</span>*&gt;s2;</span><br><span class="line"></span><br><span class="line">    s2.insert(a);</span><br><span class="line">    s2.insert(b);</span><br><span class="line"></span><br><span class="line">    s1.insert(cc);</span><br><span class="line">    s1.insert(dd);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, s1.size());</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,s2.size());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//结果是</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>对一个字符指针来说<ul>
+<li>使用<code>%s</code>则输出字符串</li>
+<li>使用<code>%p</code>则输出字符指针地址</li>
+</ul>
+</li>
+</ul>
+<h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><ul>
+<li><p>嵌套vector&lt;&lt;vector&gt; &gt;，中间要加括号，否则有些C++11之前的编译器，会把它当成移位操作</p>
+</li>
+<li><p>STL中，<strong>只有在vector和string中，才允许使用vi.begin()+3</strong>这种迭代器加上整数的写法</p>
+</li>
+<li><p><code>sort</code>函数需要加上<code>&lt;algorithm&gt;</code>和<code>using namespace std;</code></p>
+<ul>
+<li>sort(首元素<strong>地址</strong>，尾元素的<strong>下一个地址</strong>,比较函数)</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a&gt;b;</span><br><span class="line">&#125;	<span class="comment">//从高到低排列</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>第三个参数填入cmp，即可实现从大到小排序</li>
+</ul>
+</li>
+<li><p>队列出队，先用front再用pop</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Point head=que.front();</span><br><span class="line">que.pop();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>动态二维数组</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt;group;</span><br><span class="line"><span class="comment">//指定外层初始长度</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt;group(K);</span><br><span class="line"><span class="comment">//指定外层和内层初始长度</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt;group(K,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(<span class="number">3</span>));</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -381,7 +704,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">算法学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2020-12-23"><span class="nav-number">1.1.</span> <span class="nav-text">2020&#x2F;12&#x2F;23</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2020-12-24"><span class="nav-number">1.2.</span> <span class="nav-text">2020&#x2F;12&#x2F;24</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2020-12-25"><span class="nav-number">1.3.</span> <span class="nav-text">2020&#x2F;12&#x2F;25</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-4"><span class="nav-number">1.4.</span> <span class="nav-text">2021&#x2F;1&#x2F;4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-11"><span class="nav-number">1.5.</span> <span class="nav-text">2021&#x2F;1&#x2F;11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-12"><span class="nav-number">1.6.</span> <span class="nav-text">2021&#x2F;1&#x2F;12</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0"><span class="nav-number">2.</span> <span class="nav-text">语言笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">2.1.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86"><span class="nav-number">2.1.1.</span> <span class="nav-text">字符串处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%A4%84%E7%90%86"><span class="nav-number">2.1.2.</span> <span class="nav-text">序列处理</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">算法学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2020-12-23"><span class="nav-number">1.1.</span> <span class="nav-text">2020&#x2F;12&#x2F;23</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2020-12-24"><span class="nav-number">1.2.</span> <span class="nav-text">2020&#x2F;12&#x2F;24</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2020-12-25"><span class="nav-number">1.3.</span> <span class="nav-text">2020&#x2F;12&#x2F;25</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-4"><span class="nav-number">1.4.</span> <span class="nav-text">2021&#x2F;1&#x2F;4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-11"><span class="nav-number">1.5.</span> <span class="nav-text">2021&#x2F;1&#x2F;11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-12"><span class="nav-number">1.6.</span> <span class="nav-text">2021&#x2F;1&#x2F;12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-13"><span class="nav-number">1.7.</span> <span class="nav-text">2021&#x2F;1&#x2F;13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-22"><span class="nav-number">1.8.</span> <span class="nav-text">2021&#x2F;1&#x2F;22</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-25"><span class="nav-number">1.9.</span> <span class="nav-text">2021&#x2F;1&#x2F;25</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-26"><span class="nav-number">1.10.</span> <span class="nav-text">2021&#x2F;1&#x2F;26</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-27"><span class="nav-number">1.11.</span> <span class="nav-text">2021&#x2F;1&#x2F;27</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-28"><span class="nav-number">1.12.</span> <span class="nav-text">2021&#x2F;1&#x2F;28</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-1-29"><span class="nav-number">1.13.</span> <span class="nav-text">2021&#x2F;1&#x2F;29</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-2-17"><span class="nav-number">1.14.</span> <span class="nav-text">2021&#x2F;2&#x2F;17</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-2-19"><span class="nav-number">1.15.</span> <span class="nav-text">2021&#x2F;2&#x2F;19</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-2-21"><span class="nav-number">1.16.</span> <span class="nav-text">2021&#x2F;2&#x2F;21</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-2-24"><span class="nav-number">1.17.</span> <span class="nav-text">2021&#x2F;2&#x2F;24</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-3-1"><span class="nav-number">1.18.</span> <span class="nav-text">2021&#x2F;3&#x2F;1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-3-2"><span class="nav-number">1.19.</span> <span class="nav-text">2021&#x2F;3&#x2F;2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2021-3-3"><span class="nav-number">1.20.</span> <span class="nav-text">2021&#x2F;3&#x2F;3</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0"><span class="nav-number">2.</span> <span class="nav-text">语言笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">2.1.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E9%97%AE%E9%A2%98"><span class="nav-number">2.1.1.</span> <span class="nav-text">一般问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86"><span class="nav-number">2.1.2.</span> <span class="nav-text">字符串处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%A4%84%E7%90%86"><span class="nav-number">2.1.3.</span> <span class="nav-text">数组处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%A4%84%E7%90%86"><span class="nav-number">2.1.4.</span> <span class="nav-text">序列处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F"><span class="nav-number">2.1.5.</span> <span class="nav-text">日期</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C"><span class="nav-number">3.</span> <span class="nav-text">C++</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E9%97%AE%E9%A2%98-1"><span class="nav-number">3.1.</span> <span class="nav-text">一般问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98"><span class="nav-number">3.2.</span> <span class="nav-text">输入输出问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86"><span class="nav-number">3.3.</span> <span class="nav-text">字符和字符串处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STL"><span class="nav-number">3.4.</span> <span class="nav-text">STL</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -428,8 +751,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2021-01</span>
+  &copy; 2021-01 – 
+  <span itemprop="copyrightYear">2021-03</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -438,7 +761,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共13.5k字</span>
+  <span class="post-count">博客全站共17.5k字</span>
 </div>
 
 
