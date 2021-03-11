@@ -149,11 +149,12 @@
           <div class="content index posts-expand">
             
     
+    
       
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/11/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/11/%E6%88%91%E7%9A%84%E7%BC%96%E7%A8%8B%E6%97%A5%E5%B8%B8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -167,7 +168,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/11/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">算法心得（持续更新..）</a>
+            <a href="/2021/01/11/%E6%88%91%E7%9A%84%E7%BC%96%E7%A8%8B%E6%97%A5%E5%B8%B8/" class="post-title-link" itemprop="url">算法心得（持续更新..）</a>
         </h2>
 
         <div class="post-meta">
@@ -184,7 +185,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-08 17:02:24" itemprop="dateModified" datetime="2021-03-08T17:02:24+08:00">2021-03-08</time>
+                <time title="修改时间：2021-03-11 15:10:05" itemprop="dateModified" datetime="2021-03-11T15:10:05+08:00">2021-03-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -473,7 +474,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*a个字母A，b个字母B，c个字母C，能组成多少种不同的长度位固定n的字符串*/</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 这种DFS的题目，其需要求出的是DFS能走要正确终点的路径数*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c,<span class="keyword">int</span> n)</span></span>&#123;   <span class="comment">//这是我的思路，有某个字母数量还有才能递归下去</span></span><br><span class="line">    <span class="comment">//给出两种终止条件</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(a&gt;<span class="number">0</span>)</span><br><span class="line">        res+=DFS(a<span class="number">-1</span>,b,c,n<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">if</span>(b&gt;<span class="number">0</span>)</span><br><span class="line">        res+=DFS(a,b<span class="number">-1</span>,c,n<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">if</span>(c&gt;<span class="number">0</span>)</span><br><span class="line">        res+=DFS(a,b,c<span class="number">-1</span>,n<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> c, <span class="keyword">int</span> n)</span> </span>&#123;   <span class="comment">//这是答案的思路：先递归下来，如果字母数量由0变成-1，那就剪枝return 0</span></span><br><span class="line">    <span class="comment">//终止条件</span></span><br><span class="line">    <span class="keyword">if</span> (a &lt; <span class="number">0</span> || b &lt; <span class="number">0</span> || c &lt; <span class="number">0</span>)	</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//递归</span></span><br><span class="line">    <span class="keyword">return</span> cal(a - <span class="number">1</span>, b, c, n - <span class="number">1</span>) + cal(a, b - <span class="number">1</span>, c, n - <span class="number">1</span>) + cal(a, b, c - <span class="number">1</span>, n - <span class="number">1</span>);	</span><br><span class="line">    <span class="comment">//这里的返回值代表的是，选择A作为当前位置字母的话后续共有多少种方案+选择B...+选择C...</span></span><br><span class="line">    <span class="comment">//cal(a-1...)说明该方案选择A作为当前位置的字母，其返回值代表的是当前位置选择了A这种方案一共有多少种不同方法走到底，若下一步中判断出了a-1是&lt;0的，那么返回值是0，相当于对这个方案做了剪枝</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,DFS(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,cal(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="2021-3-4"><a href="#2021-3-4" class="headerlink" title="2021/3/4"></a>2021/3/4</h2><ul>
 <li>互质指的是两个数的最大公约数是1</li>
-<li>求最大公约（因）数，就用辗转相除法</li>
+<li>求最大公因数，就用辗转相除法</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//递归简约版</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>)<span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> gcd(b,a%b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
@@ -569,6 +570,7 @@
 <li>减少for循环层数</li>
 <li>减少每层的枚举范围</li>
 <li>二分法（对于顺序序列）</li>
+<li>缓存+查询</li>
 </ul>
 </li>
 <li>对于某种状态都有后续两种状态的情形，可以理解为一颗二叉树</li>
@@ -580,9 +582,92 @@
 </li>
 </ul>
 <h2 id="2021-3-8"><a href="#2021-3-8" class="headerlink" title="2021/3/8"></a>2021/3/8</h2><ul>
-<li><h1 id="语言相关"><a href="#语言相关" class="headerlink" title="语言相关"></a>语言相关</h1></li>
+<li>LCS最长公共子串的dp求解方法，注意核心在于<code>max(dp[i-1][j-1],dp[i][j-1],dp[i-1][j])</code></li>
 </ul>
-<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="一般问题"><a href="#一般问题" class="headerlink" title="一般问题"></a>一般问题</h3><ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s1[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">char</span> s2[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">int</span> dp[<span class="number">101</span>][<span class="number">101</span>];</span><br><span class="line">    gets(s1);</span><br><span class="line">    gets(s2);</span><br><span class="line">    <span class="keyword">int</span> len1=<span class="built_in">strlen</span>(s1);</span><br><span class="line">    <span class="keyword">int</span> len2=<span class="built_in">strlen</span>(s2);</span><br><span class="line">    <span class="comment">//初始化</span></span><br><span class="line">    fill(dp[<span class="number">0</span>],dp[<span class="number">0</span>]+<span class="number">101</span>*<span class="number">101</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len1+<span class="number">1</span>;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;len2+<span class="number">1</span>;j++)&#123;</span><br><span class="line">            <span class="comment">//计算三个值，取最大值</span></span><br><span class="line">            <span class="keyword">int</span> t=dp[i<span class="number">-1</span>][j<span class="number">-1</span>];</span><br><span class="line">            <span class="keyword">if</span>(s1[i]==s2[j])</span><br><span class="line">                t+=<span class="number">1</span>;</span><br><span class="line">            dp[i][j]=max(max(t,dp[i][j<span class="number">-1</span>]),dp[i<span class="number">-1</span>][j<span class="number">-1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,dp[len1][len2]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>内存优化版本，用一维数组替换矩阵</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//LCS最长公共子串的dp 一维数组写法</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s1[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">char</span> s2[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">int</span> dp[<span class="number">101</span>];</span><br><span class="line">    <span class="keyword">int</span> temp[<span class="number">101</span>];</span><br><span class="line">    gets(s1);</span><br><span class="line">    gets(s2);</span><br><span class="line">    <span class="keyword">int</span> len1=<span class="built_in">strlen</span>(s1);</span><br><span class="line">    <span class="keyword">int</span> len2=<span class="built_in">strlen</span>(s2);</span><br><span class="line">    <span class="comment">//初始化dp数组</span></span><br><span class="line">    fill(dp,dp+<span class="number">101</span>,<span class="number">0</span>);</span><br><span class="line">    fill(temp,temp+<span class="number">101</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len1;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;len2;j++)&#123;</span><br><span class="line">            <span class="keyword">int</span> t=dp[j];</span><br><span class="line">            <span class="keyword">if</span>(s1[i]==s2[j]) &#123;</span><br><span class="line">                t+=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            temp[j+<span class="number">1</span>]=max(max(dp[j+<span class="number">1</span>],t),temp[j]);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;len2;k++)</span><br><span class="line">                dp[k+<span class="number">1</span>]=temp[k+<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,dp[len2]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>Clion无法调试，使用202.2.5的版本就可以</li>
+<li>最大公因数用辗转相除法（递归版本简单，上面有代码），最小公倍数用a*b/gcd(a,b)，即a和b的积除以a和b的最大公因数</li>
+</ul>
+<h2 id="2021-3-10"><a href="#2021-3-10" class="headerlink" title="2021/3/10"></a>2021/3/10</h2><ul>
+<li>做了一道选牌的题目，点数为1~13的牌各4张，问不考虑顺序的情况下取13张，一共有多少种组合<ul>
+<li>这道题的核心在于理解什么叫<strong>不考虑顺序</strong>：即顺序不重要，每种牌取出来的张数才是重要的</li>
+<li>所以这道题就转换成了一个DFS问题，即每种牌选0~4张，总数限定13张，一共有多少种可能</li>
+</ul>
+</li>
+</ul>
+<p>回溯法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//深刻理解什么叫不考虑得到牌的先后顺序</span></span><br><span class="line"><span class="comment">//即第一张、第二章拿到A 和 第一张、第三张拿到A是一样的</span></span><br><span class="line"><span class="comment">//也就是说，重要的是A的张数</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> cards[<span class="number">13</span>];</span><br><span class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> chosen=<span class="number">0</span>;   <span class="comment">//记录已经选的牌的数量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//k表示选下标为k的牌的张数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="comment">//终止条件</span></span><br><span class="line">    <span class="keyword">if</span>(chosen==<span class="number">13</span>)&#123;</span><br><span class="line">        ans++;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(chosen&gt;<span class="number">13</span>)&#123;</span><br><span class="line">        <span class="comment">//剪枝</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(k==<span class="number">13</span>)&#123;</span><br><span class="line">        <span class="comment">//选完了还没选够13张牌</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">4</span>;i++)&#123;</span><br><span class="line">        chosen+=i;</span><br><span class="line">        cards[k]-=i;</span><br><span class="line">        func(k+<span class="number">1</span>);</span><br><span class="line">        chosen-=i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    fill(cards,cards+<span class="number">13</span>,<span class="number">4</span>);</span><br><span class="line">    func(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>非回溯法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> cards[<span class="number">13</span>];</span><br><span class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">    <span class="comment">//终止条件</span></span><br><span class="line">    <span class="keyword">if</span>(k&gt;<span class="number">13</span> || c&gt;<span class="number">13</span>) <span class="comment">//这里k不能=13是因为每次都是下一轮判断前面的选牌总数</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(c==<span class="number">13</span>)&#123;</span><br><span class="line">        ans++;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//递归主体</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">4</span>;i++)&#123;</span><br><span class="line">        f(k+<span class="number">1</span>,c+i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    fill(cards,cards+<span class="number">13</span>,<span class="number">4</span>);</span><br><span class="line">    f(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>有重复元素的圆排列与环排列的计数问题<ul>
+<li>如何判断手链<code>abc</code>和<code>cab</code>是同一个手链，只是旋转了一下</li>
+<li>第一步：<code>abc</code>-&gt;<code>abcabc</code></li>
+<li>第二步：如果<code>cab</code>是<code>abcabc</code>的子串，那么<code>abc</code>和<code>cab</code>是旋转关系<ul>
+<li>C++中判断子串用<code>s1.find(s2)!=string::npos</code>表示s2是s1的子串</li>
+</ul>
+</li>
+<li>同理：如果加上翻转，那么就判断是否是<code>abcabc</code>和翻转<code>cab</code>的子串关系‘</li>
+</ul>
+</li>
+</ul>
+<h2 id="2021-3-11"><a href="#2021-3-11" class="headerlink" title="2021/3/11"></a>2021/3/11</h2><ul>
+<li><p>在二维数组的两维之间来回切换</p>
+<ul>
+<li><code>cur=0;</code></li>
+<li>for循环中每轮<code>cur=1-cur;</code></li>
+</ul>
+</li>
+<li><p>对于结果需要对某个大数取余的题目，中间结果也需要去余，防止溢出</p>
+<ul>
+<li><code>#define MOD 1000000007</code>，注意没有<code>;</code></li>
+</ul>
+</li>
+<li><p>生成最小生成树的两个经典算法</p>
+<ul>
+<li><p>克鲁斯卡尔算法Kruskal</p>
+<ul>
+<li>将所有边从小到大排序</li>
+<li>每一轮选择最小的边加入已选边集，若形成环，则丢弃该边</li>
+<li>直到选中n-1条边</li>
+</ul>
+</li>
+<li><p>Prim普利姆算法</p>
+<ul>
+<li><p>本质是动态规划，使用三个数组</p>
+<ul>
+<li>selected[n]：记录顶点是否在已选顶点集中</li>
+<li>minDist[n]：记录某顶点距离已选顶点集的最短距离</li>
+<li>parent[n]：记录父节点</li>
+</ul>
+</li>
+<li><p>每一轮实现一个顶点数为1,2,3…n的最小生成树（动态规划）</p>
+</li>
+<li><p>具体方法</p>
+<ol>
+<li><p>选取0号节点加入<strong>已选顶点集</strong>，然后更新<strong>未选顶点</strong>距离已选顶点集的距离</p>
+</li>
+<li><p>在<strong>未选顶点</strong>中选取距离<strong>已选顶点集</strong>最近的点，加入已选顶点集</p>
+</li>
+<li><p>更新<strong>未选顶点</strong>与<strong>已选顶点集</strong>的距离</p>
+</li>
+<li><p>重复2、3步骤直到加入了所有节点</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="语言相关"><a href="#语言相关" class="headerlink" title="语言相关"></a>语言相关</h1><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="一般问题"><a href="#一般问题" class="headerlink" title="一般问题"></a>一般问题</h3><ul>
 <li>BigInteger的使用</li>
 </ul>
 <h3 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h3><ul>
@@ -626,6 +711,22 @@
 
 
 <h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><h2 id="一般问题-1"><a href="#一般问题-1" class="headerlink" title="一般问题"></a>一般问题</h2><ul>
+<li><p>C++中判断子串用<code>s1.find(s2)!=string::npos</code>表示s2是s1的子串</p>
+</li>
+<li><p>typedef long long LL;</p>
+</li>
+<li><p>运算符重载</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">fraction</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> up;</span><br><span class="line">    <span class="keyword">int</span> down;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//构造函数，并保证分子分母互质</span></span><br><span class="line">    fraction(<span class="keyword">int</span> a, <span class="keyword">int</span> b) &#123;</span><br><span class="line">        <span class="keyword">int</span> t = gcd(a, b);</span><br><span class="line">        <span class="keyword">while</span> (t != <span class="number">1</span>) &#123;</span><br><span class="line">            a /= t;</span><br><span class="line">            b /= t;</span><br><span class="line">            t = gcd(a, b);</span><br><span class="line">        &#125;</span><br><span class="line">        up = a;</span><br><span class="line">        down = b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//求最大公因数</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (b == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> a;</span><br><span class="line">        <span class="keyword">return</span> gcd(b, a % b);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//分数除法</span></span><br><span class="line">    <span class="keyword">friend</span> fraction <span class="keyword">operator</span>/(fraction &amp;f1, fraction &amp;f2) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;f1.up * f2.down, f1.down * f2.up&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//分数比大小</span></span><br><span class="line">    <span class="keyword">friend</span> <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(fraction &amp;f1, fraction &amp;f2) &#123;</span><br><span class="line">        <span class="keyword">return</span> f1.up * f2.down &lt; f2.up * f1.down;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">friend</span> <span class="keyword">bool</span> <span class="keyword">operator</span>&gt;(fraction &amp;f1, fraction &amp;f2) &#123;</span><br><span class="line">        <span class="keyword">return</span> !<span class="keyword">operator</span>&lt;(f1, f2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//拷贝构造函数</span></span><br><span class="line">    fraction(fraction &amp;b) &#123;</span><br><span class="line">        up = b.up;</span><br><span class="line">        down = b.down;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><p>C++中除了0，都是true</p>
+<ul>
+<li>故不要用 <code>return person1.age-person2.age</code>作为运算符重载的返回值</li>
+</ul>
+</li>
 <li><p>数组作为参数传递时会退化成指针，无法在函数内得出长度</p>
 </li>
 <li><p>二维数组可以使用全排列<code>next_permutation()</code>吗？</p>
@@ -689,18 +790,27 @@
 
 
 <h2 id="输入输出问题"><a href="#输入输出问题" class="headerlink" title="输入输出问题"></a>输入输出问题</h2><ul>
-<li>scanf中<ul>
+<li><p><code>%5s</code>表示输出宽度为5的字符串（如果长度不够，左边补空字符）</p>
+<ul>
+<li><code>printf(&quot;%*s&quot;,5,&quot;abc&quot;);</code>有上述同样的效果</li>
+</ul>
+</li>
+<li><p>scanf中</p>
+<ul>
 <li>float是<code>%f</code>，double是<code>%lf</code></li>
 <li>long long是<code>%lld</code></li>
 </ul>
 </li>
-<li>printf中<ul>
+<li><p>printf中</p>
+<ul>
 <li>float和double都是<code>%f</code></li>
 <li>long long仍然是<code>%lld</code></li>
 </ul>
 </li>
 </ul>
 <h2 id="字符和字符串处理"><a href="#字符和字符串处理" class="headerlink" title="字符和字符串处理"></a>字符和字符串处理</h2><ul>
+<li><p>逆置字符串:<code>reverse(s.begin(),s.end());</code></p>
+</li>
 <li><p>手动拷贝字符数组（字符串）时，要在末尾加<code>\0</code></p>
 </li>
 <li><p>关于字符和字符串的输入，某些情况下，要注意用getchar()吸收回车</p>
@@ -736,14 +846,51 @@
 </ul>
 </li>
 </ul>
-<h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><ul>
-<li>使用<code>pair</code>需要添加头文件<code>utility</code>和using namespace std;</li>
+<h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><ul>
+<li>插入数据使用<code>push_back</code></li>
+</ul>
+<h3 id="pair"><a href="#pair" class="headerlink" title="pair"></a>pair</h3><ul>
+<li>创建pair的方法<ul>
+<li><code>make_pair(&quot;haha&quot;,2)</code>;</li>
+<li><code>pair&lt;string,int&gt;(&quot;haha&quot;,2)</code></li>
+</ul>
+</li>
+<li>pair中已经定义好了比大小、判断相等的函数<ul>
+<li>因此<code>pair&lt;type T1,Type T2&gt;</code>中如果是基本数据类型，则可以直接进行比大小</li>
+<li>规则是：先比第一个，再比第二个</li>
+</ul>
+</li>
+</ul>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><ul>
+<li><p>set集合去重的原理</p>
+<ul>
+<li><p>其实，set容器在判定已有元素a和新插入元素b是否相等时，是这么做的：1）将a作为左操作数，b作为有操作数，调用比较函数，并返回比较值 2）将b作为左操作数，a作为有操作数，再调用一次比较函数，并返回比较值。如果1、2两步的返回值都是false，则认为a、b是相等的，则b不会被插入set容器中；如果1、2两步的返回值都是true，则可能发生未知行为，<strong>因此，记住一个准则：永远让比较函数对相同元素返回false。</strong></p>
+</li>
+<li><p>其实，set容器在判定已有元素a和新插入元素b是否相等时，是这么做的：<br>1）将a作为左操作数，b作为有操作数，调用比较函数，并返回比较值<br>2）将b作为左操作数，a作为有操作数，再调用一次比较函数，并返回比较值。</p>
+<p>如果1、2两步的返回值都是false，则认为a、b是相等的，则b不会被插入set容器中</p>
+<p><strong>如果1、2两步的返回值都是true，则可能发生未知行为</strong></p>
+</li>
+<li><p>重载&lt;运算符，和自定义struct比较器，都是一样的逻辑</p>
+</li>
+<li><p>为甚么要重载&lt;运算符呢？能不能重载”&lt;=”或者”&gt;=”运算符？答案是不可以。几乎所有的方法或容器都需要排序来满足数学意义上的标准严格弱序化，否则这些方法或容器的行为将不可预知。假设f(x,y)是一个比较函数。 如果该函数满足如下条件则它是严格弱序化的。</p>
+</li>
+</ul>
+</li>
+<li><p>set集合添加基本数据类型以外的数据，有两种方式</p>
+<ul>
+<li>添加比较器</li>
+<li>在类（结构体）中进行<code>&lt;</code>运算符重载</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cmp</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">char</span>*a,<span class="keyword">char</span>*b)</span></span>&#123;	<span class="comment">//必须重载()括号运算符</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">strcmp</span>(a,b)&lt;<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">char</span> *,cmp&gt; record_digits;		</span><br></pre></td></tr></table></figure>
+<h3 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h3><ul>
 <li><code>priority_queue</code>的使用</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">person</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">friend</span> <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(person p1,person p2)&#123;</span><br><span class="line">        <span class="keyword">return</span> p1.age&lt;p2.age;   <span class="comment">//表示age大的优先级高</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">priority_queue</span>&lt;person&gt;priorityQueue;</span><br><span class="line">    priorityQueue.push(person&#123;<span class="number">1</span>&#125;);</span><br><span class="line">    priorityQueue.push(person&#123;<span class="number">3</span>&#125;);</span><br><span class="line">    priorityQueue.push(person&#123;<span class="number">2</span>&#125;);</span><br><span class="line">    priorityQueue.push(person&#123;<span class="number">5</span>&#125;);</span><br><span class="line">    <span class="keyword">while</span>(!priorityQueue.empty())&#123;</span><br><span class="line">        person front=priorityQueue.top();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,front.age);</span><br><span class="line">        priorityQueue.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打印结果</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-
-<ul>
+<h3 id="others"><a href="#others" class="headerlink" title="others"></a>others</h3><ul>
+<li><p>使用<code>pair</code>需要添加头文件<code>utility</code>和using namespace std;</p>
+</li>
 <li><p>嵌套vector&lt;&lt;vector&gt; &gt;，中间要加括号，否则有些C++11之前的编译器，会把它当成移位操作</p>
 </li>
 <li><p>STL中，<strong>只有在vector和string中，才允许使用vi.begin()+3</strong>这种迭代器加上整数的写法</p>
@@ -765,11 +912,6 @@
 <li>动态二维数组</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt;group;</span><br><span class="line"><span class="comment">//指定外层初始长度</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt;group(K);</span><br><span class="line"><span class="comment">//指定外层和内层初始长度</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt;group(K,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(<span class="number">3</span>));</span><br></pre></td></tr></table></figure>
-<ul>
-<li>set集合添加基本数据类型以外的数据，需要添加比较器，如添加char*</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">cmp</span>&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">char</span>*a,<span class="keyword">char</span>*b)</span></span>&#123;	<span class="comment">//必须重载()括号运算符</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">strcmp</span>(a,b)&lt;<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">char</span> *,cmp&gt; record_digits;</span><br></pre></td></tr></table></figure>
-
       
     </div>
 
@@ -855,7 +997,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -898,7 +1040,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共19.6k字</span>
+  <span class="post-count">博客全站共21.7k字</span>
 </div>
 
 
