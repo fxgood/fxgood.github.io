@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>操作系统知识巩固 - 余丰旭的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="余丰旭的博客"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="余丰旭的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="对操作系统的知识进行系统性地梳理和巩固"><meta property="og:type" content="blog"><meta property="og:title" content="操作系统知识巩固"><meta property="og:url" content="https://fxgood.gitee.io/2021/07/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%B7%A9%E5%9B%BA/"><meta property="og:site_name" content="余丰旭的博客"><meta property="og:description" content="对操作系统的知识进行系统性地梳理和巩固"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://img-blog.csdnimg.cn/20210720102741599.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/20210720104445903.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/20210720111513111.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/c5d3e9135e2942febd5b539025b27958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/558eb4359c864086878a858f591844ee.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/495851953b4b44c7bf9a33cda4964fa1.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/5304f639b5274e5a8437bb18892c95ca.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/6ba499eabd9a433b954f297fcfac3955.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/03dff1823dc54adcb3c1ed5cd45577ff.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/25a8c04bacd647548876b3c40266f8a6.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/031200c57a624d418a305f9c5c73b5a2.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/01391ae5656e411ab7a53503ea10340c.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/b1f23d7fdc784571a7b3ae32eb268d96.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/caf293a941384c4f88e5eaef9b895058.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/fecb0132fbeb44cab662564e8f9199d3.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/410a7918acb84746a933ab6a590209b1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/29cba6a04cee4ed4a0987620291e2e10.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/53530d7b5f154102a0af1b16e8b6809e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/fe710b41ec2f458697855281c1b4346b.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/d19c89fdad4247f2812d85e89955e50d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/edeaf28e211540908dc4c5e975bbf903.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/0f4375253dcf4571b2a0ed3d8c3085f3.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/69bad90819994c6b8c2d62a7c899da2d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/64692627c1fa4af19258688b65c5e710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/df0914c320d244fba93dc25a1fbe7977.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/48e5370629f04a6695f37199ffeaf210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/8033b27497c0468c9340fc0fcae5b4a6.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/f37fdd76b0fa494c90e15fbe2f287744.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/a4f2396c6480423fac925651950eb235.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/69ac5ae8948e4d6f9284e888027f3fc1.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/d94ded0cb1a44d088bc453f0dc8f64a2.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/be2f3ec4fc82422eaf53e4a3f981ff42.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/a6d2e24a912d4b7fb323750ed8097dc5.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/a4f9274c5c1644bf8c74f0fde2c0711e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/4dfc5f1056834281b099caa401c74e6a.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/680e3cab635b4ab8a558b7c239b23b3a.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/604199f6a4af4558a3cfa007236495ee.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/6655fef0059c4bf39c02e3ceea304821.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/d26096f2adf84bc9b81afc3d375f89ed.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/bf0b857d85664acf8ea3077b50a65d60.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/7560a78a244c4331b8e044d15cf4cc40.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/c029cb57d468480aae2bdc62884e89bf.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/d3b5ebe1425641ca8ff5ef553bc8a5b5.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/112e877a166f4857bf4d6d211095dc83.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/b841410348284ac9933f922ff4b588db.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/ca2aa6fe1bb24ef49695b046b7195c5d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="og:image" content="https://img-blog.csdnimg.cn/f0f9a31c139d480e96ea4f79d348c113.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70"><meta property="article:published_time" content="2021-07-10T16:00:00.000Z"><meta property="article:modified_time" content="2021-09-09T10:35:24.562Z"><meta property="article:author" content="余丰旭"><meta property="article:tag" content="OS"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://img-blog.csdnimg.cn/20210720102741599.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://fxgood.gitee.io/2021/07/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%B7%A9%E5%9B%BA/"},"headline":"操作系统知识巩固","image":["https://img-blog.csdnimg.cn/20210720102741599.png","https://img-blog.csdnimg.cn/20210720104445903.png","https://img-blog.csdnimg.cn/20210720111513111.png","https://img-blog.csdnimg.cn/558eb4359c864086878a858f591844ee.png","https://img-blog.csdnimg.cn/495851953b4b44c7bf9a33cda4964fa1.png","https://img-blog.csdnimg.cn/5304f639b5274e5a8437bb18892c95ca.png","https://img-blog.csdnimg.cn/6ba499eabd9a433b954f297fcfac3955.png","https://img-blog.csdnimg.cn/03dff1823dc54adcb3c1ed5cd45577ff.png","https://img-blog.csdnimg.cn/25a8c04bacd647548876b3c40266f8a6.png","https://img-blog.csdnimg.cn/031200c57a624d418a305f9c5c73b5a2.png","https://img-blog.csdnimg.cn/01391ae5656e411ab7a53503ea10340c.png","https://img-blog.csdnimg.cn/fecb0132fbeb44cab662564e8f9199d3.png","https://img-blog.csdnimg.cn/fe710b41ec2f458697855281c1b4346b.png","https://img-blog.csdnimg.cn/edeaf28e211540908dc4c5e975bbf903.png","https://img-blog.csdnimg.cn/0f4375253dcf4571b2a0ed3d8c3085f3.png","https://img-blog.csdnimg.cn/f37fdd76b0fa494c90e15fbe2f287744.png","https://img-blog.csdnimg.cn/a4f2396c6480423fac925651950eb235.png","https://img-blog.csdnimg.cn/69ac5ae8948e4d6f9284e888027f3fc1.png","https://img-blog.csdnimg.cn/d94ded0cb1a44d088bc453f0dc8f64a2.png","https://img-blog.csdnimg.cn/be2f3ec4fc82422eaf53e4a3f981ff42.png","https://img-blog.csdnimg.cn/4dfc5f1056834281b099caa401c74e6a.png","https://img-blog.csdnimg.cn/680e3cab635b4ab8a558b7c239b23b3a.png","https://img-blog.csdnimg.cn/604199f6a4af4558a3cfa007236495ee.png","https://img-blog.csdnimg.cn/6655fef0059c4bf39c02e3ceea304821.png"],"datePublished":"2021-07-10T16:00:00.000Z","dateModified":"2021-09-09T10:35:24.562Z","author":{"@type":"Person","name":"余丰旭"},"publisher":{"@type":"Organization","name":"余丰旭的博客","logo":{"@type":"ImageObject","url":"https://fxgood.gitee.io/img/logo.svg"}},"description":"对操作系统的知识进行系统性地梳理和巩固"}</script><link rel="canonical" href="https://fxgood.gitee.io/2021/07/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%B7%A9%E5%9B%BA/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-10T16:00:00.000Z" title="2021/7/11 上午12:00:00">2021-07-11</time>发表</span><span class="level-item"><time dateTime="2021-09-09T10:35:24.562Z" title="2021/9/9 下午6:35:24">2021-09-09</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></span><span class="level-item">1 小时读完 (大约8597个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">操作系统知识巩固</h1><div class="content"><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><ul>
+<li>操作系统基本功能<ul>
+<li>统一管理所有计算机资源<br>  处理器资源<br>  存储资源<br>  IO资源<br>  文件资源 </li>
+<li>实现了对计算机资源的抽象<br>  用户无需面向硬件接口编程<br>  IO设备管理软件，提供读写接口<br>  文件管理软件，提供操作文件接口</li>
+<li>提供了用户与计算机之间的接口<br>  图像窗口形式<br>  命令形式<br>  系统调用形式    <!-- more --></li>
+</ul>
+</li>
+<li>操作系统四大特性<ul>
+<li>并发<br>  并行：多个事件<strong>同一时刻</strong>发生<br>  并发： 多个事件<strong>同一时间间隔</strong>内交替发生（多道程序交替执行）</li>
+<li>共享<ul>
+<li>共享性：操作系统中的资源可以供多个并发的程序共同使用</li>
+<li>分类：<br>  互斥共享<br>  同时共享</li>
+</ul>
+</li>
+<li>虚拟<ul>
+<li>虚拟性：把一个<strong>物理实体</strong>转变为若干个<strong>逻辑实体</strong>       </li>
+<li>虚拟技术又分为：时分复用和空分复用。</li>
+<li><strong>时分复用技术</strong>：资源在时间上进行复用，不同程序<strong>并发</strong>使用；多道程序分时使用计算机硬件资源 <ul>
+<li>虚拟处理器技术<br>  借助多道程序设计技术，为每个程序建立<strong>进程</strong>，多个程序（进程）<strong>分时复用处理器</strong></li>
+<li>虚拟设备技术<br>  物理设备虚拟为多个逻辑设备，每个程序占用一个逻辑设备，多个程序通过逻辑设备<strong>并发访问</strong> </li>
+</ul>
+</li>
+<li><strong>空分复用技术</strong>：用来实现<strong>虚拟磁盘、虚拟内存等</strong>，提高资源的利用率，提升编程效率。<ul>
+<li>虚拟磁盘技术<br>  物理磁盘虚拟为逻辑磁盘C、D、E等逻辑盘，使用起来更加安全、方便 </li>
+<li>虚拟内存技术<br>  在逻辑上扩大程序的存储容量，使用比实际内存更大的容量，大大提升编程效率 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>异步 <ul>
+<li> 在多道程序环境下，允许多个进程并发执行</li>
+<li>进程在使用资源时可能需要等待或放弃</li>
+<li>进程的执行并不是一气呵成，而是以走走停停的形式推进（进程以不可预知的速度向前推进）<h1 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h1></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>为什么需要进程<ul>
+<li>没有配置OS之前，资源属于当前运行的程序（单道程序设计）</li>
+<li>配置OS之后，引入<strong>多道程序设计</strong>的概念</li>
+<li>合理地隔离资源、运行环境，提升资源利用率<img src="https://img-blog.csdnimg.cn/20210720102741599.png" width=50%></li>
+</ul>
+</li>
+<li>进程的作用<ul>
+<li> 进程是系统进行资源分配和调度的基本单位</li>
+<li>进程作为程序独立运行的载体，保障程序正常执行</li>
+<li>进程的存在使得操作系统资源的利用率大幅提升<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">面试官：请你谈一谈你对进程的认识。</span><br><span class="line">答：关于进程我想谈两点，第一是为什么需要进程，第二是进程的作用。</span><br><span class="line">首先，现代操作系统一个重要的设计就是**多道程序设计**，那么在此之前是单道程序设计，在单道程序设计之下，当前运行的程序占有所有的资源，无需进行资源的分配和调度，也就无需进程这个概念。但是到了多道程序设计下，程序之间并发执行，这就涉及到了系统资源的分配和调度，比如CPU资源、存储资源、文件资源、IO资源，所以进程的概念应运而生。</span><br><span class="line">那么进程的作用就应该有一下几点：1. 他是系统资源分配和调度的基本单位 2. 它作为程序独立运行的载体，保障程序正常执行。此外我想，包括进程这个概念，还有操作系统的并发、共享、虚拟、异步这些设计，都是为了一个目标，就是提高系统资源的利用率，所以，第3点，进程的设计也是为了提高系统资源的利用率。</span><br></pre></td></tr></table></figure>
+<h2 id="进程的实体"><a href="#进程的实体" class="headerlink" title="进程的实体"></a>进程的实体</h2></li>
+</ul>
+</li>
+<li>主存中的进程形态：<ul>
+<li>标识符：唯一标记一个进程，用于区别其他进程</li>
+<li>状态：标记进程的进程状态，如：运行态</li>
+<li>程序计数器：进程即将被执行的下一条指令的地址</li>
+<li>内存指针：程序代码、进程数据相关指针</li>
+<li>上下文数据：进程执行时处理器存储的数据（cpu执行时，寄存器和高速缓存中存储的数据就是进程的上下文数据）</li>
+<li>IO状态信息：被进程IO操作所占用的文件列表</li>
+<li>记账信息：使用处理器事件、时钟数总和等<img src="https://img-blog.csdnimg.cn/20210720104445903.png" width=30%></li>
+</ul>
+</li>
+<li>进程控制块(PCB)<ul>
+<li>用于描述和控制进程运行的通用数据结构</li>
+<li>记录进程当前状态和控制进程运行的全部信息</li>
+<li>PCB是使得进程能够独立运行的基本单位（每个进程，都依赖PCB来被操作系统调度或者被控制） </li>
+<li>PCB是OS进行调度进程会被读取的信息，因此PCB是常驻内存的，存放在系统专门开辟的PCB区域内。</li>
+</ul>
+</li>
+<li>进程控制块(PCB)中记录的数据，可以分为四类<ul>
+<li>进程标识符</li>
+<li>处理机状态</li>
+<li>进程调度信息</li>
+<li>进程控制信息<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2>一个进程(Process)可以有一个或多个线程(Thread)</li>
+</ul>
+</li>
+<li>进程是系统进行资源分配和调度的基本单位；而线程是系统进行运行调度的基本单位</li>
+<li>线程包含在进程之中，是进程中实际运行工作的单位</li>
+<li>一个进程可以并发多个线程，每个线程执行不同的任务</li>
+<li>线程共享进程资源<img src="https://img-blog.csdnimg.cn/20210720111513111.png" width=60%></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>进程</th>
+<th>线程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>资源</td>
+<td>资源分配的基本单位</td>
+<td>不拥有资源</td>
+</tr>
+<tr>
+<td>调度</td>
+<td>独立调度的基本单位</td>
+<td>独立调度的最小单位</td>
+</tr>
+<tr>
+<td>系统开销</td>
+<td>开销大</td>
+<td>开销小</td>
+</tr>
+<tr>
+<td>通信</td>
+<td>进程IPC</td>
+<td>读写同一进程数据通信</td>
+</tr>
+</tbody></table>
+<h2 id="五状态模型"><a href="#五状态模型" class="headerlink" title="五状态模型"></a>五状态模型</h2><p>进程的五状态模型包括：创建，<strong>就绪，执行，阻塞</strong>，中止<br> <img src="https://img-blog.csdnimg.cn/c5d3e9135e2942febd5b539025b27958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ul>
+<li>就绪状态<ul>
+<li><strong>定义</strong>：其他资源都准备好，只差CPU资源的状态称为就绪状态</li>
+<li>当进程被分配到除了CPU以外的所有资源后，只要获得CPU的使用权，就可以立即运行</li>
+<li>多个处于就绪状态的进程通常排列成一个队列，称为<strong>就绪队列</strong></li>
+</ul>
+</li>
+<li>执行状态<ul>
+<li><strong>定义</strong>：进程获得CPU，其程序正在执行，称为执行状态</li>
+<li>在单处理机中，在某个时刻只能有一个进程是处于执行状态</li>
+</ul>
+</li>
+<li>阻塞状态<ul>
+<li><strong>定义</strong>：进程由于某种原因如：其他设备未就绪而无法继续执行，从而放弃CPU的状态，称为阻塞状态 </li>
+<li>阻塞进程会组成一个队列，称为<strong>阻塞队列</strong></li>
+</ul>
+</li>
+<li>创建状态<ul>
+<li>创建进程时，拥有PCB但其他资源尚未就绪的状态，称为创建状态<img src="https://img-blog.csdnimg.cn/558eb4359c864086878a858f591844ee.png" width=60%></li>
+<li>操作系统提供fork函数接口创建进程</li>
+</ul>
+</li>
+<li>终止状态<ul>
+<li>定义：进程结束，由系统清理或归还PCB的状态称之为终止状态<img src="https://img-blog.csdnimg.cn/495851953b4b44c7bf9a33cda4964fa1.png" width=60%> 
+## 进程同步</li>
+</ul>
+</li>
+<li>为什么需要进程间同步<ul>
+<li>需要进行进程同步的两个经典问题<br>生产者消费者问题<img src="https://img-blog.csdnimg.cn/5304f639b5274e5a8437bb18892c95ca.png" width=60%> 
+哲学家就餐问题
+<img src="https://img-blog.csdnimg.cn/6ba499eabd9a433b954f297fcfac3955.png" width=60%> </li>
+<li>上述两个模型发生问题的根源：彼此之间没有通信</li>
+<li>进程之间同步所解决的问题</li>
+</ul>
+  1.对竞争资源在多进程之间进行次序的协调<br>  2.使得并发执行的多个进程之间可以有效使用资源和相互合作<ul>
+<li><strong>临界资源</strong><br>指的是一些虽然作为共享资源，却又无法同时被多个线程共同访问的共享资源。当有进程在使用临界资源时，其他进程必须依据操作系统的同步机制，等待占用进程释放该共享资源才可重新竞争使用共享资源。</li>
+</ul>
+</li>
+<li>进程间同步的原则</li>
+</ul>
+<p>1.空闲让进：资源无占用，允许使用<br>2.忙着等待：资源有占用，请求进程等待<br>3.有限等待：保证有限等待时间能够使用资源<br>3.让权等待：等待时，进程需要让出CPU</p>
+<ul>
+<li>线程与线程的同步方法<ul>
+<li>进程同步方法</li>
+</ul>
+  1.消息队列<br>  2.共享存储<br>  3.信号量<ul>
+<li>线程同步方法</li>
+</ul>
+  1.互斥量<br>  2.读写锁<br>  3.自旋锁<br>  4.条件变量</li>
+</ul>
+<h2 id="Linux的进程管理"><a href="#Linux的进程管理" class="headerlink" title="Linux的进程管理"></a>Linux的进程管理</h2><h3 id="Linux进程的相关概念"><a href="#Linux进程的相关概念" class="headerlink" title="Linux进程的相关概念"></a>Linux进程的相关概念</h3><ul>
+<li><p>进程的类型：</p>
+<ul>
+<li><p>前台进程：<br>  1.前台进程就是具有中断，可以与用户交互的进程</p>
+</li>
+<li><p>后台进程：<br>  1.与前台进程相对，没有占用终端的就是后台进程；<br>  2.后台程序基本上不和用户交互，优先级比前台进程低<br>  3.将需要执行的命令以<code>&amp;</code>符号结束</p>
+</li>
+<li><p>守护进程：<br>  1.守护(daemon)进程是特殊的后台进程；<br>  2.很多守护进程在系统引导的时候启动，一直运行直到系统关闭；<br>  3.linux有很多典型的守护进程；<br>  4.进程名字以<code>d</code>结尾的一般都是守护进程，如<code>crond</code>,<code>sshd</code>,<code>httpd</code>,<code>mysqld</code></p>
+</li>
+<li><p>操作系统提供fork函数接口创建进程</p>
+<img src="https://img-blog.csdnimg.cn/03dff1823dc54adcb3c1ed5cd45577ff.png" width=60%></li>
+<li><p>进程的标记</p>
+<ul>
+<li>进程ID</li>
+</ul>
+<p>  1.唯一性<br>  2.负整数，最大值由操作系统限定<br>  3.ID为0的进程为idle进程，是系统创建的第一个进程<br>  4.ID为1的进程为init进程，是0号进程的子进程，完成系统初始化<br>  5.Init进程是所有用户进程的祖先进程 </p>
+<ul>
+<li>状态符号<img src="https://img-blog.csdnimg.cn/25a8c04bacd647548876b3c40266f8a6.png" width=80%>
+### 操作Linux进程的相关命令</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ps命令</p>
+</li>
+</ul>
+<p>1.ps是process status的缩写<br>2.可以添加<code>-ef</code>或者<code>-aux</code>展示详细进程详细信息<br>3.搜索某个进程的详细信息<code>ps -ef | grep python3</code><br>4.查询进程树<code>ps -ef --forest</code><br>5.查询某个用户的进程<code>ps -u yfx</code><br>6.按照cpu的使用频率进行排序<code>ps -aux --sort=-pcpu</code><br>7.按照内存使用的状况进行排序<code>ps - aux --sort=-pmem</code></p>
+<ul>
+<li>top命令</li>
+</ul>
+<p>1.与ps的区别是，ps是进程状态的静态快照，而top命令是动态监测进程状态</p>
+<ul>
+<li>kill命令 </li>
+</ul>
+<p>1.<code>kill -9 进程号</code> 无条件终止进程</p>
+<h1 id="作业管理"><a href="#作业管理" class="headerlink" title="作业管理"></a>作业管理</h1><p>作业管理和进程管理的区别：作业是一项任务，需要至少一个进程来实现。</p>
+<h2 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h2><h3 id="进程调度概述"><a href="#进程调度概述" class="headerlink" title="进程调度概述"></a>进程调度概述</h3><ul>
+<li>进程调度：计算机通过决策决定哪个<strong>就绪进程</strong>可以获得CPU的使用权（多道程序设计）</li>
+<li>进程调度的步骤</li>
+</ul>
+<p>1.保留旧进程的运行信息，请出旧进程<br>2.选择新进程，准备运行环境并分配cpu</p>
+<ul>
+<li>新老进程的上下文切换机制<br>进程的上下文不仅包括了虚拟内存、栈、全局变量等用户空间的资源，还包括了内核堆栈、寄存器等内核空间的状态。<img src="https://img-blog.csdnimg.cn/031200c57a624d418a305f9c5c73b5a2.png" width=60%>
+### 进程调度算法</li>
+<li>两种调度的方式</li>
+</ul>
+<p>1.非抢占式的调度<br>2.抢占式的调度</p>
+<ul>
+<li>进程调度算法</li>
+</ul>
+<p>1.先来先服务<br>2.短进程优先<br>3.高优先权优先<br>4.时间片轮转</p>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><p>死锁：多个进程在执行过程中，由于竞争资源或者彼此通信而造成的一种阻塞现象，若无外力作用，它们都将无法推进下去。此时，称系统处于死锁状态或者系统产生了死锁。这些永远都在互相等待的进程，称为死锁进程。</p>
+<h3 id="死锁的产生"><a href="#死锁的产生" class="headerlink" title="死锁的产生"></a>死锁的产生</h3><ul>
+<li>死锁产生的原因</li>
+</ul>
+<p>1.竞争资源<br>2.进程调度顺序不当</p>
+<ul>
+<li>死锁的四个<strong>必要条件</strong>（如果出现死锁，必然存在下边四个条件）</li>
+</ul>
+<ol>
+<li>互斥条件<br>资源同一时间只能允许一个进程访问</li>
+<li>请求保持条件<br>进程拥有至少一个资源，在请求别的资源未果发生阻塞时，不释放自身拥有的资源</li>
+<li>不可剥夺条件<br>只有进程完成对自身资源的使用后，才会释放资源。别人无法使之释放。</li>
+<li>循环等待条件<br>多个进程之间存在资源请求的环路<h3 id="死锁的处理"><a href="#死锁的处理" class="headerlink" title="死锁的处理"></a>死锁的处理</h3></li>
+</ol>
+<ul>
+<li><p>预防死锁</p>
+<ul>
+<li>破坏请求保持条件</li>
+</ul>
+<p>  1.进程运行之前，一次性申请所有需要的资源<br>  2.并且在运行期间不会提出新的资源请求</p>
+<ul>
+<li>破坏不可剥夺条件</li>
+</ul>
+<p>  1.当一个进程请求新的资源得不到满足时，必须释放占有的资源<br>  2.进程运行时占用的资源可以被释放</p>
+<ul>
+<li>破坏环路等待条件 </li>
+</ul>
+<p>  1.可用资源线性排序，申请必须按照需要递增申请</p>
+  <img src="https://img-blog.csdnimg.cn/01391ae5656e411ab7a53503ea10340c.png" width=60%>
+  假如进程1和2都需要B和D两种资源，如果要发生死锁的话，1先申请B，2申请D，然后1申请D，2申请B。
+  但是按照递增顺序申请，只能先申请B再申请D，就预防了死锁。</li>
+<li><p>避免死锁</p>
+<ul>
+<li>避免死锁和预防死锁的区别<br>二者都是通过施加某些限制条件，来预防死锁发生。<ul>
+<li>差别：</li>
+</ul>
+</li>
+</ul>
+<p>  1.预防死锁所施加的限制条件较严格，可能会导致系统资源利用率和系统吞吐量降低。（设置某些条件，去破坏产生死锁的四个必要条件中的一个或几个）<br>  2.避免死锁所施加限制条件较宽松，可获得较高的资源利用率和系统吞吐量，有利于进程的并发执行。（在资源的动态分配过程中，用某种方法去防止系统进入不安全状态）</p>
+<ul>
+<li>银行家算法<ul>
+<li>是一个可操作的著名的避免死锁的算法</li>
+<li>以银行借贷系统分配策略为基础的算法<br><img src="https://img-blog.csdnimg.cn/b1f23d7fdc784571a7b3ae32eb268d96.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/caf293a941384c4f88e5eaef9b895058.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="存储管理"><a href="#存储管理" class="headerlink" title="存储管理"></a>存储管理</h1><h2 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h2><h3 id="单一连续分配"><a href="#单一连续分配" class="headerlink" title="单一连续分配"></a>单一连续分配</h3><p>只能在单用户、单进程的操作系统中使用</p>
+<h3 id="固定分区分配"><a href="#固定分区分配" class="headerlink" title="固定分区分配"></a>固定分区分配</h3><p>1.内存空间被划分为若干固定大小的区域<br>2.每个分区只提供给一个程序使用，互不干扰<br><img src="https://img-blog.csdnimg.cn/fecb0132fbeb44cab662564e8f9199d3.png" width=20%></p>
+<h3 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h3><p>根据进程实际需要，动态分配内存空间</p>
+<ul>
+<li>动态分区空闲表数据结构<br><img src="https://img-blog.csdnimg.cn/410a7918acb84746a933ab6a590209b1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>动态分区空闲链数据结构<br><img src="https://img-blog.csdnimg.cn/29cba6a04cee4ed4a0987620291e2e10.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>内存分配过程</li>
+</ul>
+<ol>
+<li>首次适应算法（First Fit)：</li>
+</ol>
+<p><strong>算法思想</strong>：将空闲分区链以<strong>地址递增的顺序</strong>连接；在进行内存分配时，从链首开始顺序查找，直到找到一块分区的大小可以满足需求时，按照该作业的大小，从该分区中分配出内存，将剩下的空闲分区仍然链在空闲分区链中。<br><strong>优点</strong>：高址部分的大的空闲分区得到保留，为大作业的内存分配创造了条件<br><strong>缺点</strong>：(1)每次都是优先利用低址部分的空闲分区，造成低址部分产生大量的外碎片。<br>(2)每次都是从低址部分查找，使得查找空闲分区的开销增大<br>2. 循环首次适应算法(Next Fit) ：<br><strong>算法思想</strong>：配内存时不是从链首进行查找可以分配内存的空闲分区，而是<strong>从上一次分配内存的空闲分区的下一个分区</strong>开始查找，直到找到可以为该进程分配内存的空闲分区；<br><strong>优点</strong>：（1）使得空闲分区分布更加均匀（2）空闲分区的查找开销小<br><strong>缺点</strong>：高址部分的大空闲分区被分小，使得大作业进入无法分配内存<br>3. 最佳适应算法（Best Fist）<br><img src="https://img-blog.csdnimg.cn/53530d7b5f154102a0af1b16e8b6809e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>算法思想</strong>：将空闲分区链中的空闲分区按照空闲分区<strong>由小到大的顺序排序</strong>，从而形成空闲分区链。每次从链首进行查找合适的空闲分区为作业分配内存，这样每次找到的空闲分区是和作业大小最接近的，所谓“最佳”<br><strong>优点</strong>：第一次找到的空闲分区是大小最接近待分配内存作业大小的<br><strong>缺点</strong>：产生大量难以利用的外部碎片。<br>4. 快速适应算法（Quick Fit）<br><strong>算法思想</strong>：快速适应算法要求有<strong>多个空闲区链表</strong>，每个空闲区链表存储一种容量的空闲区<br><img src="https://img-blog.csdnimg.cn/fe710b41ec2f458697855281c1b4346b.png" alt="在这里插入图片描述"></p>
+<h2 id="内存回收"><a href="#内存回收" class="headerlink" title="内存回收"></a>内存回收</h2><p>一共有四中情况，如下图<br><img src="https://img-blog.csdnimg.cn/d19c89fdad4247f2812d85e89955e50d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>1.第一种情形：（1）无需新建空闲链表节点（2）只需要把空闲区1的容量增大即可<br>2.第二种情况：（1）将回收区与空闲区合并（2）新的空闲区使用回收区的地址<br>3.第三种情况：（1）将三个区合并（2）新的空闲区使用空闲区1的地址<br>4.第四种情况：（1）为回收区创建新的空闲节点 （2）插入到相应的空闲区链表中去</p>
+<h2 id="页式存储管理"><a href="#页式存储管理" class="headerlink" title="页式存储管理"></a>页式存储管理</h2><p><strong>管理方式</strong><br>1.将进程逻辑空间等分为若干大小的页面<br>2.相应地把物理内存空间分成与页面大小相同的物理块<br>3.以页面为单位把进程空间装进物理内存中分散的物理块</p>
+<p><strong>页面大小</strong><br>1.过大难以分配，过小内存碎片过多<br>2.通常是512B~8K</p>
+<p><strong>页表</strong><br>1.页表记录进程逻辑空间与物理空间的映射<br>2.某个页表项的地址=页表起始地址+页表项大小x页号<br>3.实际物理地址=字块大小x字块号+块内偏移地址<br><img src="https://img-blog.csdnimg.cn/edeaf28e211540908dc4c5e975bbf903.png" width=70%><br><img src="https://img-blog.csdnimg.cn/0f4375253dcf4571b2a0ed3d8c3085f3.png" width=40%></p>
+<p><strong>多级页表</strong><br>页表的作用就是使得进程连续的逻辑地址空间，可以映射到内存中离散的物理地址上，这样进程的地址空间就不必占用一大块连续的物理地址。<br>但是页表本身有可能占用较大的连续地址空间，既然如此，就用相同的办法，把页表的连续物理地址空间离散，即使用多级页表。<br> <img src="https://img-blog.csdnimg.cn/69bad90819994c6b8c2d62a7c899da2d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>缺陷</strong><br>有一段连续的逻辑分布在多个页面中，将大大降低执行效率</p>
+<h2 id="段式存储管理"><a href="#段式存储管理" class="headerlink" title="段式存储管理"></a>段式存储管理</h2><p><strong>管理方式</strong><br>1.将进程逻辑空间划分成若干段（非等分）<br>2.段的长度由连续逻辑的长度决定<br>3.主函数MAIN，子程序段X，子函数Y等<br><img src="https://img-blog.csdnimg.cn/64692627c1fa4af19258688b65c5e710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="段式和页式对比"><a href="#段式和页式对比" class="headerlink" title="段式和页式对比"></a>段式和页式对比</h2><p>1.二者都离散地管理了进程的逻辑空间<br>2.页是物理单位，段式逻辑单位<br>3.分页是为了合理利用空间，分段是满足用户要求<br>4.页大小由硬件固定，段长度可动态变化<br>5.页表信息是一维的，段表信息是二维的（因为段长度不固定，需要补充一栏来交代段长度）</p>
+<h2 id="段页式存储管理"><a href="#段页式存储管理" class="headerlink" title="段页式存储管理"></a>段页式存储管理</h2><p><strong>为何需要段页式存储管理</strong><br>1.分页可以有效提高内存利用率<br>2.分段可以更好地满足用户需求<br>3.二者结合，形成段页式存储管理</p>
+<p><strong>如何管理</strong><br>1.先将逻辑空间按按段式管理分成若干段<br>2.再把段内空间按页式管理分成若干页<br><img src="https://img-blog.csdnimg.cn/df0914c320d244fba93dc25a1fbe7977.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/48e5370629f04a6695f37199ffeaf210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><p><strong>问题</strong><br>一个游戏十几G，物理内存只有8G，游戏如何运行起来的？</p>
+<p><strong>虚拟内存概述</strong><br>有些进程实际需要的内存很大，超过物理内存的容量；多道程序设计，使得每个进程可用物理内存更加稀缺；不可能无线增加物理内存，物理内存总有不够用的时候。<br>虚拟内存是操作系统内存管理的关键技术；使得多道程序运行和大程序运行成为现实；把程序使用内存划分，将部分暂时不实用的内存放置在辅存。<br><img src="https://img-blog.csdnimg.cn/8033b27497c0468c9340fc0fcae5b4a6.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>程序局部性原理</strong><br>指CPU访问存储器，无论是<strong>存取指令</strong>还是<strong>存取数据</strong>，所访问的存储单元都趋于聚集在一个较小的连续区域中。<br>那么程序在运行时，无需全部装入内存，装备部分即可。如果访问页不在内存中，则发出缺页中断，发起页面置换。从用户层面看，程序拥有很大的空间，即是虚拟内存。<br>虚拟内存实际上是对物理内存的补充，速度接近于内存，成本接近于辅存。</p>
+<p><strong>虚拟内存的置换算法</strong><br>1.先进先出算法FIFO<br>2.最不经常使用算法LFU<br>3.最近最少使用算法LRU</p>
+<p><strong>与高速缓存的替换区别</strong><br>1.替换策略发生在Cache-主存层次、主存-辅存层次<br>2.Cache-主存层次的替换策略主要是为了解决<strong>速度问题</strong><br>3.主存-辅存层次主要是为了解决<strong>容量问题</strong></p>
+<h2 id="Linux存储管理"><a href="#Linux存储管理" class="headerlink" title="Linux存储管理"></a>Linux存储管理</h2><h3 id="Buddy内存管理算法"><a href="#Buddy内存管理算法" class="headerlink" title="Buddy内存管理算法"></a>Buddy内存管理算法</h3><p><strong>概述</strong><br>1.Buddy算法（伙伴算法）是经典的内存管理算法<br>2.基于计算机处理二进制的优势，效率极高<br>3.主要是为了解决<strong>内存外碎片</strong>的问题（其实是把外碎片转换为内碎片，比如本来要用120KB，实际分配128KB）<br><img src="https://img-blog.csdnimg.cn/f37fdd76b0fa494c90e15fbe2f287744.png" width=60%></p>
+<p><img src="https://img-blog.csdnimg.cn/a4f2396c6480423fac925651950eb235.png" width=15%>  <img src="https://img-blog.csdnimg.cn/69ac5ae8948e4d6f9284e888027f3fc1.png" width=10%></p>
+<p><strong>Buddy管理算法的目的</strong><br>努力让内存分配与相邻内存合并能够快速进行</p>
+<p><strong>内存分配原则</strong><br>向上取整为2的幂大小（外碎片转化为内碎片）<br>(1)申请70k -&gt; 分配128k<br>(2)申请129k -&gt; 分配256k<br>(3)申请666k -&gt; 分配1024k</p>
+<p><strong>伙伴系统</strong><br>伙伴指的是内存的伙伴，一片连续内存的伙伴是<strong>相邻的</strong>另一片大小一样的连续内存</p>
+<p><strong>内存分配过程</strong><br>1.创建一系列空闲块链表，每一种都是2的幂大小<br><img src="https://img-blog.csdnimg.cn/d94ded0cb1a44d088bc453f0dc8f64a2.png" width=60%><br>2.假设存储空间有1M大小<br><img src="https://img-blog.csdnimg.cn/be2f3ec4fc82422eaf53e4a3f981ff42.png" width=20%><br>3.分配100k内存<br>(1)100k向上取2的幂=128k<br>(2)查询是否有128k的空闲内存块？<br>(3)没有！查询是否有256k空闲内存块？<br>(4)没有！查询是否有512k空闲内存块？<br>(5)没有！查询是否有1M空闲块内存？<br>(6)有，摘下1M空闲内存块，分配出去<br>(7)拆下1M的一半512K放在512K的空闲链上，其余的分配出去<br>(8)拆下256K放在空闲链上，其余分配出去<br>(9)拆下128K放在空闲链上，其余分配出去<br>(10)分配完毕</p>
+<p>4.回收内存过程<br>(1)判断刚才分配的内存伙伴在空闲链表上吗？<br>(2)在！移出伙伴，合并为256K空闲内存，再判断伙伴…?<br>(3)在！移出伙伴，合并为512k空闲内存，再判断伙伴…?<br>(4)在！移出伙伴，合并为1M空闲内存<br>(5)插入1M空闲链表，回收完成</p>
+<h3 id="Linux交换空间"><a href="#Linux交换空间" class="headerlink" title="Linux交换空间"></a>Linux交换空间</h3><p><strong>概述</strong><br>1.交换空间（Swap）是磁盘的一个分区<br>2.Linux物理内存满时，会把一些内存交换到Swap空间</p>
+<p><strong>作用</strong><br>1.冷启动内存依赖<br>许多大型程序在启动的时候需要使用大量的内存，但是许多内存只是在启动的时候用一下，后续很少使用。那么系统就可以将这些运行时不怎么使用的内存内容，存在放Swap空间中，从而提供更多的物理空间给系统使用。<br>2.系统睡眠依赖<br>Linux系统睡眠时，会将系统运行的数据存放在Swap空间中，下次启动时重新将其加载到内存中，从而加快系统的启动速度。<br>3.大进程空间依赖<br>有些进程需要大量内存空间，物理内存不够使用，将部分内存保存在Swap中。</p>
+<p><strong>Swap空间和虚拟内存的对比</strong><br>Swap空间<br>(1)存在于磁盘<br>(2)与主存发生置换<br>(3)是<strong>操作系统概念</strong><br>(4)<strong>解决系统物理内存不足问题</strong></p>
+<p>虚拟内存<br>(1)存在于磁盘<br>(2)与主存发生置换<br>(3)是<strong>进程概念</strong><br>(4)<strong>解决进程物理内存不足问题</strong></p>
+<h1 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h1><h2 id="文件的逻辑结构"><a href="#文件的逻辑结构" class="headerlink" title="文件的逻辑结构"></a>文件的逻辑结构</h2><p><img src="https://img-blog.csdnimg.cn/a6d2e24a912d4b7fb323750ed8097dc5.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="逻辑结构的文件类型"><a href="#逻辑结构的文件类型" class="headerlink" title="逻辑结构的文件类型"></a>逻辑结构的文件类型</h3><p><img src="https://img-blog.csdnimg.cn/a4f9274c5c1644bf8c74f0fde2c0711e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>有结构文件</strong><br>1.文件内容由定长记录和可变长记录组成<br>2.定长记录存储文件格式、文件描述等结构化数据项<br>3.可变长记录存储文件的具体内容<br><img src="https://img-blog.csdnimg.cn/4dfc5f1056834281b099caa401c74e6a.png" width=70%></p>
+<p><strong>无结构文件</strong><br>也成为流式文件，文件内容长度以<strong>字节</strong>为单位。如exe文件、dll文件、so文件</p>
+<blockquote>
+<p>linux静态链接库文件.a  动态链接库文件.so<br>windows静态链接库文件.lib 动态链接库文件.dll</p>
+</blockquote>
+<h3 id="顺序文件"><a href="#顺序文件" class="headerlink" title="顺序文件"></a>顺序文件</h3><p>1.顺序文件是指按照顺序存放在存储介质中的文件<br>2.磁带的存储特性使得磁带文件只能存储顺序文件<br>3.顺序文件是所有逻辑文件当中存储效率最高的<br>4.顺序文件的增删查改是比较困难的</p>
+<h3 id="索引文件"><a href="#索引文件" class="headerlink" title="索引文件"></a>索引文件</h3><p>1.可变长的文件不适合用顺序文件格式存储<br>2.索引文件是为了解决可变长文件存储而发明的一种文件格式<br>3.索引文件需要配合<strong>索引表</strong>完成存储<br><img src="https://img-blog.csdnimg.cn/680e3cab635b4ab8a558b7c239b23b3a.png" width=70%></p>
+<h2 id="辅存的存储空间分配"><a href="#辅存的存储空间分配" class="headerlink" title="辅存的存储空间分配"></a>辅存的存储空间分配</h2><img src="https://img-blog.csdnimg.cn/604199f6a4af4558a3cfa007236495ee.png" width=90%>
+
+<h3 id="连续分配"><a href="#连续分配" class="headerlink" title="连续分配"></a>连续分配</h3><img src="https://img-blog.csdnimg.cn/6655fef0059c4bf39c02e3ceea304821.png" width=90%>
+1.顺序读取文件非常容易，速度很快
+2.对存储要求高，要求满足容量的连续存储空间
+
+<h3 id="链接分配"><a href="#链接分配" class="headerlink" title="链接分配"></a>链接分配</h3><p>1.链接分配可以将文件存储在离散的盘块中<br>2.需要额外的存储空间存储文件的盘块链接顺序（记录在盘块中-&gt;隐式链接，记录在FAT中-&gt;显示分配）</p>
+<p><strong>隐式链接分配</strong><br><img src="https://img-blog.csdnimg.cn/d26096f2adf84bc9b81afc3d375f89ed.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>显式链接分配</strong><br><img src="https://img-blog.csdnimg.cn/bf0b857d85664acf8ea3077b50a65d60.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>缺点：<br>1.FAT表占用较大的存储空间，需要将整个FAT加载到内存中，且磁盘越大，FAT越大（记录整个磁盘的存储信息）。<br>2.不支持高效的直接存储（需要先从FAT表中寻找离散的空闲的块）</p>
+<h3 id="索引分配"><a href="#索引分配" class="headerlink" title="索引分配"></a>索引分配</h3><p><img src="https://img-blog.csdnimg.cn/7560a78a244c4331b8e044d15cf4cc40.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>1.每个文件拥有一个索引块，记录所有盘块信息<br>2.索引分配方式支持直接访问盘块<br>3.文件较大时，索引分配方式具有明显优势<br>4.现在主流文件系统都是使用索引分配</p>
+<h2 id="空闲块-存储空间管理"><a href="#空闲块-存储空间管理" class="headerlink" title="(空闲块)存储空间管理"></a>(空闲块)存储空间管理</h2><p>三种（空闲块）管理方式：空闲表、空闲链表、位示图。其中前两种和内存管理方式类似。</p>
+<h3 id="空闲表"><a href="#空闲表" class="headerlink" title="空闲表"></a>空闲表</h3><p><img src="https://img-blog.csdnimg.cn/c029cb57d468480aae2bdc62884e89bf.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="空闲链表"><a href="#空闲链表" class="headerlink" title="空闲链表"></a>空闲链表</h3><p>1.把所有空闲盘区组成一个空闲链表<br>2.每个链表节点存储空闲盘块和空闲的数目</p>
+<h3 id="位示图"><a href="#位示图" class="headerlink" title="位示图"></a>位示图</h3><p><img src="https://img-blog.csdnimg.cn/d3b5ebe1425641ca8ff5ef553bc8a5b5.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>1.位示图维护成本低<br>2.非常容易找到空闲盘块<br>3.使用0/1比特，占用空间小</p>
+<h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><p><img src="https://img-blog.csdnimg.cn/112e877a166f4857bf4d6d211095dc83.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>任何文件或目录都只有唯一路径</p>
+<h2 id="Linux文件的基本操作"><a href="#Linux文件的基本操作" class="headerlink" title="Linux文件的基本操作"></a>Linux文件的基本操作</h2><h3 id="Linux目录"><a href="#Linux目录" class="headerlink" title="Linux目录"></a>Linux目录</h3><p><img src="https://img-blog.csdnimg.cn/b841410348284ac9933f922ff4b588db.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>|目录|描述  |<br>|–|–|<br>|/bin  |存放二进制可执行文件(ls,cat,mkdir等命令)，常用命令一般都在这里  |<br>|/etc  |存放系统管理和配置文件  |<br>|/home  |存放所有用户文件的根目录，是用户主目录的基点，比如用户user的主目录就是/home/user  |<br>|/usr  |用于存放系统应用程序，比较重要的目录/usr/local 本地系统管理员软件安装目录。usr全称：<code>unix software resources</code>  |<br>|/opt  |额外安装的可选应用程序宝所放置的位置  |<br>|/proc  |虚拟文件系统目录，是系统内存的映射。可以直接访问这个目录来获取系统信息  |<br>|root  |超级用户（系统管理员）的主目录  |<br>|/sbin  |存放二进制可执行文件，只有root才能访问  |<br>|/dev  |用于存放设备文件  |<br>|/mnt  |系统管理员安装临时文件系统的安装点，系统提供这个目录是让用户临时挂载其它的文件系统。  |<br>|/boot  |存放用于系统引导时使用的各种文件  |<br>|/lib  |存放文件系统中的程序运行所需要的共享库及内核模块  |<br>|/var  |用于存放运行时需要改变数据的文件  |</p>
+<h3 id="Linux文件常用操作"><a href="#Linux文件常用操作" class="headerlink" title="Linux文件常用操作"></a>Linux文件常用操作</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>touch</td>
+<td>创建文件</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td>创建文件夹</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>删除文件</td>
+</tr>
+<tr>
+<td>cat</td>
+<td>查看文件</td>
+</tr>
+<tr>
+<td>gedit</td>
+<td>使用gedit编辑文件</td>
+</tr>
+</tbody></table>
+<h3 id="Linux文件类型"><a href="#Linux文件类型" class="headerlink" title="Linux文件类型"></a>Linux文件类型</h3><p><img src="https://img-blog.csdnimg.cn/ca2aa6fe1bb24ef49695b046b7195c5d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>注：这里的FIFO即先入先出，是pipe管道类型的文件，用于通信</p>
+</blockquote>
+<p>使用<code>ls -al</code>命令（展示所有文件的详细信息），此时每一行第一个字符，就代表这个文件的类型<br><img src="https://img-blog.csdnimg.cn/f0f9a31c139d480e96ea4f79d348c113.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjI1OTA4OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="Linux文件系统"><a href="#Linux文件系统" class="headerlink" title="Linux文件系统"></a>Linux文件系统</h2><h1 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h1></div><div class="article-licensing box"><div class="licensing-title"><p>操作系统知识巩固</p><p><a href="https://fxgood.gitee.io/2021/07/11/计算机基础-操作系统复习巩固/">https://fxgood.gitee.io/2021/07/11/计算机基础-操作系统复习巩固/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>余丰旭</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-07-11</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-09-09</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/OS/">OS</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/07/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8D%95%E8%B0%83%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">单调栈的应用案例</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/04/26/Java-java%E7%9B%B8%E5%85%B3%E7%9A%84%E6%80%9D%E8%80%83/"><span class="level-item">Java相关的思考</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/icon.jpg" alt="余丰旭"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">余丰旭</p><p class="is-size-6 is-block">一名奋斗的程序员</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">15</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">13</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/fxgood" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/fxgood"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="level-start"><span class="level-item">数据结构</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%80%9F%E5%86%B3%E7%BB%93%E6%9E%84/"><span class="level-start"><span class="level-item">速决结构</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-09T05:53:01.143Z">2021-09-09</time></p><p class="title"><a href="/2021/09/09/%E8%87%AA%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%BF%83%E5%BE%97/">自建博客过程记录</a></p><p class="categories"><a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-07T16:00:00.000Z">2021-08-08</time></p><p class="title"><a href="/2021/08/08/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9D%9E%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/">非递归实现树的三种遍历</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-03T16:00:00.000Z">2021-08-04</time></p><p class="title"><a href="/2021/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-O-1-%E6%97%B6%E9%97%B4%E6%8F%92%E5%85%A5%E3%80%81%E5%88%A0%E9%99%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E9%9A%8F%E6%9C%BA%E5%85%83%E7%B4%A0%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">O(1)时间插入、删除和获取随机元素的数据结构</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-01T16:00:00.000Z">2021-08-02</time></p><p class="title"><a href="/2021/08/02/%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E6%88%B3%E6%B0%94%E7%90%83/">算法题之戳气球</a></p><p class="categories"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-07-28T16:00:00.000Z">2021-07-29</time></p><p class="title"><a href="/2021/07/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8F%8C%E6%A0%88%E6%A8%A1%E6%8B%9F%E9%98%9F%E5%88%97/">双栈模拟队列</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/OS/"><span class="tag">OS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="tag">中间件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"><span class="tag">二叉树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"><span class="tag">优先级队列</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="tag">动态规划</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"><span class="tag">单调栈</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"><span class="tag">单调队列</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%88%E5%B8%8C/"><span class="tag">哈希</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A0%86/"><span class="tag">堆</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A0%88/"><span class="tag">栈</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"><span class="tag">滑动窗口</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span class="tag">编程语言</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%9F%E5%88%97/"><span class="tag">队列</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a><p class="is-size-7"><span>&copy; 2021 余丰旭</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
