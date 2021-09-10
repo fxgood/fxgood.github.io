@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Redis - 余丰旭的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="余丰旭的博客"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="余丰旭的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="记录学习和应用redis的过程。"><meta property="og:type" content="blog"><meta property="og:title" content="Redis"><meta property="og:url" content="https://fxgood.gitee.io/2021/06/10/%E6%8A%80%E6%9C%AF-Redis/"><meta property="og:site_name" content="余丰旭的博客"><meta property="og:description" content="记录学习和应用redis的过程。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623161805293.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623165456847.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623171411979.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623200814255.png"><meta property="article:published_time" content="2021-06-09T16:00:00.000Z"><meta property="article:modified_time" content="2021-09-10T03:27:08.600Z"><meta property="article:author" content="余丰旭"><meta property="article:tag" content="数据库"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623161805293.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://fxgood.gitee.io/2021/06/10/%E6%8A%80%E6%9C%AF-Redis/"},"headline":"Redis","image":["https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623161805293.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623165456847.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623171411979.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623200814255.png"],"datePublished":"2021-06-09T16:00:00.000Z","dateModified":"2021-09-10T03:27:08.600Z","author":{"@type":"Person","name":"余丰旭"},"publisher":{"@type":"Organization","name":"余丰旭的博客","logo":{"@type":"ImageObject","url":"https://fxgood.gitee.io/img/logo.svg"}},"description":"记录学习和应用redis的过程。"}</script><link rel="canonical" href="https://fxgood.gitee.io/2021/06/10/%E6%8A%80%E6%9C%AF-Redis/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-09T16:00:00.000Z" title="2021/6/10 上午12:00:00">2021-06-10</time>发表</span><span class="level-item"><time dateTime="2021-09-10T03:27:08.600Z" title="2021/9/10 上午11:27:08">2021-09-10</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span><span class="level-item">19 分钟读完 (大约2904个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Redis</h1><div class="content"><h1 id="NoSQL数据库"><a href="#NoSQL数据库" class="headerlink" title="NoSQL数据库"></a>NoSQL数据库</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>NoSQL数据库，指的是非关系型的数据库。不依赖业务逻辑的方式存储，而是以简单的key-value模式存储。因此大大增加了数据库的扩展能力。</p>
+<ol>
+<li>不遵循SQL标准</li>
+<li>不支持ACID<ol>
+<li>原子性：事务的一组操作，要么都执行， 要么都不执行</li>
+<li>一致性：满足数据完整性和一致性</li>
+<li>隔离性：多个事务之间互不影响<blockquote>
+<p>事务隔离分为不同级别：读未提交、读提交、可重复读、串行化     </p>
+</blockquote>
+</li>
+<li>持久性：一旦事务提交，即使数据库故障也不会丢失信息</li>
+</ol>
+</li>
+<li>远超SQL的性能<h2 id="NoSQL适用场景"><a href="#NoSQL适用场景" class="headerlink" title="NoSQL适用场景"></a>NoSQL适用场景</h2></li>
+</ol>
+<ul>
+<li>对数据进行高并发的读写</li>
+<li>海量数据的读写</li>
+<li>对数据高可扩展性<blockquote>
+<p>NoSQL数据的存在意义就是从关系型数据库以业务逻辑为依据的存储模式，变为以性能为最优先考虑的存储方式，目的就是为了提高性能。</p>
+</blockquote>
+<h2 id="NoSQL不适用场景"><a href="#NoSQL不适用场景" class="headerlink" title="NoSQL不适用场景"></a>NoSQL不适用场景</h2></li>
+<li>需要事务支持</li>
+<li>基于sql的结构化查询存储，处理复杂的关系，即需要<strong>即席</strong>查询<h2 id="常见NoSQL"><a href="#常见NoSQL" class="headerlink" title="常见NoSQL"></a>常见NoSQL</h2></li>
+</ul>
+<ol>
+<li>Memcache<ul>
+<li>支持的数据类型比较单一</li>
+<li>不支持持久化操作 </li>
+<li><strong>多线程+锁</strong></li>
+</ul>
+</li>
+<li>Redis<ul>
+<li>数据都在内存中，<strong>支持持久化</strong>，主要用作备份恢复</li>
+<li>除了支持简单的key-value模式，还<strong>支持多种数据结构的存储，比如list、set、hash、zset等</strong></li>
+<li>一般作为<strong>缓存数据库</strong>辅助持久化的数据库</li>
+<li><strong>单线程+多路IO复用</strong><ul>
+<li>实现了多线程的效果，比memcache效率更高</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>MongoDB<ul>
+<li> 高性能、开源、模式自由的<strong>文档型数据库</strong></li>
+<li>数据都在内存中</li>
+<li>虽然是key-value模式，但是对value（尤其是<strong>json</strong>）提供了丰富的查询功能</li>
+<li>支持二进制数据和大型对象</li>
+<li>可以根据数据的特点<strong>替代RDBMS</strong>，成为独立的数据库。或者配合RDBMS，存储特定的数据。<h1 id="Redis安装"><a href="#Redis安装" class="headerlink" title="Redis安装"></a>Redis安装</h1></li>
+</ul>
+</li>
+<li>安装gcc</li>
+<li>redis官网找下载链接，用wget 下载安装包并解压</li>
+<li>解压目录下编译<code>make</code>然后安装<code>make install</code></li>
+<li>安装后，将配置文件redis.conf复制到/etc下，并修改启动模式为后台启动，即修改redis.conf中<code>daemonize no</code>为yes</li>
+<li>启动redis<ul>
+<li>redis-server  /etc/redis.conf 以该配置启动（后台启动）</li>
+<li>打开客户端redis-cli</li>
+<li>查看进程ps -ef | grep redis</li>
+<li>测试验证：ping<ul>
+<li>得到pong回复，则说明运行正常 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关闭redis<ul>
+<li>redis cli shutdown</li>
+<li>或者查看进程号 kill -9 xxx</li>
+</ul>
+</li>
+</ol>
+<h1 id="Redis常用五大数据类型"><a href="#Redis常用五大数据类型" class="headerlink" title="Redis常用五大数据类型"></a>Redis常用五大数据类型</h1><h2 id="库命令"><a href="#库命令" class="headerlink" title="库命令"></a>库命令</h2><ul>
+<li>默认16个数据库，下标从0开始，默认使用0号库<ul>
+<li>使用<code>select &lt;dbid&gt;</code>来切换数据库，如select 1</li>
+<li>统一密码管理，所有库同样密码</li>
+</ul>
+</li>
+<li><code>dbsize</code>查看当前数据库的key的数量</li>
+<li><code>flushdb</code> 清空当前库</li>
+<li><code>flushall</code> 通杀所有库</li>
+</ul>
+<hr>
+<h2 id="五大数据类型"><a href="#五大数据类型" class="headerlink" title="五大数据类型"></a>五大数据类型</h2><h3 id="键的基本操作"><a href="#键的基本操作" class="headerlink" title="键的基本操作"></a>键的基本操作</h3><ul>
+<li><code>keys*</code> 查看当前库所有key （匹配 <code>keys *1</code>）</li>
+<li><code>exists key</code> 判断某个key是否存在</li>
+<li><code>type key</code> 查看你的key是什么类型</li>
+<li><code>del key</code> 删除执行的key数据</li>
+<li><code>unlink key</code> 根据value选择非阻塞删除<ul>
+<li>仅将keys从keyspace元数据中删除，真正的删除会在后续异步操作</li>
+</ul>
+</li>
+<li><code>expire key 10</code> 10秒种：为给定的key设置过期时间 </li>
+<li><code>ttl key</code> 查看还有多少秒过期，-1表示永不过期，-2表示已过期 <h3 id="字符串String"><a href="#字符串String" class="headerlink" title="字符串String"></a>字符串String</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4></li>
+<li>String是Redis最基本的数据类型，它是<strong>二进制安全的</strong>（意味着redis的String可以包含任何数据，比如jpg图片或者序列化的对象）</li>
+<li>一个Redis种字符串value最多可以是<strong>512M</strong><h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4></li>
+<li><code>set &lt;key&gt;&lt;value&gt; </code>添加键值对<ul>
+<li><code>*NX</code> 当数据库种key不存在时，可以将key-value添加进数据库</li>
+<li><code>*XX</code> 当数据库种key存在时，可以将key-value添加进数据库，与NX参数互斥</li>
+<li><code>*EX</code> key的超时秒数</li>
+<li><code>*PX</code> key的超时毫秒数，与EX互斥</li>
+</ul>
+</li>
+<li><code>get &lt;key&gt;</code> 查询对应键值</li>
+<li><code>append &lt;key&gt;&lt;value&gt;</code>将给定的<code>&lt;value&gt;</code>追加到原值的末尾</li>
+<li><code>strlen &lt;key&gt;</code> 获得值的长度</li>
+<li><code>setnx &lt;key&gt;&lt;value&gt;</code> 只有在key不存在时，设置key的值</li>
+</ul>
+<hr>
+<ul>
+<li><code>incr</code> 数字加一 </li>
+<li><code>decr</code> 数字减一</li>
+<li><code>incrby/decrby &lt;value&gt; &lt;步长&gt; </code> 数字增减自定义长度</li>
+<li><strong>增减操作具有原子性</strong>，即原子操作不会被线程调度机制打断。Redis单命令的原子性主要得益于Redis的单线程（单线程+IO多路复用）<ul>
+<li>Java种的<code>i++</code>不是原子操作 </li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code>mset &lt;key1&gt;&lt;value1&gt; &lt;key2&gt;&lt;value2&gt;...</code> 同时设置多个key-value</li>
+<li><code>mget &lt;key1&gt;&lt;key2&gt;...</code> 同时获取多个value</li>
+<li><code>msetnx &lt;key1&gt;&lt;value1&gt; &lt;key2&gt;&lt;value2&gt;...</code> 同时设置多个key-value，当且仅当所有给定key都不存在</li>
+<li><strong>以上三个操作具有原子性，有一个失败则都失败</strong></li>
+</ul>
+<hr>
+<ul>
+<li><code>getrange &lt;key&gt; &lt;起始位置&gt;&lt;结束位置&gt;</code> 获得某范围内的值（左右都是闭区间）</li>
+<li><code>setrange &lt;key&gt;&lt;起始位置&gt;&lt;value&gt;</code> 用<code>value</code>覆盖从<code>起始位置</code>开始的值（<strong>索引从0开始</strong>）</li>
+</ul>
+<hr>
+<ul>
+<li><code>setex &lt;key&gt;&lt;过期时间&gt;&lt;value&gt;</code> 设置键值的同时，设置过期时间，单位秒</li>
+<li><code>getset&lt;key&gt;&lt;value&gt;</code> 以旧换新，设置新值同时获得旧值<h4 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h4>String的数据结构为简单动态字符串（Simple Dynamic String，缩写SDS）。是可以修改的字符串，内部结构类似Java的ArrayList，采用预分配冗余空间的方式来减少内存的频繁分配。<br><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623161805293.png" alt="在这里插入图片描述"><br>当字符串长度小于1M时，扩容时<strong>加倍现有的空间</strong>，超过1M，扩容时只会多扩1M的空间。字符串的最大长度是512M。<h3 id="列表list"><a href="#列表list" class="headerlink" title="列表list"></a>列表list</h3></li>
+</ul>
+<h4 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h4><p>Redis列表是简单的字符串列表，按照插入顺序排序。可以添加一个元素到列表的头部（左边）或者尾部（右边）。它的底层实际上是<strong>双向链表</strong>，对两端的操作性能很高，通过索引下标的操作中间的节点性能比较差。</p>
+<h4 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h4><ul>
+<li><code>lpush/rpush &lt;key&gt;&lt;value1&gt;&lt;value2&gt;&lt;value3&gt;...</code> 从左边/右边插入值</li>
+<li><code>lpop/rpop &lt;key&gt;</code> 从左边/右边吐出一个值。</li>
+<li><code>rpoplpush &lt;key1&gt;&lt;key2&gt;</code> 从<code>key1</code>列表右边吐出一个值，插入到<code>key2</code>列表左边</li>
+<li><code>lrange &lt;key&gt;&lt;start&gt;&lt;stop&gt;</code> 按照索引下标获得元素（从左到右）<ul>
+<li><code>lrange &lt;key&gt; 0 -1</code> 获取所有元素 </li>
+</ul>
+</li>
+<li><code>index &lt;key&gt;&lt;index&gt;</code> 按照索引下标获得元素（从左到右）</li>
+<li><code>llen &lt;key&gt;</code> 获得列表长度</li>
+</ul>
+<hr>
+<ul>
+<li><code>linsert &lt;key&gt; before/after &lt;value&gt; &lt;newvalue&gt;</code> 在<code>&lt;value&gt;</code>的前边或后边插入值</li>
+<li><code>lrem &lt;key&gt; &lt;n&gt; &lt;value&gt; </code> 从左边删除n各value</li>
+<li><code>lset &lt;key&gt; &lt;index&gt; &lt;value&gt;</code> 将列表key下标为index的值替换为value<h4 id="数据结构-1"><a href="#数据结构-1" class="headerlink" title="数据结构"></a>数据结构</h4>List的数据结构为快速链表quickList。<br>首先在列表元素较少的情况下会使用<strong>一块连续的内存空间， 这个结构是ziplist</strong>，即压缩列表。它将所有的元素紧挨着一块存储，分配的是一块连续的内存。<strong>当数据量比较多的时候才会改成quicklist</strong>。<br><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623165456847.png" alt="在这里插入图片描述"><br>Redis将链表和ziplist结合起来组成quicklist。也就是将多个ziplist使用双向指针串起来。这样既满足了快速的插入删除性能，又不会出现太大的空间冗余。<h3 id="集合set"><a href="#集合set" class="headerlink" title="集合set"></a>集合set</h3><h4 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h4>与list类似，但是具有<strong>去重</strong>功能。<br>Redis的Set是string类型的无序集合。它底层是一个value为null的哈希表，所以添加、删除、查找的<strong>复杂度都是O（1）</strong><h4 id="常用命令-2"><a href="#常用命令-2" class="headerlink" title="常用命令"></a>常用命令</h4></li>
+<li><code>sadd &lt;key&gt;&lt;value1&gt;&lt;value2&gt;...</code> 将一个或多个member元素加入集合key种，已经存在的member元素被忽略</li>
+<li><code>smembers &lt;key&gt;</code>取出该集合的所有值</li>
+<li><code>sismember &lt;key&gt; &lt;value&gt;</code> 判断集合key是否含有value值</li>
+<li><code>scard&lt;key&gt;</code> 返回该集合的元素个数</li>
+<li><code>srem &lt;key&gt;&lt;value1&gt;&lt;value2&gt;...</code> 删除集合中的某个元素</li>
+<li><code>spop &lt;key&gt;</code> 随机从该集合种吐出一个值</li>
+<li><code>srandmember &lt;key&gt; &lt;n&gt;</code> 随机从该集合种取出n个值。不会删除成员。</li>
+<li><code>smove &lt;source&gt; &lt;des&gt; value</code> 把集合中一个值移动到另一个集合</li>
+<li><code>sinter &lt;key1&gt; &lt;key2&gt;</code> 返回两个集合的<strong>交集</strong>元素</li>
+<li><code>sunion &lt;key1&gt;&lt;key2&gt;</code> 返回两个集合的<strong>并集</strong>元素</li>
+<li><code>sdiff &lt;key1&gt;&lt;key2&gt; </code>返回两个集合的<strong>差集</strong>元素（在key1中，不在key2中） <h4 id="数据结构-2"><a href="#数据结构-2" class="headerlink" title="数据结构"></a>数据结构</h4>Set数据结构是dict字典，字典是用哈希表实现的。<h3 id="哈希Hash"><a href="#哈希Hash" class="headerlink" title="哈希Hash"></a>哈希Hash</h3><h4 id="简介-3"><a href="#简介-3" class="headerlink" title="简介"></a>简介</h4>Redis Hash是一个键值对集合，是一个stirng类型的field和value的映射表，hash特别适合用于存储对象，类似Java中的Map&lt;String,Object&gt;。<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623171411979.png" width=50%>
+#### 常用命令</li>
+<li><code>hset &lt;key&gt;&lt;field&gt;&lt;value&gt;</code>给key集合中field键赋值</li>
+<li><code>hget &lt;key&gt;&lt;field&gt;</code> 从集合key中的field中取值value</li>
+<li><code>hmset &lt;key&gt;&lt;field1&gt;&lt;value1&gt;&lt;field2&gt;&lt;value2&gt;...</code> 批量设置hash的值</li>
+<li><code>hexists&lt;key1&gt;&lt;field&gt;</code> 查看哈希表key中，给定域field是否存在</li>
+<li><code>hkeys &lt;key&gt;</code> 列出该hash集合的所有field</li>
+<li><code>hvals &lt;key&gt;</code> 列出该hash集合的所有value</li>
+<li><code>hincrby &lt;key&gt;&lt;field&gt;&lt;increment&gt;</code> 为哈希表key中的域field的值加上增量1 -1</li>
+<li><code>hsetnx &lt;key&gt;&lt;field&gt;&lt;value&gt;</code> 将哈希表key中的域field的值设置为value，当且仅当域不存在 <h4 id="数据结构-3"><a href="#数据结构-3" class="headerlink" title="数据结构"></a>数据结构</h4>Hash类型对应的数据结构是两种：ziplist（压缩列表），hashtable（哈希表）。当field-value长度较短且个数较少时，是用ziplist，否则是用hashtable<h3 id="有序集合Zset-sorted-set"><a href="#有序集合Zset-sorted-set" class="headerlink" title="有序集合Zset (sorted set)"></a>有序集合Zset (sorted set)</h3><h4 id="常用命令-3"><a href="#常用命令-3" class="headerlink" title="常用命令"></a>常用命令</h4></li>
+<li><code>zadd &lt;key&gt;&lt;score1&gt;&lt;value1&gt;&lt;score2&gt;&lt;value2&gt;...</code> 将一个或多个member元素及其score值（用于排序）添加到有序集合key中</li>
+<li><code>zrange &lt;key&gt; &lt;start&gt; &lt;stop&gt; [withscores]</code> 返回有序集合key中，下标在start和stop之间的元素(0 -1展示全部），带withscores，可以让分数一起和值返回到结果集中。</li>
+<li><code>zrangebyscore key minmax [withscores] [limit offset count]</code> 返回有序集合key中，所有score值介于min和max之间（闭区间）的成员。有序集成员按score值递增次序排列</li>
+<li><code>zrevrangebyscore key maxmin [withscores] [limit offset count]</code> 同上，改为从大到小排列</li>
+<li><code>zincryby &lt;key&gt;&lt;increment&gt;&lt;value&gt;</code> 为元素的score加上增量</li>
+<li><code>zrem &lt;key&gt;&lt;value&gt;</code> 删除该集合下，指定值的元素</li>
+<li><code>zcount &lt;key&gt; &lt;min&gt; &lt;max&gt; </code> 统计集合，分数区间内的元素个数</li>
+<li><code>zrank &lt;key&gt; &lt;value&gt;</code> 返回该值在集合中的排名，从0开始</li>
+</ul>
+<p>案例：如何利用zset实现文章访问量的排行榜</p>
+<h4 id="数据结构-4"><a href="#数据结构-4" class="headerlink" title="数据结构"></a>数据结构</h4><p>SortedSet(Zset)是Redis提供的一个非常特别的数据结构，一方面它等价于Java的数据结构<code>Map&lt;String,Double&gt;</code>，可以给每个元素value赋予一个权重score，另一方面它又类似于TreeSet，内部的元素会按照权重score进行排序，可以得到每个元素的名次，还可以通过score的范围来获取元素的列表<br>zset底层使用了两个数据结构</p>
+<ol>
+<li>hash，hash的作用就是关联value和权重score，保障元素value的唯一性，通过元素value可以找到相应的score值</li>
+<li>跳跃表，跳跃表的目的在于给元素value排序，根据score的范围获取元素列表<br><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/20210623200814255.png" alt="在这里插入图片描述"><h1 id="Redis6的发布和订阅"><a href="#Redis6的发布和订阅" class="headerlink" title="Redis6的发布和订阅"></a>Redis6的发布和订阅</h1><h2 id="什么是发布和订阅"><a href="#什么是发布和订阅" class="headerlink" title="什么是发布和订阅"></a>什么是发布和订阅</h2>Redis发布订阅(pub / sub)是一种<strong>消息通信模式</strong>：发送者（pub）发送消息，订阅者（sub）接收消息。<br>Redis客户端可以订阅任意数量的频道。<h1 id="Redis6新数据类型"><a href="#Redis6新数据类型" class="headerlink" title="Redis6新数据类型"></a>Redis6新数据类型</h1><h2 id="Bitmaps"><a href="#Bitmaps" class="headerlink" title="Bitmaps"></a>Bitmaps</h2><h2 id="HyperLogLog"><a href="#HyperLogLog" class="headerlink" title="HyperLogLog"></a>HyperLogLog</h2><h2 id="Geospatial"><a href="#Geospatial" class="headerlink" title="Geospatial"></a>Geospatial</h2></li>
+</ol>
+<h1 id="Jedis操作Redis6"><a href="#Jedis操作Redis6" class="headerlink" title="Jedis操作Redis6"></a>Jedis操作Redis6</h1></div><div class="article-licensing box"><div class="licensing-title"><p>Redis</p><p><a href="https://fxgood.gitee.io/2021/06/10/技术-Redis/">https://fxgood.gitee.io/2021/06/10/技术-Redis/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>余丰旭</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-06-10</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-09-10</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/07/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%B7%A9%E5%9B%BA/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">操作系统知识巩固</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/06/02/%E9%9A%8F%E7%AC%94-%E7%94%9F%E6%88%90%E5%AD%A6%E4%B9%A0%E6%97%B6%E9%97%B4%E7%BB%9F%E8%AE%A1%E5%9B%BE%E8%A1%A8/"><span class="level-item">生成学习时间统计图表</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/icon.jpg" alt="余丰旭"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">余丰旭</p><p class="is-size-6 is-block">一名奋斗的程序员</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">32</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">16</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/fxgood" target="_blank" rel="noopener">关注我</a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/C/"><span class="level-start"><span class="level-item">C++</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/"><span class="level-start"><span class="level-item">我的项目</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">技术</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="level-start"><span class="level-item">数据结构</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%80%9F%E5%86%B3%E7%BB%93%E6%9E%84/"><span class="level-start"><span class="level-item">速决结构</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-10T03:35:46.203Z">2021-09-10</time></p><p class="title"><a href="/2021/09/10/%E6%8A%80%E6%9C%AF-Javascrpit/">JavaScript</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-07T16:00:00.000Z">2021-08-08</time></p><p class="title"><a href="/2021/08/08/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%9D%9E%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86/">非递归实现树的三种遍历</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-03T16:00:00.000Z">2021-08-04</time></p><p class="title"><a href="/2021/08/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-O-1-%E6%97%B6%E9%97%B4%E6%8F%92%E5%85%A5%E3%80%81%E5%88%A0%E9%99%A4%E5%92%8C%E8%8E%B7%E5%8F%96%E9%9A%8F%E6%9C%BA%E5%85%83%E7%B4%A0%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">O(1)时间插入、删除和获取随机元素的数据结构</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-01T16:00:00.000Z">2021-08-02</time></p><p class="title"><a href="/2021/08/02/%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E6%88%B3%E6%B0%94%E7%90%83/">算法题之戳气球</a></p><p class="categories"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-07-28T16:00:00.000Z">2021-07-29</time></p><p class="title"><a href="/2021/07/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8F%8C%E6%A0%88%E6%A8%A1%E6%8B%9F%E9%98%9F%E5%88%97/">双栈模拟队列</a></p><p class="categories"><a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/OS/"><span class="tag">OS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="tag">中间件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"><span class="tag">二叉树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"><span class="tag">优先级队列</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="tag">动态规划</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"><span class="tag">单调栈</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"><span class="tag">单调队列</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%88%E5%B8%8C/"><span class="tag">哈希</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A0%86/"><span class="tag">堆</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A0%88/"><span class="tag">栈</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"><span class="tag">滑动窗口</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span class="tag">编程语言</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%9F%E5%88%97/"><span class="tag">队列</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a><p class="is-size-7"><span>&copy; 2021 余丰旭</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
