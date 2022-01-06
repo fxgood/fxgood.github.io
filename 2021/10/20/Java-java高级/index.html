@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Java高级 - 余丰旭的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="余丰旭的博客"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="余丰旭的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="记录Java高级方面知识，包括多线程、IO、泛型、集合、网络编程、反射等。"><meta property="og:type" content="blog"><meta property="og:title" content="Java高级"><meta property="og:url" content="https://fxgood.gitee.io/2020/07/30/Java-java%E9%AB%98%E7%BA%A7/"><meta property="og:site_name" content="余丰旭的博客"><meta property="og:description" content="记录Java高级方面知识，包括多线程、IO、泛型、集合、网络编程、反射等。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/a7437d2699d34cc582cbbd041ec7fefa.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/217a185420c343c588eace6cab65a7ee.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/0ff201a797884d01ab10b9011b7dcada.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/368db7198d97447795b9c31952568c7f.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/1446daae771048868a2cce95c2072908.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/fbce2f0eaa654fb983fce7738ee031ab.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/b37e9f32887744b0bc1349993c1f2767.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/7e50b194a59c4f3ab77971be9f5487e4.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/1f12c768903643f2ab209cb65deaf7a7.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015165822331.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170036496.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170515904.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170758744.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170832228.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170923073.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211018115847328.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211018200409123.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205807182.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205833959.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205905165.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019210011651.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019210314315.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020185549611.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020193009794.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020213052703.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020213128277.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211021093805529.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211026101834161.png"><meta property="article:published_time" content="2020-07-29T16:00:00.000Z"><meta property="article:modified_time" content="2021-10-30T03:40:59.472Z"><meta property="article:author" content="余丰旭"><meta property="article:tag" content="编程语言"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/a7437d2699d34cc582cbbd041ec7fefa.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://fxgood.gitee.io/2020/07/30/Java-java%E9%AB%98%E7%BA%A7/"},"headline":"Java高级","image":["https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/a7437d2699d34cc582cbbd041ec7fefa.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/217a185420c343c588eace6cab65a7ee.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/0ff201a797884d01ab10b9011b7dcada.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/368db7198d97447795b9c31952568c7f.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/1446daae771048868a2cce95c2072908.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/fbce2f0eaa654fb983fce7738ee031ab.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/b37e9f32887744b0bc1349993c1f2767.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/7e50b194a59c4f3ab77971be9f5487e4.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/1f12c768903643f2ab209cb65deaf7a7.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015165822331.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170036496.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170515904.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170758744.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170832228.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170923073.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211018115847328.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211018200409123.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205807182.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205833959.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205905165.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019210011651.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019210314315.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020185549611.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020193009794.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020213052703.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020213128277.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211021093805529.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211026101834161.png"],"datePublished":"2020-07-29T16:00:00.000Z","dateModified":"2021-10-30T03:40:59.472Z","author":{"@type":"Person","name":"余丰旭"},"publisher":{"@type":"Organization","name":"余丰旭的博客","logo":{"@type":"ImageObject","url":"https://fxgood.gitee.io/img/logo.svg"}},"description":"记录Java高级方面知识，包括多线程、IO、泛型、集合、网络编程、反射等。"}</script><link rel="canonical" href="https://fxgood.gitee.io/2020/07/30/Java-java%E9%AB%98%E7%BA%A7/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-29T16:00:00.000Z" title="2020/7/30 上午12:00:00">2020-07-30</time>发表</span><span class="level-item"><time dateTime="2021-10-30T03:40:59.472Z" title="2021/10/30 上午11:40:59">2021-10-30</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Java/">Java</a></span><span class="level-item">1 小时读完 (大约12353个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Java高级</h1><div class="content"><h1 id="1-多线程"><a href="#1-多线程" class="headerlink" title="1.多线程"></a>1.多线程</h1><h2 id="1-1-基本概念：程序、进程、线程"><a href="#1-1-基本概念：程序、进程、线程" class="headerlink" title="1.1 基本概念：程序、进程、线程"></a>1.1 基本概念：程序、进程、线程</h2><p>程序：一段静态的代码<br>进程：正在运行的程序，是<strong>资源分配的基本单位</strong>。<br>线程：<strong>是CPU执行和调度的最小单位</strong>，每个线程拥有<strong>独立的运行栈和程序计数器pc</strong>，线程切换的开销比较小。多个线程共享一个进程的资源（共享进程的方法区和堆，但存在安全隐患）。</p>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>余丰旭的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="余丰旭的博客"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="余丰旭的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="date: 2020-07-30title: Java高级category: Javatag: 编程语言excerpt: 记录Java高级方面知识，包括多线程、IO、泛型、集合、网络编程、反射等。top: 10 1.多线程1.1 基本概念：程序、进程、线程程序：一段静态的代码进程：正在运行的程序，是资源分配的基本单位。线程：是CPU执行和调度的最小单位，每个线程拥有独立的运行栈和程序计数器pc，线"><meta property="og:type" content="blog"><meta property="og:title" content="余丰旭的博客"><meta property="og:url" content="https://fxgood.gitee.io/2021/10/20/Java-java%E9%AB%98%E7%BA%A7/"><meta property="og:site_name" content="余丰旭的博客"><meta property="og:description" content="date: 2020-07-30title: Java高级category: Javatag: 编程语言excerpt: 记录Java高级方面知识，包括多线程、IO、泛型、集合、网络编程、反射等。top: 10 1.多线程1.1 基本概念：程序、进程、线程程序：一段静态的代码进程：正在运行的程序，是资源分配的基本单位。线程：是CPU执行和调度的最小单位，每个线程拥有独立的运行栈和程序计数器pc，线"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/a7437d2699d34cc582cbbd041ec7fefa.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/217a185420c343c588eace6cab65a7ee.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/0ff201a797884d01ab10b9011b7dcada.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/368db7198d97447795b9c31952568c7f.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/1446daae771048868a2cce95c2072908.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/fbce2f0eaa654fb983fce7738ee031ab.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/b37e9f32887744b0bc1349993c1f2767.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/7e50b194a59c4f3ab77971be9f5487e4.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/1f12c768903643f2ab209cb65deaf7a7.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015165822331.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170036496.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170515904.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170758744.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170832228.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170923073.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211018115847328.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211018200409123.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205807182.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205833959.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205905165.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019210011651.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019210314315.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020185549611.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020193009794.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020213052703.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020213128277.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211021093805529.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211026101834161.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211224214935079.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211225150203537.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211225150801352.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226093527904.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226143304180.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226145634905.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226150152685.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226150512810.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211231155043835.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211231163746622.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220101103822036.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220101103915239.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220101134612613.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103453508.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103515417.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103526943.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103543846.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103603452.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103611895.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220105095131010.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220105100554138.png"><meta property="article:published_time" content="2021-10-20T13:26:51.065Z"><meta property="article:modified_time" content="2022-01-05T02:25:02.530Z"><meta property="article:author" content="余丰旭"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/a7437d2699d34cc582cbbd041ec7fefa.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://fxgood.gitee.io/2021/10/20/Java-java%E9%AB%98%E7%BA%A7/"},"headline":"余丰旭的博客","image":["https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/a7437d2699d34cc582cbbd041ec7fefa.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/217a185420c343c588eace6cab65a7ee.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/0ff201a797884d01ab10b9011b7dcada.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/368db7198d97447795b9c31952568c7f.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/1446daae771048868a2cce95c2072908.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/fbce2f0eaa654fb983fce7738ee031ab.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/b37e9f32887744b0bc1349993c1f2767.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/7e50b194a59c4f3ab77971be9f5487e4.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/1f12c768903643f2ab209cb65deaf7a7.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015165822331.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170036496.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170515904.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170758744.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170832228.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211015170923073.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211018115847328.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211018200409123.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205807182.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205833959.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019205905165.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019210011651.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211019210314315.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020185549611.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020193009794.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020213052703.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020213128277.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211021093805529.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211026101834161.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211224214935079.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211225150203537.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211225150801352.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226093527904.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226143304180.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226145634905.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226150152685.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226150512810.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211231155043835.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211231163746622.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220101103822036.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220101103915239.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220101134612613.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103453508.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103515417.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103526943.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103543846.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103603452.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103611895.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220105095131010.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220105100554138.png"],"datePublished":"2021-10-20T13:26:51.065Z","dateModified":"2022-01-05T02:25:02.530Z","author":{"@type":"Person","name":"余丰旭"},"publisher":{"@type":"Organization","name":"余丰旭的博客","logo":{"@type":"ImageObject","url":"https://fxgood.gitee.io/img/logo.svg"}},"description":"date: 2020-07-30title: Java高级category: Javatag: 编程语言excerpt: 记录Java高级方面知识，包括多线程、IO、泛型、集合、网络编程、反射等。top: 10 1.多线程1.1 基本概念：程序、进程、线程程序：一段静态的代码进程：正在运行的程序，是资源分配的基本单位。线程：是CPU执行和调度的最小单位，每个线程拥有独立的运行栈和程序计数器pc，线"}</script><link rel="canonical" href="https://fxgood.gitee.io/2021/10/20/Java-java%E9%AB%98%E7%BA%A7/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-20T13:26:51.065Z" title="2021/10/20 下午9:26:51">2021-10-20</time>发表</span><span class="level-item"><time dateTime="2022-01-05T02:25:02.530Z" title="2022/1/5 上午10:25:02">2022-01-05</time>更新</span><span class="level-item">2 小时读完 (大约21240个字)</span></div></div><div class="content"><p>date: 2020-07-30<br>title: Java高级<br>category: Java<br>tag: 编程语言<br>excerpt: 记录Java高级方面知识，包括多线程、IO、泛型、集合、网络编程、反射等。<br>top: 10</p>
+<h1 id="1-多线程"><a href="#1-多线程" class="headerlink" title="1.多线程"></a>1.多线程</h1><h2 id="1-1-基本概念：程序、进程、线程"><a href="#1-1-基本概念：程序、进程、线程" class="headerlink" title="1.1 基本概念：程序、进程、线程"></a>1.1 基本概念：程序、进程、线程</h2><p>程序：一段静态的代码<br>进程：正在运行的程序，是<strong>资源分配的基本单位</strong>。<br>线程：<strong>是CPU执行和调度的最小单位</strong>，每个线程拥有<strong>独立的运行栈和程序计数器pc</strong>，线程切换的开销比较小。多个线程共享一个进程的资源（共享进程的方法区和堆，但存在安全隐患）。</p>
 <p> <img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/a7437d2699d34cc582cbbd041ec7fefa.png" alt="在这里插入图片描述"><br> 在Java的内存区域中，<strong>栈区（虚拟机栈）和程序计数器是每个线程一份</strong>，<strong>方法区和堆区，是每个进程一份，各个线程共享</strong>。</p>
 <p><strong>使用多线程的优点</strong><br>1.资源利用率提升，程序处理效率提高<br>2.改善程序结构，代码会相对简单<br>3.软件运行速度提升，提升应用程序的响应速度</p>
 <p><strong>何时需要多线程</strong><br>1.程序需要同时执行两个或多个任务<br>2.程序需要实现一些需要等待的任务，如用户输入、文件读写操作、网络操作、搜索等<br>3.需要一些后台运行的程序时</p>
@@ -343,6 +344,9 @@ public void test() &#123;
 </li>
 <li>Map接口：双列数据，保存具有映射关系<code>key-value</code>对的集合</li>
 </ul>
+<blockquote>
+<p>Collection接口中存储自定义类的对象，除了TreeSet(自然排序重写compareTo，定制排序重写compare)，其他基本都需要重写equals，Set中需要重写hashCode和equals自不用说， List中要重写equals，主要是后续用于remove，contents等方法。</p>
+</blockquote>
 <p>Collection接口继承树</p>
 <p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211020213052703.png" alt="image-20211020213052703"></p>
 <p>Map接口继承树</p>
@@ -403,7 +407,681 @@ public void test() &#123;
 <p>IDEA ctrl+f12 查看类的所有方法</p>
 </blockquote>
 <p>结论：建议开发中使用带参的构造器：<code>new ArrayList(int capacity);</code>，如果使用空参构造器，可能会发生频繁扩容（复制数组），降低效率</p>
-<h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><h2 id="Collection子接口二：Set"><a href="#Collection子接口二：Set" class="headerlink" title="Collection子接口二：Set"></a>Collection子接口二：Set</h2><h2 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h2><h2 id="Collections工具类"><a href="#Collections工具类" class="headerlink" title="Collections工具类"></a>Collections工具类</h2><h1 id="6-泛型"><a href="#6-泛型" class="headerlink" title="6.泛型"></a>6.泛型</h1><h1 id="7-IO流"><a href="#7-IO流" class="headerlink" title="7.IO流"></a>7.IO流</h1><h1 id="8-网络编程"><a href="#8-网络编程" class="headerlink" title="8.网络编程"></a>8.网络编程</h1><h1 id="9-反射"><a href="#9-反射" class="headerlink" title="9.反射"></a>9.反射</h1><h1 id="10-Java8新特性"><a href="#10-Java8新特性" class="headerlink" title="10.Java8新特性"></a>10.Java8新特性</h1><h1 id="11-Java9-amp-10-amp-11-新特性"><a href="#11-Java9-amp-10-amp-11-新特性" class="headerlink" title="11.Java9 &amp; 10 &amp; 11 新特性"></a>11.Java9 &amp; 10 &amp; 11 新特性</h1></div><div class="article-licensing box"><div class="licensing-title"><p>Java高级</p><p><a href="https://fxgood.gitee.io/2020/07/30/Java-java高级/">https://fxgood.gitee.io/2020/07/30/Java-java高级/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>余丰旭</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-07-30</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-10-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/12/25/%E9%9A%8F%E7%AC%94-%E6%97%A5%E5%B8%B8%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">日常编程心得</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/07/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E8%A7%A3%E5%86%B3%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC%E9%97%AE%E9%A2%98/"><span class="level-item">单调队列解决滑动窗口最大值问题</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/icon.jpg" alt="余丰旭"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">余丰旭</p><p class="is-size-6 is-block">一名奋斗的程序员</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">80</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/fxgood" target="_blank" rel="noopener">关注我</a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/C/"><span class="level-start"><span class="level-item">C++</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/"><span class="level-start"><span class="level-item">我的项目</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">技术</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="level-start"><span class="level-item">数据结构</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">37</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%BA%E6%96%87/"><span class="level-start"><span class="level-item">论文</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-14T07:53:49.731Z">2021-11-14</time></p><p class="title"><a href="/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/">物联网溯源相关论文</a></p><p class="categories"><a href="/categories/%E8%AE%BA%E6%96%87/">论文</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-09T07:42:50.917Z">2021-11-09</time></p><p class="title"><a href="/2021/11/09/%E8%AE%BA%E6%96%87-%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">论文精读</a></p><p class="categories"><a href="/categories/%E8%AE%BA%E6%96%87/">论文</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-16T08:50:13.744Z">2021-10-16</time></p><p class="title"><a href="/2021/10/16/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E6%80%A7/">排序算法稳定性</a></p><p class="categories"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-29T07:12:48.509Z">2021-09-29</time></p><p class="title"><a href="/2021/09/29/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE-%E5%86%9B%E7%94%A8%E7%94%B5%E5%AD%90%E6%89%8B%E5%86%8C%E9%A1%B9%E7%9B%AE/">军用电子手册项目</a></p><p class="categories"><a href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/">我的项目</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-26T02:50:54.893Z">2021-09-26</time></p><p class="title"><a href="/2021/09/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">内存管理</a></p><p class="categories"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">五月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/B%E6%A0%91/"><span class="tag">B树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OS/"><span class="tag">OS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dfs/"><span class="tag">dfs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/leetcode/"><span class="tag">leetcode</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="tag">中间件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%88%86/"><span class="tag">二分</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"><span class="tag">二叉树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"><span class="tag">优先级队列</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="tag">动态规划</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"><span class="tag">单调栈</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"><span class="tag">单调队列</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"><span class="tag">双指针</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%88%E5%B8%8C/"><span class="tag">哈希</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%9E%E6%BA%AF/"><span class="tag">回溯</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A0%86/"><span class="tag">堆</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8E%92%E5%BA%8F/"><span class="tag">排序</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"><span class="tag">最小生成树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"><span class="tag">最短路径</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A0%88/"><span class="tag">栈</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"><span class="tag">滑动窗口</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span class="tag">编程语言</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"><span class="tag">背包问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B4%AA%E5%BF%83/"><span class="tag">贪心</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AC%E5%8C%96%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98/"><span class="tag">转化等价问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%80%92%E5%BD%92/"><span class="tag">递归</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%9F%E5%88%97/"><span class="tag">队列</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a><p class="is-size-7"><span>&copy; 2021 余丰旭</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+<h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><p>略</p>
+<h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><p>略</p>
+<p>作为List接口的古老实现类；线程安全；效率低；底层使用<code>object[]</code></p>
+<h3 id="List接口中的常用测试方法"><a href="#List接口中的常用测试方法" class="headerlink" title="List接口中的常用测试方法"></a>List接口中的常用测试方法</h3><p>List中除了从Collection集合继承的方法外，List集合里添加了一些根据索引来操作集合元素的方法</p>
+<ul>
+<li><code>void add(int index,Object ele)</code></li>
+<li><code>Object get(int index)</code></li>
+<li><code>Object remove(int index)</code></li>
+<li><code>Object set(int index,Object ele)</code></li>
+</ul>
+<h2 id="Collection子接口二：Set"><a href="#Collection子接口二：Set" class="headerlink" title="Collection子接口二：Set"></a>Collection子接口二：Set</h2><p>Set：存储无序的、不可重复的数据</p>
+<p>以HashSet为例（TreeSet底层不是数组，是二叉树了）</p>
+<ol>
+<li>无序性：不等于随机性，存储的数据在底层数组（TreeSet底层不是数组）中并非按照数据索引的顺序添加，而是根据数据的hash值</li>
+<li>不可重复性：hash值不同，或者hash值相同，但equals不同<ul>
+<li>底层是用数组+链表/二叉树，来实现存储的。</li>
+<li>向HashSet中添加元素a，先调用a的HashCode()方法，计算a的hash值，然后通过某种算法计算出a在底层数组中的存放位置（索引位置），判断数组在此位置上是否已经有元素，如果没有则添加成功，如果有则跟此位置挂载的链表/红黑树，上的元素进行比较（调用equals），如果均不相同则插入，否则产生重复不插入。</li>
+</ul>
+</li>
+</ol>
+<h3 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h3><p>底层用的是HashMap</p>
+<p>特点：</p>
+<ol>
+<li>线程不安全</li>
+<li> 可以存储null值</li>
+</ol>
+<h3 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h3><p>是HashSet的子类，可以按照添加顺序遍历元素。</p>
+<p>底层是hash表+双向链表（leetcode有一题LRU算法就是用这个数据结构来实现的）</p>
+<h3 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h3><p>特点：</p>
+<ol>
+<li><strong>只能放同一类的对象</strong></li>
+<li>两种排序方式：自然排序（Comparable）、定制排序(Comparator)<ul>
+<li><strong>自然排序，自定义类型必须实现Comparable接口</strong></li>
+</ul>
+</li>
+<li>可以按照添加对象的指定属性，进行排序</li>
+<li><strong>TreeSet中判断是否相同，使用的是CompareTo（自然排序）/compare（定制排序），而非equals</strong></li>
+<li>TreeSet底层用的是TreeMap</li>
+</ol>
+<h2 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h2><p>Map中的key：无序、不可重复，使用Set存储所有key（key的类要重写equals和hashCode方法，TreeMap则需要自然排序或定制排序）</p>
+<p>Map中的value：无序、可重复，使用Collection存储所有的value</p>
+<p><code>key-value</code>键值对：构成了一个Entry对象</p>
+<p>Map中的entry：无序、不可重复，使用Set存储所有的entry</p>
+<p><strong>注意，Map没有Iterator，不可直接迭代，需要使用元视图keySet()、entrySet()、values()的结果才能迭代</strong></p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211224214935079.png" alt="image-20211224214935079" style="zoom:67%;" />
+
+<blockquote>
+<p>注意，Hashtable的t是小写</p>
+</blockquote>
+<p><strong>Map接口常用方法</strong></p>
+<ol>
+<li>增删改<ul>
+<li><code>Object put(Object key,Object value)</code></li>
+<li><code>void putAll(Map m)</code></li>
+<li><code>Object remove(Object key)</code></li>
+<li><code>void clear（）</code></li>
+</ul>
+</li>
+<li>查询操作<ul>
+<li><code>Object get(Object key)</code></li>
+<li><code>boolean containsKey(Object key)</code></li>
+<li><code>boolean containsValue(Object value)</code></li>
+<li><code>int size()</code></li>
+<li><code>boolean isEmpty()</code></li>
+<li><code>boolean equals(Object obj)</code></li>
+</ul>
+</li>
+<li>元视图操作<ul>
+<li><code>Set keySet()</code>：返回所有key构成的set集合</li>
+<li><code>Collection values()</code>：返回所有value构成的Collection集合</li>
+<li><code>Set entrySet</code>：返回所有key-value构成的Set集合</li>
+</ul>
+</li>
+</ol>
+<h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><p>HashMap是Map接口的主要实现类</p>
+<p>HashMap特点：</p>
+<ol>
+<li>线程不安全</li>
+<li>效率高</li>
+<li>可以存储null的key和value</li>
+<li><strong>和ArrayList一样，即使涉及线程安全问题，也可以用Collections来改造使之线程安全</strong></li>
+</ol>
+<p>HashMap存储数据的过程：</p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211225150203537.png" alt="image-20211225150203537"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211225150801352.png" alt="image-20211225150801352"></p>
+<p>读源码注释的收获：</p>
+<ol>
+<li>扩容会将原有的hash表结构破坏，所有key的位置需要重新计算，因此代价非常高。如果HashMap需要存储的数据量很大，则最好预先制定好capacity。</li>
+<li>capacity大小需要合适，如果太大占用空间且迭代效率低（迭代时间复杂度O(N+capacity)，N是key的数量），如果太小需要经常扩容，扩容需要全部重新计算hash，即重新计算key的位置，代价非常大。</li>
+<li>状态因子，如果大了，空间利用率高，但是容易产生冲突；如果小了，空间利用率低，但不容易产生冲突；一般用0.75比较合适</li>
+<li>threshold阈值=capacity*loadfactor，hash表上元素个数（不包括链表/红黑树上的元素）超过此阈值要扩容（两倍）</li>
+</ol>
+<h3 id="Hashtable"><a href="#Hashtable" class="headerlink" title="Hashtable"></a>Hashtable</h3><p>Hashtable是古老实现类。</p>
+<p>其子类Properties常用来处理配置文件。</p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226093527904.png" alt="image-20211226093527904"></p>
+<p><strong>LinkedHashMap</strong></p>
+<p>保证在遍历map元素时，可以按照添加的顺序实现遍历。</p>
+<p>原理：hash表+双向链表</p>
+<p>对频繁的遍历操作，此类执行效率高于HashMap（支持LRU算法）</p>
+<p>HashMap的底层：</p>
+<ol>
+<li>数组+链表（jdk7及之前）</li>
+<li>数字+链表/红黑树（jdk8）</li>
+</ol>
+<h3 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h3><p>按照key-value中的key进行排序（<strong>要求key是同一个类的对象</strong>），需要实现自然排序/定制排序</p>
+<h3 id="ConcurrentHashMap"><a href="#ConcurrentHashMap" class="headerlink" title="ConcurrentHashMap"></a>ConcurrentHashMap</h3><p>使用分段锁（数据分段加lock），在多线程使用时安全且高效</p>
+<h2 id="Collections工具类"><a href="#Collections工具类" class="headerlink" title="Collections工具类"></a>Collections工具类</h2><p>Collections是操作<strong>Set,List,Map</strong>等集合的工具类</p>
+<ol>
+<li>排序操作（均为static方法）<ul>
+<li>reverse(List)</li>
+<li>shuffle(List)</li>
+<li>sort(List)</li>
+<li>sort(List,Comparator)</li>
+<li>swap(List,int,int)</li>
+</ul>
+</li>
+<li>查找、替换<ul>
+<li>Object max(Collection)</li>
+<li>Object max(Collection, Comparator)</li>
+<li>Object min(Collection)</li>
+<li>Object min(Collection, Comparator)</li>
+<li>int frequency(Collection, Object) ：返回指定集合中指定元素出现的次数</li>
+<li>void copy(List dest, List src)：将src中的内容复制到dest中</li>
+<li>boolean replaceAll(List list, Object oldVal, Object newVal)：使用新值替换List对象的所有旧值</li>
+</ul>
+</li>
+<li>同步控制（将对应类型扔进参数即可），底层仅仅用synchronized包装了原有的方法<ul>
+<li>synchronizedCollection</li>
+<li>synchronizedList</li>
+<li>synchronizedMap</li>
+<li>synchronizedSet</li>
+<li>synchronizedSortedMap</li>
+<li>synchronizedSortedSet</li>
+</ul>
+</li>
+</ol>
+<h1 id="6-泛型"><a href="#6-泛型" class="headerlink" title="6.泛型"></a>6.泛型</h1><ol>
+<li>泛型类可能有多个参数，此时应该将多个参数一起放在尖括号内，如<code>E1,E2,E3</code></li>
+<li>泛型类的构造器如下：<code>public GenericClass()&#123;&#125;</code><ul>
+<li>这种写法是错误的：<code>public GenericClass&lt;E&gt;()&#123;&#125;</code></li>
+</ul>
+</li>
+<li>实例化后，操作原来泛型位置的结构必须与指定的泛型类型一致</li>
+<li>泛型不同的引用不能相互赋值<ul>
+<li>尽管在编译时ArrayList&lt;String&gt;和ArrayList&lt;Integer&gt;是两种类型，但是在运行时都只会被当做ArrayList被加载到JVM中。</li>
+</ul>
+</li>
+<li>泛型如果不指定，将被擦除，泛型对应的类型均按照Object处理，但不等价于Object<ul>
+<li>即泛型要用，就一路都用；要不用，就都不用</li>
+</ul>
+</li>
+<li>如果泛型类是一个接口或抽象类，则不可创建泛型类的对象</li>
+<li>泛型的指定中不能使用基本数据类型，可以使用包装类替换</li>
+<li>在类/接口上声明的泛型，在本类或本接口中即代表某种类型，可以作为非静态属性的类型、非静态方法的参数类型、非静态方法的返回值类型。<strong>但在静态方法中，不能使用类的泛型</strong>（本质原因：泛型是在生成对象的时候指定的，静态结构早于对象创建）<ul>
+<li>泛型方法可以是静态方法，因为泛型参数是在调用方法时确定的，并非在实例化类的时候确定。</li>
+</ul>
+</li>
+<li>异常类，不能是泛型的</li>
+<li>不能使用<code>new E[]</code>，但是可以<code>E[]elements=(E[])new Object[capacity]</code><ul>
+<li>参考：ArrayList源码中生命：<code>Object[] elementData</code>，而非泛型参数类型数组</li>
+</ul>
+</li>
+<li>父类有泛型，子类可以选择保留泛型也可以选择指定泛型类型<ul>
+<li>子类不保留父类的泛型，按需实现<ul>
+<li>没有类型 擦除</li>
+<li>具体类型</li>
+</ul>
+</li>
+<li>子类保留父类的泛型，泛型子类<ul>
+<li>全部保留</li>
+<li>部分保留</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Father</span>&lt;<span class="title">T1</span>,<span class="title">T2</span>&gt;</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. 没有类型，擦除</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son1</span> <span class="keyword">extends</span> <span class="title">Father</span></span>&#123;&#125;</span><br><span class="line"><span class="comment">//2. 具体类型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son2</span> <span class="keyword">extends</span> <span class="title">Father</span>&lt;<span class="title">Integer</span>,<span class="title">String</span>&gt;</span>&#123;&#125;</span><br><span class="line"><span class="comment">//3. 子类保留父类的泛型</span></span><br><span class="line"><span class="comment">//3.1 全部保留</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son3</span>&lt;<span class="title">T1</span>,<span class="title">T2</span>&gt;<span class="keyword">extends</span> <span class="title">Father</span>&lt;<span class="title">T1</span>,<span class="title">T2</span>&gt;</span>&#123;&#125;</span><br><span class="line"><span class="comment">//3.2 部分保留</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son4</span>&lt;<span class="title">T2</span>&gt;<span class="keyword">extends</span> <span class="title">Father</span>&lt;<span class="title">Integer</span>,<span class="title">T2</span>&gt;</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226143304180.png" alt="image-20211226143304180"></p>
+<h2 id="为何需要泛型"><a href="#为何需要泛型" class="headerlink" title="为何需要泛型"></a>为何需要泛型</h2><ol>
+<li>解决元素存储的安全性问题</li>
+<li>解决获取数据元素时，需要强制类型转换的问题</li>
+</ol>
+<h2 id="在集合中使用泛型"><a href="#在集合中使用泛型" class="headerlink" title="在集合中使用泛型"></a>在集合中使用泛型</h2><p>如果没有使用泛型，默认是java.lang.Object类型</p>
+<h2 id="自定义泛型结构"><a href="#自定义泛型结构" class="headerlink" title="自定义泛型结构"></a>自定义泛型结构</h2><p>泛型类、泛型接口、泛型方法</p>
+<p>泛型方法：在方法中出现了泛型的结构，<strong>泛型参数与类的泛型参数没有任何关系！</strong></p>
+<ul>
+<li>换句话说，类中指明了<code>&lt;E&gt;</code>，而方法中用到了<code>&lt;T&gt;</code>，才能叫泛型方法。<strong>泛型方法所属的类是不是泛型类都没有关系</strong></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;E&gt; <span class="function">List&lt;E&gt; <span class="title">copyFromArrayToList</span><span class="params">(E[] arr)</span></span>&#123;...&#125;</span><br><span class="line"><span class="comment">//最前面需要声明泛型E，否则编译器认为E是一个类名，会报错</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>泛型方法可以是静态的！泛型方法可以是静态方法，因为泛型参数是在调用方法时确定的，并非在实例化类的时候确定。</strong></p>
+<h2 id="泛型在继承上的体现"><a href="#泛型在继承上的体现" class="headerlink" title="泛型在继承上的体现"></a>泛型在继承上的体现</h2><p>子类在继承泛型时，指明了泛型类型。则实例化子类对象时，不再需要指明泛型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SubOrder</span> <span class="keyword">extends</span> <span class="title">Order</span>&lt;<span class="title">Integer</span>&gt;</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125; <span class="comment">//SubOrder:不是泛型类</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SubOrder2</span>&lt;<span class="title">T</span>&gt; <span class="keyword">extends</span> <span class="title">Order</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;	<span class="comment">//SubOrder&lt;T&gt;仍然是泛型类</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>类A是类B的父类，G&lt;A&gt;和G&lt;B&gt;二者不具备子父类关系，二者是并列关系</li>
+</ol>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226145634905.png" alt="image-20211226145634905"></p>
+<ol start="2">
+<li>下面这个是可以的</li>
+</ol>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226150152685.png" alt="image-20211226150152685"></p>
+<h2 id="通配符的使用"><a href="#通配符的使用" class="headerlink" title="通配符的使用"></a>通配符的使用</h2><p> <img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211226150512810.png" alt="image-20211226150512810"></p>
+<p>需要泛型通配符的根本原因在于，泛型之间都平行关系（即使两个泛型类型自身存在父子关系），因此如果没有泛型的话，要兼容同一子类下的所有所有类型，必须要重载很多函数。</p>
+<h3 id="有限制条件的通配z符"><a href="#有限制条件的通配z符" class="headerlink" title="有限制条件的通配z符"></a>有限制条件的通配z符</h3><ul>
+<li><code>&lt;?&gt;</code>允许所有泛型的引用调用</li>
+<li>通配符指定上限，上限extends：使用时指定的类型必须是继承某个类，或者实现某个接口，即<code>&lt;=</code></li>
+<li>通配符指定下限，下限super：使用时指定的类型不能小于操作的类，即<code>&gt;=</code></li>
+<li>举例<ul>
+<li><code>&lt;? extends Number&gt;</code></li>
+<li><code>&lt;? super Number&gt;</code></li>
+<li><code>&lt;? externds Comparable&gt;</code> 只允许泛型为实现了Comparable接口的实现类的引用调用</li>
+</ul>
+</li>
+</ul>
+<h1 id="7-IO流"><a href="#7-IO流" class="headerlink" title="7.IO流"></a>7.IO流</h1><h2 id="File类的使用"><a href="#File类的使用" class="headerlink" title="File类的使用"></a>File类的使用</h2><h3 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h3><ul>
+<li><p>绝对路径与相对路径</p>
+<ul>
+<li>File中的相对路径（IDEA）：<ul>
+<li>如果在main方法中写，则是相对于工程的根目录（一个工程下可以有多个module）</li>
+<li>如果是使用Junit单元测试测试方法，相对路径即为当前module下</li>
+</ul>
+</li>
+<li>Eclipse中，均是相对于Project根目录下</li>
+</ul>
+</li>
+<li><p>路径分隔符</p>
+<ul>
+<li><p>windows和DOS系统采用<code>\</code>来标识</p>
+</li>
+<li><p>UNIX和URL使用<code>/</code>来标识</p>
+</li>
+<li><p>为了解决这个隐患，File类提供一个常量<code>public static final String separator</code>，根据操作系统，动态地提供分隔符</p>
+</li>
+<li><p>注：在windows下写成<code>/</code>也能识别</p>
+</li>
+</ul>
+</li>
+<li><p>三种构造器</p>
+<ol>
+<li>直接写地址</li>
+<li>parent地址+child地址</li>
+<li>File+child地址</li>
+</ol>
+</li>
+<li><p>创建File时，若硬盘中有对应文件，则File对象的各属性会显式赋值；否则，除了指定目录和路径外，其余属性都取默认值。</p>
+</li>
+</ul>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li>File类的获取功能<ul>
+<li><code>public String getAbsolutePath()</code>：获取绝对路径</li>
+<li><code>public String getPath()</code>：获取路径</li>
+<li><code>public String getName()</code>：获取名称</li>
+<li><code>public String getParent()</code>：获取上层文件目录路径，若无，返回null<ul>
+<li>如果用相对路径创建File，路径名只有一级的话，返回null</li>
+</ul>
+</li>
+<li><code>public long length()</code>：获取文件长度（字节数）不能获取目录的长度</li>
+<li><code>public long lastModified</code>：获取最后一次的修改时间，毫秒值</li>
+<li><code>public String[]list()</code>：获取指定目录下的所有文件或文件目录的<strong>名称</strong>数组</li>
+<li><code>public File[]listFiles()</code>：获取指定目录下的所有文件或文件目录的File数组</li>
+</ul>
+</li>
+<li>File类的重命名功能<ul>
+<li><code>public boolean renameTo(File des)</code>：把文件重命名为指定的文件路径<ul>
+<li>底层是native方法，跟平台相关</li>
+<li>linux下des只能在同一文件夹下，我的理解：其目的是重命名，所以只能在同一目录下进行。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>File类的判断功能<ul>
+<li><code>public boolean isDirectory()</code>：判断是否是文件目录</li>
+<li><code>public boolean isFile()</code>：判断是否是文件</li>
+<li><code>public boolean exists()</code>是否存在</li>
+<li><code>public boolean canRead()</code>是否可读</li>
+<li><code>public boolean canWrite()</code>是否可写</li>
+<li><code>public boolean isHidden()</code>是否隐藏</li>
+</ul>
+</li>
+</ul>
+<h2 id="IO流原理及流的分类"><a href="#IO流原理及流的分类" class="headerlink" title="IO流原理及流的分类"></a>IO流原理及流的分类</h2><ul>
+<li>按操作<strong>数据单位</strong>不同分为：字节流，字符流</li>
+<li>按数据流的<strong>流向</strong>不同分为：输入流，输出流</li>
+<li>按流的角色的不同分为：节点流，处理流</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>字节流</strong></th>
+<th><strong>字符流</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>输入流</strong></td>
+<td>InputStream</td>
+<td>Reader</td>
+</tr>
+<tr>
+<td><strong>输出流</strong></td>
+<td>OutputStream</td>
+<td>Writer</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Java的IO流共40多个类，实际上非常规则，都是以上四个抽象基类派生的</li>
+<li>由这四个类派生出来的子类名称都是以其父类名作为后缀</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>字节输入流</th>
+<th>字节输出流</th>
+<th>字符输入流</th>
+<th>字符输出流</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>抽象基类</td>
+<td>InputStream</td>
+<td>OutputStream</td>
+<td>Reader</td>
+<td>Writer</td>
+</tr>
+<tr>
+<td>访问文件/节点流</td>
+<td>FileInputStream</td>
+<td>FileOutputStream</td>
+<td>FileReader</td>
+<td>FileWriter</td>
+</tr>
+<tr>
+<td>访问数组</td>
+<td>ByteArrayInputStream</td>
+<td>ByteArrayOutputStream</td>
+<td>CharArrayReader</td>
+<td>CharArrayWriter</td>
+</tr>
+<tr>
+<td>访问管道</td>
+<td>PipedInputstream</td>
+<td>PipedOutputStream</td>
+<td>PipedReader</td>
+<td>PipedWriter</td>
+</tr>
+<tr>
+<td>访问字符串</td>
+<td></td>
+<td></td>
+<td>StringReader</td>
+<td>StringWriter</td>
+</tr>
+<tr>
+<td>缓冲流</td>
+<td>BufferedInputStream</td>
+<td>BufferOutputStream</td>
+<td>BufferedReader</td>
+<td>BufferedWriter</td>
+</tr>
+<tr>
+<td>转换流</td>
+<td></td>
+<td></td>
+<td>InputStreamReader</td>
+<td>OutputStreamWriter</td>
+</tr>
+<tr>
+<td>对象流</td>
+<td>ObjectInputStream</td>
+<td>ObjectOutputStream</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>FilterInputStream</td>
+<td>FilterOutputStream</td>
+<td>FilterReader</td>
+<td>FilterWriter</td>
+</tr>
+<tr>
+<td>打印流</td>
+<td></td>
+<td>PrintStream</td>
+<td></td>
+<td>PrintWriter</td>
+</tr>
+<tr>
+<td>推回输入流</td>
+<td>PushbackInputStream</td>
+<td></td>
+<td>PushbackReader</td>
+<td></td>
+</tr>
+<tr>
+<td>特殊流</td>
+<td>DataInputStream</td>
+<td>DataOutputStream</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>字符流一次读几个字节？</p>
+<ul>
+<li>我的理解：看到FileReader源码中提到字符集的问题，应该是根据字符集来的</li>
+</ul>
+</li>
+<li><p>为什么不能用字符流处理图片（如复制图片后会损坏打不开）？</p>
+<ul>
+<li>我的理解：字符流在读取文件后，会根据指定的（或默认）字符集转换原有的编码，因此二进制文件已经被改变，所以图片损坏。（如utf-32是4字节一个字符，utf-8是可变长编码字符）</li>
+</ul>
+</li>
+<li><p>文本文件：<code>.txt</code> <code>.java</code> <code>.c</code> 使用字符流进行处理</p>
+</li>
+<li><p>非文本文件：<code>.jpg</code> <code>.mp3</code> <code>.doc</code> <code>.ppt</code> 使用字节流进行处理</p>
+</li>
+</ul>
+<h2 id="节点流（又叫文件流）"><a href="#节点流（又叫文件流）" class="headerlink" title="节点流（又叫文件流）"></a>节点流（又叫文件流）</h2><p><strong>FileReader如果要一个一个读，直接用read()方法，不加参数，返回的是int类型，如果值是-1代表文件末尾，如果不是-1则转化为char类型即可</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">&quot;demo&quot;</span>);</span><br><span class="line"></span><br><span class="line">    FileReader reader = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        reader = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">        <span class="keyword">int</span> data;</span><br><span class="line">        <span class="keyword">while</span> ((data = reader.read()) != -<span class="number">1</span>)</span><br><span class="line">            System.out.print((<span class="keyword">char</span>) data);</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span>(reader!=<span class="keyword">null</span>)</span><br><span class="line">                reader.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为什么不推荐使用throws IOException?</p>
+<ul>
+<li>因为一共有三个地方抛异常，如果中间抛异常，会导致流没有close</li>
+<li>java垃圾回收机制，只能回收JVM堆内存里的对象空间；对于其他物理连接，比如数据库连接、输入输出流、Socket连接无能为力。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">&quot;demo&quot;</span>);</span><br><span class="line">    FileReader fr = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        fr = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">        <span class="keyword">char</span>[] buff = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">3</span>];</span><br><span class="line">        <span class="keyword">int</span> len;<span class="comment">//需要len的原因是，结尾处可能读不满buff</span></span><br><span class="line">        <span class="keyword">while</span> ((len = fr.read(buff)) != -<span class="number">1</span>) &#123; <span class="comment">//每次按照buff的长度来读取字符，返回读取的字符的数量</span></span><br><span class="line">            <span class="comment">//for (int i = 0; i &lt; len; i++)</span></span><br><span class="line">            	<span class="comment">//System.out.print(buff[i]);</span></span><br><span class="line">            <span class="comment">//方式二</span></span><br><span class="line">            System.out.print(<span class="keyword">new</span> String(buff, <span class="number">0</span>, len));</span><br><span class="line">        &#125;</span><br><span class="line">        ;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (fr != <span class="keyword">null</span>)</span><br><span class="line">                fr.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>为什么流需要关闭？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">因为当我们用了虚拟机以外的资源，比如端口、显存、文件的时候（访问本地资源），超出了虚拟机能够释放资源的界限，这时候虚拟机并不能通过垃圾回收机制对你占用的资源进行释放，如果在没有关闭的情况下第一次运行程序是不会发生问题的，但是随着资源占有量逐渐增多而你又不自己进行close释放资源的话，垃圾只会越积越多，导致系统无法存储其他的资源，甚至会导致系统崩溃。如果你再次对未关闭流的文件进行读写，编译就会报错，告诉你这个文件被占用。</span><br><span class="line"></span><br><span class="line">举例说明：如果你再堆区new一个对象的时候，如果等号左边是对端口、显存、文件进行操作的时候，虚拟机就无法利用垃圾回收机制对堆区占用的资源进行释放。</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">虽然都是 InputStream，但不同的物理实现，close() 的物理作用也有所不同，所以忘记了 close() 的后果也不一样。</span><br><span class="line"></span><br><span class="line">比如 ByteArrayInputStream 这种输入流，close() 与否就没什么关系。</span><br><span class="line"></span><br><span class="line">楼主的例子中，实际的输入流是一个网络连接。如果忘记 close() 的话，它会一直占用着，直到 timeout 后系统自动关闭这个网络连接。也就是说，如果你忘记了关闭这个资源，到了一定的时候，系统会替你关闭。但如果类似这样的程序被执行很多次，就会有大量资源被长时间无效占用，极端情况下可能导致后续程序资源不足而失败。</span><br><span class="line"></span><br><span class="line">也不是所有的资源都能自动回收，比如 FileInputStream，你要是忘记关闭了，它就一直占用着，直到 JVM 退出。</span><br><span class="line"></span><br><span class="line">所以，回过来说，好的编程习惯是：主动用程序严格控制对资源的释放，而不必区分其具体的物理实现，不要指望系统级的回收机制。这样能保证程序的可读性和可靠性。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>总结一下，针对内存的流可以不关闭，但是使用了JVM外界的资源的流如文件、端口、数据库连接等，JVM无法在垃圾回收时进行关闭并清理对应的内存对象，因此需要手动close（可以使用try-with-resources方式进行关闭）。如果一直不关，会导致外界资源一直被占用，对应的内存对象无法回收。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">&quot;demo&quot;</span>);</span><br><span class="line">    FileWriter fw = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        fw = <span class="keyword">new</span> FileWriter(file,<span class="keyword">true</span>); <span class="comment">//第二个参数表示是否追加写入</span></span><br><span class="line">        fw.write(<span class="string">&quot;\n你在赣神魔！&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (fw != <span class="keyword">null</span>)</span><br><span class="line">                fw.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;成功！&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为什么close要放在finally中？</p>
+<ul>
+<li><p>如果不写在finally中，如写在try或catch或try-catch代码块后面，try或者catch中可能会出现跳过close的代码，如thow、return、continue、break(如下代码所示)</p>
+</li>
+<li><p>不放在catch中，是因为可能有多个具体的异常（多个catch），需要写很多close，不如统一写在finally中</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：try-catch的目的就是为了处理异常，使得后续代码可以继续运行。因此try-catch中出现了异常，程序不会直接退出，后续代码会继续执行</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">    	<span class="keyword">if</span>(..)</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">    &#125;<span class="keyword">catch</span>()&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    close();	<span class="comment">//如果continue执行，则无法close</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用filereader和filewriter进行文件的复制</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*复制文件*/</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    File f1 = <span class="keyword">new</span> File(<span class="string">&quot;src.txt&quot;</span>);</span><br><span class="line">    File f2 = <span class="keyword">new</span> File(<span class="string">&quot;target.txt&quot;</span>);</span><br><span class="line">    FileReader fr = <span class="keyword">null</span>;</span><br><span class="line">    FileWriter fw = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        fr = <span class="keyword">new</span> FileReader(f1);</span><br><span class="line">        fw = <span class="keyword">new</span> FileWriter(f2,<span class="keyword">true</span>);   <span class="comment">//true:追加写入，false：清空文件重新写入</span></span><br><span class="line">        <span class="keyword">char</span>[]buf=<span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">int</span> len;</span><br><span class="line">        <span class="keyword">while</span>((len=fr.read(buf))!=-<span class="number">1</span>)&#123;</span><br><span class="line">            fw.write(buf,<span class="number">0</span>,len);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (fr != <span class="keyword">null</span>)</span><br><span class="line">                fr.close();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (IOException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (fw != <span class="keyword">null</span>)</span><br><span class="line">                fw.close();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (IOException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用字节流复制图片</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*使用字节流复制图片*/</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    File f1 = <span class="keyword">new</span> File(<span class="string">&quot;皮卡丘.jfif&quot;</span>);</span><br><span class="line">    File f2 = <span class="keyword">new</span> File(<span class="string">&quot;皮卡丘副本.png&quot;</span>);</span><br><span class="line"></span><br><span class="line">    FileInputStream fis = <span class="keyword">null</span>;</span><br><span class="line">    FileOutputStream fos = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        fis = <span class="keyword">new</span> FileInputStream(f1);</span><br><span class="line">        fos = <span class="keyword">new</span> FileOutputStream(f2);</span><br><span class="line">        <span class="keyword">byte</span>[]buf=<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1000</span>];</span><br><span class="line">        <span class="keyword">int</span> len;</span><br><span class="line">        <span class="keyword">while</span>((len=fis.read(buf))!=-<span class="number">1</span>)&#123;</span><br><span class="line">            fos.write(buf,<span class="number">0</span>,len);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (fis != <span class="keyword">null</span>)</span><br><span class="line">                fis.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (fos != <span class="keyword">null</span>)</span><br><span class="line">                fos.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;复制完成！&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="缓冲流"><a href="#缓冲流" class="headerlink" title="缓冲流"></a>缓冲流</h2><p>处理流的一种</p>
+<p>缓冲流是为了提高文件的读写效率</p>
+<ul>
+<li>我认为其效果就如同中断方式的IO和DMA方式的IO</li>
+</ul>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211231155043835.png" alt="image-20211231155043835"></p>
+<p>没有缓冲意味着：包工头指着一块砖头对着工人说你给我从A搬到B地，然后再发出命令你把下一块砖头从A搬到B，重复直至搬完；有了缓冲，包工头可以说你把这100块砖头从A搬到B，然后等工人搬完再下达命令，直到所有砖头搬完（方法二节省了很多无效时间）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">copyFileByBuf</span><span class="params">(String url)</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(url);</span><br><span class="line">    File copy = <span class="keyword">new</span> File(<span class="string">&quot;副本&quot;</span> + file.getName());</span><br><span class="line">    FileInputStream fis = <span class="keyword">null</span>;</span><br><span class="line">    FileOutputStream fos = <span class="keyword">null</span>;</span><br><span class="line">    BufferedInputStream bis = <span class="keyword">null</span>;</span><br><span class="line">    BufferedOutputStream bos = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        fis = <span class="keyword">new</span> FileInputStream(file);</span><br><span class="line">        fos = <span class="keyword">new</span> FileOutputStream(copy);</span><br><span class="line">        bis = <span class="keyword">new</span> BufferedInputStream(fis);</span><br><span class="line">        bos = <span class="keyword">new</span> BufferedOutputStream(fos);</span><br><span class="line">        <span class="keyword">int</span> len;</span><br><span class="line">        <span class="keyword">byte</span>[]buf=<span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];	<span class="comment">//buf的大小影响文件读写效率</span></span><br><span class="line">        <span class="keyword">while</span>((len=bis.read(buf))!=-<span class="number">1</span>)&#123;</span><br><span class="line">            bos.write(buf,<span class="number">0</span>,len);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (bis != <span class="keyword">null</span>)</span><br><span class="line">                bis.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (bos != <span class="keyword">null</span>)</span><br><span class="line">                bos.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意，将外层处理流关闭后，内层的节点流会自动关闭</strong></p>
+<h2 id="转换流"><a href="#转换流" class="headerlink" title="转换流"></a>转换流</h2><p>处理流的一种</p>
+<ol>
+<li>转换流提供了在字节流和字符流之间的转换</li>
+<li>Java API提供了两个转换流<ul>
+<li><code>InputStreamReader</code>：将InputStream转换为Reader</li>
+<li><code>OutputStreamWriter</code>：将Writer转换为OutputStream</li>
+</ul>
+</li>
+<li>字节流中的数据都是字符时，转换成字符流操作更高效（为什么？没查到原因）</li>
+<li>很多时候我们使用转换流来处理<strong>文件乱码</strong>的问题，实现编码和解码的功能</li>
+<li>字符集<ul>
+<li>ASCII：美国标准信息交换码</li>
+<li>ISO8895-1：拉丁码表：欧洲码表。</li>
+<li>GB2312：中国的中文编码表。最多两个字节编码所有字符</li>
+<li>GBK:中国的中文编码表升级，融合了更多的中文文字符号。最多两个字节编码。</li>
+<li>Unicode：国际标准码，融合了目前人类使用的所有字符。为每一个字符分配唯一的字符码。<ul>
+<li>Unicode只是定义了一个庞大的、全球通用的字符集，并为每个字符规定了唯一确定的编号，具体存储成什么样的字节流，取决于字符编码方案。推荐的Unicode编码是<strong>UTF-8和UTF-16</strong>。</li>
+</ul>
+</li>
+<li>UTF-8:变长的编码方法，可用1-4个字节来表示一个字符。</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211231163746622.png" alt="image-20211231163746622"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    InputStreamReader isr = <span class="keyword">null</span>;</span><br><span class="line">    OutputStreamWriter osw=<span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        isr = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="string">&quot;src.txt&quot;</span>), StandardCharsets.UTF_8);</span><br><span class="line">        osw=<span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="string">&quot;gbk_src.txt&quot;</span>),<span class="string">&quot;gbk&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> len;</span><br><span class="line">        <span class="keyword">char</span>[] buf = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">while</span> ((len = isr.read(buf)) != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="comment">//                System.out.println(new String(buf, 0, len));</span></span><br><span class="line">            osw.write(buf,<span class="number">0</span>,len);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span>(isr!=<span class="keyword">null</span>)</span><br><span class="line">                isr.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span>(osw!=<span class="keyword">null</span>)</span><br><span class="line">                osw.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220101103822036.png" alt="image-20220101103822036"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220101103915239.png" alt="image-20220101103915239"></p>
+<h2 id="标准输入输出流"><a href="#标准输入输出流" class="headerlink" title="标准输入输出流"></a>标准输入输出流</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*从键盘输入字符串，要求将读取到的整行字符串转换成大写输出。然后继续进行输入操作</span></span><br><span class="line"><span class="comment">     * 直至输入e和exit时，退出程序*/</span></span><br><span class="line"><span class="comment">/*方法1：使用Scanner实现</span></span><br><span class="line"><span class="comment">     * 方法2：使用System.in实现。 System.in --&gt; 转换流 --&gt; BufferedReader的readline()*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    BufferedReader br = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        InputStreamReader reader = <span class="keyword">new</span> InputStreamReader(System.in, StandardCharsets.UTF_8);</span><br><span class="line">        br = <span class="keyword">new</span> BufferedReader(reader);</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            String t = br.readLine();</span><br><span class="line">            <span class="keyword">if</span> (<span class="string">&quot;e&quot;</span>.equalsIgnoreCase(t) || <span class="string">&quot;exit&quot;</span>.equals(t.toLowerCase())) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;程序结束...&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(t.toUpperCase());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (br != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                br.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>模拟实现Scanner效果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    MyInput myInput = <span class="keyword">new</span> MyInput(System.in);</span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">        <span class="comment">//            int a= myInput.readInt();</span></span><br><span class="line">        <span class="comment">//            System.out.println(a);</span></span><br><span class="line">        <span class="comment">//            System.out.println(myInput.readString());</span></span><br><span class="line">        System.out.println(myInput.readFloat());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyInput</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> BufferedReader reader = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyInput</span><span class="params">(InputStream input)</span> </span>&#123;</span><br><span class="line">        reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(input));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*输出字符，直到遇到空格或回车停止*/</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">readInt</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">char</span> c = (<span class="keyword">char</span>) reader.read();</span><br><span class="line">            <span class="keyword">if</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">                sb.append(c);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (sb.length() == <span class="number">0</span>)   <span class="comment">//防止返回空的数字</span></span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">return</span> Integer.parseInt(sb.toString());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">readString</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">char</span> c = (<span class="keyword">char</span>) reader.read();</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">&#x27; &#x27;</span> || c == <span class="string">&#x27;\t&#x27;</span> || c == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (sb.length() == <span class="number">0</span>)</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">return</span> sb.toString();</span><br><span class="line">            &#125; <span class="keyword">else</span></span><br><span class="line">                sb.append(c);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">float</span> <span class="title">readFloat</span><span class="params">()</span><span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">        StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">            <span class="keyword">char</span> c=(<span class="keyword">char</span>)reader.read();</span><br><span class="line">            <span class="keyword">if</span>(c&gt;=<span class="string">&#x27;0&#x27;</span> &amp;&amp; c&lt;=<span class="string">&#x27;9&#x27;</span> || c==<span class="string">&#x27;.&#x27;</span>)&#123;</span><br><span class="line">                sb.append(c);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(sb.length()==<span class="number">0</span>)</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                <span class="comment">/*输入的浮点数格式不正确*/</span></span><br><span class="line">                <span class="keyword">try</span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> Float.parseFloat(sb.toString());</span><br><span class="line">                &#125;<span class="keyword">catch</span> (NumberFormatException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="打印流"><a href="#打印流" class="headerlink" title="打印流"></a>打印流</h2><p>了解即可</p>
+<p>Sytem.out就是一个打印流</p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220101134612613.png" alt="image-20220101134612613"></p>
+<p><strong>将System.out的打印流从控制台重定向到自定义的输出流中，然后写入文件</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FileOutputStream fos=<span class="keyword">new</span> FileOutputStream(<span class="string">&quot;testSystemOutRedirect.txt&quot;</span>,<span class="keyword">true</span>);	<span class="comment">//追加写入</span></span><br><span class="line">PrintStream ps=<span class="keyword">new</span> PrintStream(fos);	</span><br><span class="line">System.setOut(ps);	<span class="comment">//重定向System输出，到自定义的ps打印流</span></span><br><span class="line">InputStreamReader reader=<span class="keyword">new</span> InputStreamReader(System.in);</span><br><span class="line"><span class="keyword">int</span> t;</span><br><span class="line"><span class="keyword">while</span>((t=reader.read())!=-<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">char</span> c=(<span class="keyword">char</span>)t;</span><br><span class="line">    System.out.print(c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据流"><a href="#数据流" class="headerlink" title="数据流"></a>数据流</h2><p>了解即可</p>
+<ul>
+<li><p>作用：为了方便操作Java语言的基本数据类型和String的数据，可以使用数据流（<strong>可以理解为专门为Java基本数据类型和String类型持久化和读取的流，其生成的文件可以理解为一种特殊文件，用于持久化存储java基本数据类型和String</strong>）</p>
+</li>
+<li><p>读取不同类型的数据的顺序，要与当初写入文件时的顺序一致！</p>
+</li>
+<li><p>数据流有两个类：用于读取和写出基本数据类型、String类的数据</p>
+<ul>
+<li>DataInputStream和DataOutputStream</li>
+<li>分别“套接”在InputStream和OutputStream子类的流上</li>
+</ul>
+</li>
+<li><p>DataInputStream中的方法</p>
+<ul>
+<li><code>boolean readBoolean()</code></li>
+<li><code>char readChar()</code></li>
+<li><code>double readDouble</code></li>
+<li>…</li>
+<li><code>String readUTF()</code></li>
+<li><code>void readFully(byte[] b)</code></li>
+</ul>
+</li>
+<li><p>DataOutputStream中的方法</p>
+<ul>
+<li>将上述的方法中的read改为相应的write即可</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据流进行java基本数据类型和String的持久化</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test3</span><span class="params">()</span><span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    DataOutputStream dos=<span class="keyword">new</span> DataOutputStream(<span class="keyword">new</span> FileOutputStream(<span class="string">&quot;dataflow&quot;</span>));</span><br><span class="line">    dos.writeBoolean(<span class="keyword">false</span>);</span><br><span class="line">    dos.writeUTF(<span class="string">&quot;张三丰&quot;</span>);</span><br><span class="line">    dos.writeInt(<span class="number">12345</span>);</span><br><span class="line">    dos.flush();    <span class="comment">//将内存中的数据写入文件</span></span><br><span class="line">    dos.close();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//数据流进行java基本数据类型和String的持久化文件的读取</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test4</span><span class="params">()</span><span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    DataInputStream dis=<span class="keyword">new</span> DataInputStream(<span class="keyword">new</span> FileInputStream(<span class="string">&quot;dataflow&quot;</span>));</span><br><span class="line">    <span class="keyword">boolean</span> b=dis.readBoolean();</span><br><span class="line">    String s=dis.readUTF();</span><br><span class="line">    <span class="keyword">int</span> i=dis.readInt();</span><br><span class="line">    System.out.println(b);</span><br><span class="line">    System.out.println(s);</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="对象流"><a href="#对象流" class="headerlink" title="对象流"></a>对象流</h2><h3 id="对象的序列化"><a href="#对象的序列化" class="headerlink" title="对象的序列化"></a>对象的序列化</h3><ul>
+<li>对象序列化机制允许把内存中的Java对象转换成平台无关的二进制流，从而允许把这种二进制流持久地保存在磁盘上，或通过网络将这种二进制流传输到另一个网络节点。当其他程序获取了这种二进制流，就可以恢复成原来的Java对象</li>
+<li>序列化的好处在于：可将任何实现了Serializable接口的对象转换成字节数据，使其在保存和传输时可以被还原。</li>
+<li>序列化是RMI（Remote Method Invoke 远程方法调用）过程的参数和返回值都必须实现的机制，而RMI是JavaEE的基础。因此序列化机制是JavaEE平台的基础</li>
+<li>如果需要让某个对象支持序列化机制，则必须让对象所属的类及其属性是可序列化的，为了让某个类是可序列化的，该类必须实现如下两个接口之一。否则会抛出<code>NotSerializableException</code>异常。<ul>
+<li><code>Serializable</code></li>
+<li><code>Externalizable</code></li>
+</ul>
+</li>
+<li><strong>对象序列化需要满足两个要求</strong><ol>
+<li>实现接口Serializable（仅仅是个标识接口，无具体内容）</li>
+<li>当前类提供一个全局常量：serialVersionUID<ul>
+<li>serialVersionUID用来表示类的不同版本之间的兼容性。简言之，其目的是以序列化对象进行版本控制，有关各版本反序列化时是否兼容。</li>
+<li>如果类没有显示定义这个静态常量，它的值是Java运行时环境根据类的内部细节自动生成。<strong>若类的实例变量做了修改，serialVersionUID可能发生变化</strong>。所以，建议使用显式声明。</li>
+<li>简单来说，Java的序列化机制是通过在运行时判断类的serialVersionUID来验证版本的一致性的。在进行反序列化时，JVM会把传过来的字节流中的serialVersionUID与本地相应实体类的serialVersionUID进行比较，如果相同就认为是一致的，可以进行反序列化，否则就会出现版本不一致的异常（InvalidCastException）</li>
+</ul>
+</li>
+<li>必须保证内部所有属性可序列化（默认情况下，基本数据类型可序列化）</li>
+</ol>
+</li>
+</ul>
+<h3 id="对象流-1"><a href="#对象流-1" class="headerlink" title="对象流"></a>对象流</h3><ul>
+<li>ObjectInputStream, ObjectOutputStream</li>
+<li>用于存储和读取<strong>基本数据类型</strong>数据或<strong>对象</strong>的处理流。可以把Java中的对象写入到数据源中，也能把对象从数据源中还原回来。</li>
+<li>序列化：用ObjectOutputStream类保存基本数据类型或对象的机制</li>
+<li>反序列化：用ObjectInputStream类读取基本数据类型或对象的机制</li>
+<li>不能序列化<strong>static</strong>和<strong>transient</strong>修饰的成员变量</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//java对象序列化</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test5</span><span class="params">()</span><span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">    ObjectOutputStream oos=<span class="keyword">new</span> ObjectOutputStream(<span class="keyword">new</span> FileOutputStream(<span class="string">&quot;serializationObjects&quot;</span>));</span><br><span class="line">    oos.writeObject(<span class="string">&quot;你是什么念&quot;</span>);</span><br><span class="line">    oos.writeObject(<span class="keyword">new</span> Date());</span><br><span class="line">    oos.flush();</span><br><span class="line">    oos.close();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//java对象反序列化</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test6</span><span class="params">()</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;</span><br><span class="line">    ObjectInputStream ois=<span class="keyword">new</span> ObjectInputStream(<span class="keyword">new</span> FileInputStream(<span class="string">&quot;serializationObjects&quot;</span>));</span><br><span class="line">    Object o1=ois.readObject();</span><br><span class="line">    Object o2=ois.readObject();</span><br><span class="line">    System.out.println(o1);</span><br><span class="line">    System.out.println(o2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="随机存取文件流"><a href="#随机存取文件流" class="headerlink" title="随机存取文件流"></a>随机存取文件流</h2><p>RandomAccessFile类</p>
+<ul>
+<li>声明在<code>java.io</code>包下，但直接继承于java.lang.Object类。（而非继承于流的四个基类）并且它实现了DataInput、DataOutput这两个接口，意味着既可以读也可以写（但是要造两个对象）</li>
+<li><code>RandomAccessFile</code>类支持“随机访问”方式，程序可以直接跳到文件的任意地方来读、写文件<ul>
+<li>支持只访问文件的部分内容</li>
+<li>可以向已存在的文件后追加内容</li>
+</ul>
+</li>
+<li><code>RandomAccessFile</code>对象包含一个记录指针，可以标示当前读写处的位置。该对象可以自由移动记录指针<ul>
+<li><code>long getFilePointer()</code>：获取文件记录指针的当前位置</li>
+<li><code>void seek(long pos)</code>：将文件记录指针定位到pos位置</li>
+</ul>
+</li>
+<li>创建对象需要指定一个mode参数，该参数指定RandomAccessFIle对象的访问模式<ul>
+<li><code>r</code>：以只读方式打开</li>
+<li><code>rw</code>：打开以便读取和写入</li>
+<li><code>rwd</code>：打开以便读取和写入；同步文件的内容的更新</li>
+<li><code>rws</code>：打开以便进行读取和写入；同步文件内容和元数据的更新</li>
+<li>注：如果模式为r，则不会创建文件，而是会读取一个已存在的文件，如果读取的文件不存在则会抛出异常。如果模式为rw读写。如果文件不存在则会去创建文件，如果存在则不会创建，而是覆盖。</li>
+</ul>
+</li>
+</ul>
+<h2 id="NIO-2中Path、Paths、Files类的使用"><a href="#NIO-2中Path、Paths、Files类的使用" class="headerlink" title="NIO.2中Path、Paths、Files类的使用"></a>NIO.2中Path、Paths、Files类的使用</h2><ul>
+<li>Java NIO(Non-Blocking IO)是从java1.4开始引入的一套新的IO API，可以替代标准Java IO API。NIO与原来的IO有同样的作用和目的，但是使用的方式完全不同，NIO支持面向缓冲区的（IO是面向流的）、基于通道的IO操作。<strong>NIO将以更高效的方式进行文件的读写操作</strong>。</li>
+<li>Java API中提供了两套NIO，一套是针对标准输入输出的NIO，另一套是网络编程NIO<ul>
+<li><code>java.nio.channels.Channel</code>：<ul>
+<li><code>FileChannel</code>：处理本地文件</li>
+<li><code>SocketChannel</code>：TCP网络编程的客户端Channel</li>
+<li><code>ServerSocketChannel</code>：TCP网络编程的服务器端的Channel</li>
+<li><code>DatagramChannel</code>：UDP网络编程中发送端和接收端的Channel</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>随着JDK7的发布，Java对NIo进行了极大的扩展，增强了对文件处理和文件系统特性的支持，以至于我们称他们为NIO.2，因为NIO提供的一些功能，NIO已经成为文件处理中越来越重要的部分。</li>
+</ul>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103453508.png" alt="image-20220103103453508"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103515417.png" alt="image-20220103103515417"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103526943.png" alt="image-20220103103526943"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103543846.png" alt="image-20220103103543846"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103603452.png" alt="image-20220103103603452"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220103103611895.png" alt="image-20220103103611895"></p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>一般实际工作中，会导入第三方jar包，如Apache的<code>commons-io</code>中的FileUitls来实现文件的操作。</p>
+<h1 id="8-网络编程"><a href="#8-网络编程" class="headerlink" title="8.网络编程"></a>8.网络编程</h1><h2 id="网络通信要素概述"><a href="#网络通信要素概述" class="headerlink" title="网络通信要素概述"></a>网络通信要素概述</h2><p>如何实现网络中的主机相互通信</p>
+<ul>
+<li>通信双方地址<ul>
+<li>IP</li>
+<li>端口号</li>
+</ul>
+</li>
+<li>一定的规则（网络通信协议）<ul>
+<li>OSI参考模型：模型过于理想化，未在因特网上进行广泛推广</li>
+<li>TCP/IP参考模型（TCP/IP协议）：事实上的国际标准</li>
+</ul>
+</li>
+</ul>
+<h2 id="通信要素1：IP和端口号"><a href="#通信要素1：IP和端口号" class="headerlink" title="通信要素1：IP和端口号"></a>通信要素1：IP和端口号</h2><p>在Java中使用InetAddress类代表IP</p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220105095131010.png" alt="image-20220105095131010"></p>
+<ul>
+<li>端口号标识正在计算机上运行的进程<ul>
+<li>不同的进程有不同的端口号</li>
+<li>被规定为一个16位的整数0~65535</li>
+<li>端口分类<ul>
+<li>公认端口：0~1023。被预先定义的服务通信占用（如HTTP80，FTP21，Telnet23）</li>
+<li>注册端口：1024~49151.分配给用户进程或应用程序。（如Tomcat8080，MySQL3306，Oracle1521）</li>
+<li>动态/私有端口：49152~65535</li>
+</ul>
+</li>
+<li>端口号和IP地址的组合得出一个网络套接字：Socket</li>
+</ul>
+</li>
+</ul>
+<h2 id="通信要素2：网络协议"><a href="#通信要素2：网络协议" class="headerlink" title="通信要素2：网络协议"></a>通信要素2：网络协议</h2><p>TCP和UDP</p>
+<p>TCP协议：</p>
+<ul>
+<li>使用前须建立TCP连接，形成传输通道</li>
+<li>传输前，采用<strong>三次握手</strong>方式，点对点通信，可靠的</li>
+<li>TCP协议进行通信的两个应用进程：客户端、服务端</li>
+<li>在连接中可进行大量数据的传输</li>
+<li>传输完毕，需释放已建立的连接，效率低</li>
+</ul>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20220105100554138.png" alt="image-20220105100554138"></p>
+<p>UDP协议：</p>
+<ul>
+<li>将数据、源、目的封装成数据包，无需建立连接</li>
+<li>每个数据报的大小限制在64K内</li>
+<li>发送不管对方是否准备好，接收方也收不到确认，故不可靠</li>
+<li>可以广播发送</li>
+<li>发送结束后无需释放资源，开销小，速度快</li>
+</ul>
+<p>为什么TCP需要三次握手、四次挥手?</p>
+<ul>
+<li>B站掌知识：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1kV411j7hA?from=search&amp;seid=5623693464798890863&amp;spm_id_from=333.337.0.0">https://www.bilibili.com/video/BV1kV411j7hA?from=search&amp;seid=5623693464798890863&amp;spm_id_from=333.337.0.0</a></li>
+</ul>
+<h2 id="TCP网络编程"><a href="#TCP网络编程" class="headerlink" title="TCP网络编程"></a>TCP网络编程</h2><h2 id="UDP网络编程"><a href="#UDP网络编程" class="headerlink" title="UDP网络编程"></a>UDP网络编程</h2><h2 id="URL编程"><a href="#URL编程" class="headerlink" title="URL编程"></a>URL编程</h2><h1 id="9-反射"><a href="#9-反射" class="headerlink" title="9.反射"></a>9.反射</h1><h1 id="10-Java8新特性"><a href="#10-Java8新特性" class="headerlink" title="10.Java8新特性"></a>10.Java8新特性</h1><h1 id="11-Java9-amp-10-amp-11-新特性"><a href="#11-Java9-amp-10-amp-11-新特性" class="headerlink" title="11.Java9 &amp; 10 &amp; 11 新特性"></a>11.Java9 &amp; 10 &amp; 11 新特性</h1></div><div class="article-licensing box"><div class="licensing-title"><p><a href="https://fxgood.gitee.io/2021/10/20/Java-java高级/">https://fxgood.gitee.io/2021/10/20/Java-java高级/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>余丰旭</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-10-20</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-01-05</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/11/09/%E8%AE%BA%E6%96%87-%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">论文精读</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/10/16/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E6%80%A7/"><span class="level-item">排序算法稳定性</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/icon.jpg" alt="余丰旭"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">余丰旭</p><p class="is-size-6 is-block">一名奋斗的程序员</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">82</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/fxgood" target="_blank" rel="noopener">关注我</a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/C/"><span class="level-start"><span class="level-item">C++</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/"><span class="level-start"><span class="level-item">我的项目</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">技术</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="level-start"><span class="level-item">数据结构</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">37</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%BA%E6%96%87/"><span class="level-start"><span class="level-item">论文</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-06T10:55:33.860Z">2022-01-06</time></p><p class="title"><a href="/2022/01/06/Java-%E7%AE%80%E5%8D%95%E8%81%8A%E5%A4%A9%E7%A8%8B%E5%BA%8F/">Java简单聊天程序</a></p><p class="categories"><a href="/categories/Java/">Java</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-04T02:22:30.205Z">2021-12-04</time></p><p class="title"><a href="/2021/12/04/%E6%8A%80%E6%9C%AF-ssh%E4%B8%8ERAS%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">SSH和RSA非对称加密算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-14T07:53:49.731Z">2021-11-14</time></p><p class="title"><a href="/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/">物联网溯源相关论文</a></p><p class="categories"><a href="/categories/%E8%AE%BA%E6%96%87/">论文</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-09T07:42:50.917Z">2021-11-09</time></p><p class="title"><a href="/2021/11/09/%E8%AE%BA%E6%96%87-%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">论文精读</a></p><p class="categories"><a href="/categories/%E8%AE%BA%E6%96%87/">论文</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-20T13:26:51.065Z">2021-10-20</time></p><p class="title"><a href="/2021/10/20/Java-java%E9%AB%98%E7%BA%A7/"> </a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">一月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">十二月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">五月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/B%E6%A0%91/"><span class="tag">B树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OS/"><span class="tag">OS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dfs/"><span class="tag">dfs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/leetcode/"><span class="tag">leetcode</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="tag">中间件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%88%86/"><span class="tag">二分</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"><span class="tag">二叉树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"><span class="tag">优先级队列</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="tag">动态规划</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"><span class="tag">单调栈</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"><span class="tag">单调队列</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"><span class="tag">双指针</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%88%E5%B8%8C/"><span class="tag">哈希</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%9E%E6%BA%AF/"><span class="tag">回溯</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A0%86/"><span class="tag">堆</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8E%92%E5%BA%8F/"><span class="tag">排序</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"><span class="tag">最小生成树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"><span class="tag">最短路径</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A0%88/"><span class="tag">栈</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"><span class="tag">滑动窗口</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span class="tag">编程语言</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"><span class="tag">背包问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B4%AA%E5%BF%83/"><span class="tag">贪心</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AC%E5%8C%96%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98/"><span class="tag">转化等价问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%80%92%E5%BD%92/"><span class="tag">递归</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%9F%E5%88%97/"><span class="tag">队列</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a><p class="is-size-7"><span>&copy; 2022 余丰旭</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

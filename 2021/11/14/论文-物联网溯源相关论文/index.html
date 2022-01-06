@@ -1,71 +1,729 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>物联网溯源相关论文 - 余丰旭的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="余丰旭的博客"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="余丰旭的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="记录物联网溯源相关的论文，以及我的思考。"><meta property="og:type" content="blog"><meta property="og:title" content="物联网溯源相关论文"><meta property="og:url" content="https://fxgood.gitee.io/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/"><meta property="og:site_name" content="余丰旭的博客"><meta property="og:description" content="记录物联网溯源相关的论文，以及我的思考。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://fxgood.gitee.io/img/og_image.png"><meta property="article:published_time" content="2021-11-14T07:53:49.731Z"><meta property="article:modified_time" content="2021-11-14T11:05:27.120Z"><meta property="article:author" content="余丰旭"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://fxgood.gitee.io/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/"},"headline":"物联网溯源相关论文","image":["https://fxgood.gitee.io/img/og_image.png"],"datePublished":"2021-11-14T07:53:49.731Z","dateModified":"2021-11-14T11:05:27.120Z","author":{"@type":"Person","name":"余丰旭"},"publisher":{"@type":"Organization","name":"余丰旭的博客","logo":{"@type":"ImageObject","url":"https://fxgood.gitee.io/img/logo.svg"}},"description":"记录物联网溯源相关的论文，以及我的思考。"}</script><link rel="canonical" href="https://fxgood.gitee.io/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-14T07:53:49.731Z" title="2021/11/14 下午3:53:49">2021-11-14</time>发表</span><span class="level-item"><time dateTime="2021-11-14T11:05:27.120Z" title="2021/11/14 下午7:05:27">2021-11-14</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E8%AE%BA%E6%96%87/">论文</a></span><span class="level-item">4 分钟读完 (大约671个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">物联网溯源相关论文</h1><div class="content"><h1 id="iot溯源相关期刊和论文"><a href="#iot溯源相关期刊和论文" class="headerlink" title="iot溯源相关期刊和论文"></a>iot溯源相关期刊和论文</h1><h2 id="会议"><a href="#会议" class="headerlink" title="会议"></a>会议</h2><ol>
-<li><em>International Conference on Trust, Security and Privacy in Computing and Communications</em></li>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>物联网溯源相关论文 - 余丰旭的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="余丰旭的博客"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="余丰旭的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="记录物联网溯源相关的论文，以及我的思考。"><meta property="og:type" content="blog"><meta property="og:title" content="物联网溯源相关论文"><meta property="og:url" content="https://fxgood.gitee.io/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/"><meta property="og:site_name" content="余丰旭的博客"><meta property="og:description" content="记录物联网溯源相关的论文，以及我的思考。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209162755680.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209171048946.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209171407253.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211201161952160.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211214003737937.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211204204729250.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211204132910912.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125171531091.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125095238312.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125112719498.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211116092830991.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125154302128.png"><meta property="article:published_time" content="2021-11-14T07:53:49.731Z"><meta property="article:modified_time" content="2021-12-13T17:20:39.376Z"><meta property="article:author" content="余丰旭"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209162755680.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://fxgood.gitee.io/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/"},"headline":"物联网溯源相关论文","image":["https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209162755680.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209171048946.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209171407253.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211201161952160.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211214003737937.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211204204729250.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211204132910912.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125171531091.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125095238312.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125112719498.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211116092830991.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125154302128.png"],"datePublished":"2021-11-14T07:53:49.731Z","dateModified":"2021-12-13T17:20:39.376Z","author":{"@type":"Person","name":"余丰旭"},"publisher":{"@type":"Organization","name":"余丰旭的博客","logo":{"@type":"ImageObject","url":"https://fxgood.gitee.io/img/logo.svg"}},"description":"记录物联网溯源相关的论文，以及我的思考。"}</script><link rel="canonical" href="https://fxgood.gitee.io/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-14T07:53:49.731Z" title="2021/11/14 下午3:53:49">2021-11-14</time>发表</span><span class="level-item"><time dateTime="2021-12-13T17:20:39.376Z" title="2021/12/14 上午1:20:39">2021-12-14</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E8%AE%BA%E6%96%87/">论文</a></span><span class="level-item">2 小时读完 (大约14245个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">物联网溯源相关论文</h1><div class="content"><h1 id="工业物联网知识"><a href="#工业物联网知识" class="headerlink" title="工业物联网知识"></a>工业物联网知识</h1><h2 id="工业物联网架构"><a href="#工业物联网架构" class="headerlink" title="工业物联网架构"></a>工业物联网架构</h2><p>《An Experimental Analysis of Security Vulnerabilities in Industrial IoT Devices》</p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209162755680.png" alt="image-20211209162755680"></p>
+<p>《A Secure and Fine-Grained Scheme for Data Security in Industrial IoT Platforms for Smart City》</p>
+<p>常见的工业物联网控制系统可以大致分为两类：一类是以智能电网和数字油田为代表的SCADA系统，第二类是以智能工厂为代表的基于云平台的工业物联网控制系统。</p>
+<p>一般来说，SCADA系统有两个主要角色:1)中心和2)外围。外围设备是数据的持有者，通常是基础设施。在数字油田的情况下，外围是油井。为了保证井的正常运行，井中分布了大量的传感器，用于传感现场数据。此外，采集现场的每个基础设施还配备了PLC和RTU，用于将电信号转换为数字信号、处理数据和控制设备。中心是数据请求者或命令发起者。控制器与监控中心之间的数据交互一般通过无线网络进行传输。一般情况下，由监控中心进行统一监控管理，将权限分配给不同的运营商，对不同区域的基础设施进行监控。SCADA系统结构如图1所示</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209171048946.png" alt="image-20211209171048946" style="zoom:80%;" />
+
+<p>智能工厂和智能家居设备的运营是典型的基于云的工业物联网控制系统。智能工厂利用物联网技术和设备监控技术加强信息化管理和服务，实现车间无人管理。如图2所示，不同车间的每条装配线都配备了车间控制器，负责下达车间生产条件和接收指令。由于参与工业生产的企业众多，无法实现集中管理。因此，车间控制器连接到云，而云连接到公司网络。云对数据进行初步处理和分析，并将数据交付给相应的公司和车间进行进一步处理。</p>
+<p>SCADA系统底层设备往往较弱，需要在现场配备数据采集和控制设备。而基于云的工业物联网控制系统增加了云，将部分计算任务转移到云上，减轻了监控中心的负担</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211209171407253.png" alt="image-20211209171407253" style="zoom:80%;" />
+
+<h2 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h2><ul>
+<li><p>第一问题：工业物联网相比于物联网有什么特殊之处（因为这些特性，所以在做安全或者溯源的时候要区分于物联网）</p>
+<ul>
+<li>不太需要User参与</li>
+<li>数据量巨大</li>
+<li>产业链上的不同厂家与云的物联网相连接，共享数据</li>
+<li>工业上数据被篡改、窃取，可能会造成重大经济损失；云中心对工业现场下达的指令被篡改，可能会造成重大事故。因此IIoT的安全问题，更加突出。</li>
+<li>因为云常常使用第三方，因此对于涉及商业机密的敏感信息，不能直接上传到云</li>
+<li>IIoT收集的数据上传到云，一般的应用有：上下游企业、关联企业生产供应链动态协同；机器人、车辆路径规划；数据挖掘；深度学习优化生产过程；</li>
+<li>物联网设备在与云数据中心连接时，由于工业环境中的复杂性和恶劣性，节点之间的通信质量难以保证，造成物联网设备连接性差。此时，需要考虑更稳定的连接和更加靠近数据的连接。（如果结合雾计算，那么雾节点可能在野外：矿场、海上平台等）</li>
+<li>IIoT applications are ususally safety critical and time constrained(e.g., controlling robotic arms operating alongside a human). Hence, attack detection techniques must be performed in place, as delegating remote servers or cloud systems will introduce variability in the system timing, thus affecting realtime constraints.At the same time, such solutions might expose new attack surfaces.Thus, solving security and privacy issues on IIoT systems requires consideration of a higher number of dimensions with respect to targeting the same problem for classic IoT applications.<ul>
+<li>IIoT应用通常具有安全关键性和时间限制性（例如，控制与人类一起工作的机器人手臂）。因此，攻击检测技术必须到位，因为委派远程服务器或云系统将引入系统定时的可变性，从而影响实时约束。同时，此类解决方案可能会暴露新的攻击面。因此，解决IIoT系统上的安全和隐私问题需要考虑更高的维度，以针对经典物联网应用的相同问题。</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>工业物联网可以做的事</p>
+<ul>
+<li>production monitoring and control, or communication</li>
+<li>data analysis for logistics</li>
+</ul>
+</li>
+<li><p>解决IIot下的两个问题</p>
+<ul>
+<li>溯源（基于区块链）</li>
+<li>认证/授权方案（基于区块链）</li>
+</ul>
+</li>
+<li><p>定义</p>
+<ul>
+<li>是指在当前制造业中使用过程自动化和数据交换的趋势或概念，它汇集了<strong>物联网、网络增强系统和云计算</strong>的应用。</li>
+<li>工业物联网是许多新技术的融合，如自助机器人、高级机器人、大数据、云/边缘计算、数字无处不在(<em>digital ubiquity</em>)、智能工厂、机器学习、人工智能和基于物联网的网络物理(<em>cyber physical on the basis of IoT</em>)</li>
+<li>工业物联网主要将仪器、连接传感器和其他设备用于机械、运输车辆以及能源和工业部门。</li>
+<li>传统的物联网应用，如联网冰箱，它是IIoT的一个子集。</li>
+<li>工业物联网有四个设计原则<ol>
+<li>互操作性：机器和相关组件与人连接和通信的可能性</li>
+<li>信息透明度：创建物理世界的虚拟副本的必要性</li>
+<li>技术协助：基本的综合聚合和信息可视化，以支持人的能力</li>
+<li>决策分散化：网络支持的系统独立作出决策和执行自己专有功能的能力</li>
 </ol>
-<h2 id="期刊"><a href="#期刊" class="headerlink" title="期刊"></a>期刊</h2><h1 id="论文和会议"><a href="#论文和会议" class="headerlink" title="论文和会议"></a>论文和会议</h1><p><strong>Prov-IoT: A Security-Aware IoT Provenance Model</strong></p>
+</li>
+<li>基于物联网的工业物联网为跨不同工作场所的数据传输提供了无缝方式。实时监控系统和数据传输能够优化和提高生产力，获得更好的质量产品，帮助企业变得更加智能和高效。</li>
+<li>《工业物联网白皮书》对IIoT的定义<ul>
+<li>工业物联网是通过工业资源的网络互联、数据互通和系统互操作，实现制造原料的灵活配置、制造过程的按需执行、制造工艺的合理优化和制造环境的快速适应，达到资源的高效利用，从而构建服务驱动型的新工业生态体系。</li>
+<li>工业物联网表现出六大典型特征：智能感知、泛在连接、精准控制、数字建模、实时分析和迭代优化</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>关于溯源的问题</strong></p>
 <ul>
-<li>日期: 2021</li>
-<li>出处：会议，<em>International Conference on Trust, Security and Privacy in Computing and Communications</em></li>
-<li>提出的方法，解决的问题：<ul>
-<li>物联网数据溯源，缺乏安全元数据</li>
-<li>本文提出一种带有安全元数据的溯源模型</li>
+<li>溯源是我们研究的对象（要去解决的问题），需要用什么样的方法来实现溯源，而非是用溯源去解决什么问题，溯源本身就是安全下面的一个问题（就像对排序的研究，不是排序去解决什么问题，而是研究怎样排序更高效，比如冒泡、快速排序）</li>
+<li>我们需要解决两个具体的问题，使用什么样的方法，可以将溯源作为一个具体要解决的问题（有很多方法实现溯源，我们采用什么方法：区块链的方法），然后再找另一个问题，凑成两个问题写论文；也可以在溯源下，找两个需要解决的问题，例如如何保证溯源数据的完整性不可篡改性、如何更高效查询、如何减少压缩溯源数据。</li>
+</ul>
+</li>
+<li><p>论文题目：</p>
+<ul>
+<li>研究<strong>溯源下的两个问题</strong><ul>
+<li>工业物联网中溯源问题研究</li>
+<li>一种基于区块链的工业物联网溯源方法</li>
+</ul>
+</li>
+<li>研究<strong>包括溯源在内的两个工业物联网中的两个安全相关的问题</strong><ul>
+<li>工业物联网安全问题研究</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>区块链在身份认证和访问控制方面的东西可以看一下，到时候结合到我的系统中</p>
+<ul>
+<li>使用分布式公钥基础设施来验证用户</li>
+<li>使用特定的安全套接字层SSL证书，替换了传统密码</li>
+</ul>
+</li>
+<li><p>著名的做工业物联网的公司：Kepware</p>
+</li>
+<li><p>工业物联网和工业互联网的区别</p>
+<ul>
+<li>工业互联网涵盖了工业物联网，工业物联网是要实现[人、机、物]的全面互联，追求的是数字化</li>
+<li>工业物联网强调的是“物与物”的连接，追求的是自动化</li>
+<li>工业物联网是物联网和互联网的交叉网络系统，同时也是自动化与信息化深度融合的突破口</li>
+</ul>
+</li>
+<li><p>相关可用技术</p>
+<ul>
+<li>PUF物理不可克隆</li>
+<li>SDN软件定义网络</li>
+<li>云计算、雾计算、边缘计算</li>
+<li>Hyperledger Fabric、Ethereum</li>
+<li>MQTT（提高物联网设备/机器人之间的互操作性）</li>
+</ul>
+</li>
+<li><p>针对工业环境中的攻击的研究主要集中在（来自综述<em>A Comprehensive Survey on Attacks,Security Issues and Blockchain Solutions for IoT and IIoT</em> ）</p>
+<ul>
+<li>重放攻击</li>
+<li>MiTM</li>
+<li>DDoS攻击</li>
+<li>IOTA</li>
+<li>代理重加密、属性加密</li>
+<li>DHT分布式哈希表</li>
+</ul>
+</li>
+<li><p>由于传统区块链技术具有以下缺陷，因此需要为工业物联网设计可伸缩、可计算和节能的安全区块链。（IOTA专门为物联网设计）</p>
+<ul>
+<li>可扩展性差：随着规模增大，冗余数据量越来越大</li>
+<li>通信和同步开销：每添加到区块链一个新事务，需要广播到所有的对等体，涉及大量的通信开销，所有对等体都需要同步和维护区块链的相同副本（可以考虑采用云存储解决）</li>
+<li>效率：批准交易，需要所有其他对等端验证，因此验证算法在每个节点上运行太多次，大大降低了操作效率</li>
+<li>浪费能源：pow共识机制浪费资源</li>
 </ul>
 </li>
 </ul>
 <hr>
-<p><strong>Enhancing transparency of MQTT brokers for IoT applications through provenance streams</strong></p>
+<p><strong>工业4.0下的工业系统</strong></p>
+<p>最近，IOT应用在工业中，将生产世界和网络连接集成在CPS（Cyber Physical Systems)中，被称为工业物联网IIoT。IIoT的目标是，生产智能制造产品，从而在客户和商业伙伴之间简历紧密联系的智能工厂。随着工业物联网的出现，工业4.0形成了一个子集，特别强调<strong>制造业场景</strong>，其重点是数字化和整合整个组织的所有物理过程。工业4.0是工业3.0的一个进步，机器配备了传感器、无线连接并与CPS连接，以便可视化整个生产流程以作出智能决策。</p>
+<p>该系统分为四层：</p>
 <ul>
-<li>日期：2019</li>
-<li>出处：会议，<em>Proceedings of the 2019 Workshop on Middleware and Applications for the Internet of Things, Part of Middleware 2019 Conference</em></li>
-<li>解决的问题<ul>
-<li>iot系统产生和使用的个人数据如果被未经授权的代理使用，可能会侵犯用户隐私；</li>
-<li>记录物联网系统行为的来源可以支持评估机制，确保系统组建符合数据访问限制。</li>
+<li>感知层：不同类型的传感器、FRID扫描仪、监控摄像头、GPS模块等<ul>
+<li>对于一套工业设置来说，所有这些设备可能伴随着自动引导车辆AGC、输送系统、工业机器人等设备。这些设备负责捕获感官数据，监测环境条件和生产车间，运输原材料等。</li>
 </ul>
 </li>
-<li>提出的方法<ul>
-<li>本文描述了一种使用溯源的MQTT代理，该代理增强了<strong>记录消息转发期间实际代理行为</strong>的能力</li>
+<li>网络层：WiFi、蓝牙、Zigbee、3G、4G、5G等，使用IPv4、IPv5等协议，负责将信息传输到下一层的处理系统。在工业环境中，工业<strong>以太网</strong>构成这一层的基础，并将数据传输到云和其他设备中。</li>
+<li>处理层：由服务器和数据库组成，负责执行决策、计算优化算法、存储大量数据等多项任务。</li>
+<li>应用层：负责交付特定应用程序的需求，以满足最终用户的需求。<ul>
+<li>一些重要的基于物联网的应用包括：智能家居、只能城市、电子医疗、车载自足网VANET等</li>
+<li>智能电网、智能工厂、智能机器人、供应链、智能仓储</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211201161952160.png" alt="image-20211201161952160"></p>
+<hr>
+<p><strong>以上描述的集中式的物联网/工业物联网架构，有以下缺点</strong></p>
+<ul>
+<li>存在故障中心点，可能导致整个网络瘫痪</li>
+<li>用户对存储在集中服务器上的数据几乎没有任何有限的控制，用户的敏感数据可能会被误用</li>
+<li>存储在集中服务器中的数据可能会被篡改或者删除，因此缺乏可保证的可追溯性和可问责性</li>
+<li>由于对大量端到端通信的低效处理，集中式服务器可以显著限制物联网的增长</li>
+</ul>
+<hr>
+<p><strong>物联网/工业物联网中存在的攻击</strong></p>
+<ul>
+<li>物理攻击</li>
+<li>网络攻击</li>
+<li>软件攻击</li>
+<li>数据攻击<ul>
+<li>数据不一致：物联网中，对数据完整性的攻击导致传输中的数据或存储在中央数据库中的数据不一致</li>
+<li>未授权访问：在未经授权的情况下，恶意用户可以访问敏感数据(对应访问控制、身份认证)</li>
+<li>数据泄露：以未经授权的方式泄露个人、敏感或机密数据。（对应数据加密）</li>
 </ul>
 </li>
 </ul>
 <hr>
-<p><strong>Secure Data Provenance in IoT Network using Bloom Filters</strong></p>
+<p><strong>工业物联网</strong></p>
+<p>随着第四次工业革命的欻先，在工业环境中使用某些物联网技术和各种智能对象来促进行业独特的目标被称为工业物联网。</p>
+<p>工业物联网系统能够在没有人工干预的情况下监测、收集、分析和智能地改变行为或环境。</p>
+<p>一个被称为监视控制和数据采集SCADA的成熟的软件和硬件系统已经在行业中存在了20多年。SCADA系统由两部分组成</p>
+<p>a.要监视或控制的过程/机械 b.控制这些过程/机械的智能设备网络</p>
+<p>然后，由于以下四个方面的改进，工业物联网已经成为了建立在SCADA之上的技术：</p>
+<p>a.可扩展性：工业物联网可以利用从云端收集的资源，在任何需要的时候建立新的工厂</p>
+<p>b.数据分析：工业物联网需要允许长期数据存储，然后大数据处理和机器学习技术可以应用于预测结果</p>
+<p>c.标准化：工业物联网旨在标准化传感网络、数据收集和融合，以实现工厂内部的实时通信。</p>
+<p>d.互操作性：工业物联网使用MQTT等协议，使平台能够跨设备进行可交流和可编程，无论供应商是什么</p>
+<p>将物联网技术融入工业带来了生产力、效率方面的好处。然后，这些系统相互连接、始终在线的特性意味着整个工厂可能容易遭到毁灭性的网络攻击。网络攻击主要针对工业控制系统ICS、可编程逻辑控制器PLC、分布式控制系统DCS、人机接口HMI、监控和数据采集系统SCADA。工业物联网容易遭受网络攻击的原因如下：</p>
+<p>a.10年前的设备和控制系统从来就不是为暴露在互联网上而设计的，因此也不是为安全而设计的</p>
+<p>b.连接到每个组织的工业物联网的传感器和设备数量的大幅增加，需要它们之间进行适当的协调。然而传统算法在处理这种协调时，往往效率低下。</p>
+<p>c.潜在攻击者的数量增加了。现在的攻击者包括老练的国家、使用勒索软件的网络罪犯</p>
+<h1 id="汇报"><a href="#汇报" class="headerlink" title="汇报"></a>汇报</h1><ul>
+<li><p>什么是IIoT的secure data management。由于通信技术、云计算等技术的快速发展，越来越多的工业物联网数据被存储在云中。因此存储在云中的工业物联网数据的安全性和隐私性需要保护（一般企业使用的是第三方云服务）</p>
+</li>
+<li><p>可以将雾计算和区块链结合，做安全数据管理</p>
+</li>
+<li><p>《工业物联网信息安全防护技术研究》王斌，写的太好了，对IIot做了全面的介绍</p>
+</li>
+<li><p>雾计算和边缘计算的区别</p>
 <ul>
-<li>日期：2019</li>
-<li>出处：会议，<em>16th Learning and Technology Conference 2019 Artificial Intelligence and Machine Learning: Embedding the Intelligence</em></li>
-<li>解决的问题<ul>
-<li>物联网中溯源框架容易    ·遭到攻击，因为攻击者可以操纵溯源机制使用的数据和元数据，因此需要一种安全的溯源机制</li>
-<li>由于物联网设备的计算和存储资源有限，因此这种安全机制需要高效且轻量。</li>
+<li>雾计算过程发生在局域网(LAN)级网络架构上，使用与智能网关 和嵌入式计算机系统交互的集中式系统。</li>
+<li>而边缘计算处理的大部分数据来源于所在的物联网设备本身。</li>
 </ul>
 </li>
-<li>提出的方法<ul>
-<li>本文提出使用布隆过滤器和外包属性加密，设计一种使用较少存储的物联网安全溯源机制</li>
+<li><p>雾计算+区块链，实现数据的安全管理、不可篡改性（哈希值正确时，保证数据的正确性）、可追溯性。</p>
+<ul>
+<li><p>每个区域物联网设备的网关节点，为一个雾节点，其中运行着区块链节点</p>
+</li>
+<li><p>当物联网设备将采集的数据传输的雾节点时，雾节点进行一定的处理（如压缩、过滤、加密、甚至AI处理等），然后此transaction记录在区块链中（数据采集的设备、采集的时间、经过处理后数据的hash值），传播到区块链网络中。</p>
+</li>
+<li><p>云中也有区块链节点，可以进行溯源（多个transaction可以组成溯源），对处理的数据的真实性、可靠性进行验证</p>
+</li>
+<li><p>每个雾节点存储各个雾节点之间也可</p>
+</li>
+<li><p>问题是：云，是对物联网系统发出指令，还是仅仅就是对物联网产生的数据进行分析</p>
+<ul>
+<li>我目前的理解，物联网系统收集数据经过雾节点的处理后发送给云进行处理，云中分析后下达一定的指令返回物联网系统</li>
+<li>雾节点自身也可以作出部分决策，或者对上传到云的数据进行一定的处理（压缩、加密等），因为工业物联网的数据量巨大，对通信造成了巨大压力，并且很多数据都是无效的。</li>
+</ul>
+</li>
+<li><p>是否需要部署雾计算节点，取决于以下几个条件</p>
+<ul>
+<li><strong>物联网设备连接性差</strong>。物联网设备在与云数据中心连接时，由于工业环境中的复杂性和恶劣性，节点之间的通信质量难以保证，造成物联网设备连接性差。此时，需要考虑更稳定的连接和更加靠近数据的连接。</li>
+<li><strong>为了安全和隐私（这不就和secure data management结合起来了嘛！）</strong>，需要在工厂内保存数据。实际的工业生产中，工厂通常不具有独立的云数据中心，往往是租用其他云服务提供商。因此，在一些敏感型数据传输到云中之前，工厂希望能够将这些数据留在本地进行独立保存。如果雾节点检测到网络攻击，它可以阻止其他攻击者的传输通信，来保护内部的工厂关键网络。功能类似网关。</li>
+<li>边缘处的原始数据需要预处理以减少计算。将所有数据全部上传到云中是不明智的，这将占用大量宝贵的贷款资源。因此有必要在上传数据之前，对原始数据进行预处理，进行初步的分析和剪裁，以减少不必要的数据传输和计算。</li>
+<li>应用程序依赖人工智能学习，需要对海量数据进行分析。由于雾计算模式中，作为与传感器相连，直接负责数据的传输和计算的网关借点，我们称之为雾节点。雾节点作为计算资源，更加靠近数据产出的位置。对于节点产生的大量数据可以提供快速的计算和反馈，这是用于机器学习的重要前提。</li>
+<li>典型应用领域是面部识别，智能导航等。在一些特定的应用领域，我们通常需要部署雾计算，这将会带来计算效率的大幅提高。值得注意的是，如果物联网设备必须始终连接到中央云，则部署雾计算的效率并不高。</li>
+</ul>
+</li>
+<li><p>澄清一个概念，就是IIot，不一定是所有物联网设备在工厂之中，首先物联网设备可能分布在分散的工厂之中，也可能在工厂之外的地方（如油矿钻井平台、远海气象站、沙漠水库），甚至各种移动车辆或工程机械之中，自动巡逻或工作的机器人上，无人机。（<strong>注意，可以考虑供应链上的企业协同进行工业物联网的连接，这样隐私保护、访问控制就有事可做了</strong>）</p>
+</li>
+<li><p>区块链+雾节点可以做的事情</p>
+<ul>
+<li>保证数据的不可篡改性（访问数据时根据hash值保证真实完整性）</li>
+<li>数据可追溯性（可以对有关联交易进行处理，恢复出溯源图DAG）<ul>
+<li>Hyperledger Fabric平台的搭建和性能测试</li>
+</ul>
+</li>
+<li>数据上云前的预处理，（自定义规则）对敏感数据进行处理</li>
+<li>访问控制，用智能合约实现，这样可以让供应链上的多加企业的IIoT设备，自动化地安全共享数据<ul>
+<li><strong>属性加密</strong>+区块链+智能合约（我的方法/工作量）</li>
+<li>即使入侵了某些节点，也无法实现访问无权的内容，系统具有健壮性</li>
+<li><strong>徐荣华提出了BlendCAC，引入了基于联合功能的委派模型FCDM，支持分层和多跳委派，提出了一种基于身份的健壮能力令牌管理策略，利用智能合约来进行访问授权的注册、传播和注销</strong>。</li>
+<li><strong>潘健立，设计了EdgeChain，边缘物联网框架。</strong></li>
+<li>访问控制/权限的修改呢？</li>
+</ul>
+</li>
+<li>区块链系统还可以识别恶意节点（或者被入侵的节点），将其提出区块链系统？；在系统存在一定恶意节点的情况下， 仍然能够继续运行</li>
 </ul>
 </li>
 </ul>
-<h1 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h1><ul>
+</li>
+<li><p>物联网中针对数据的三种攻击：数据窃取、数据欺诈（中间人攻击）、数据篡改</p>
+</li>
+<li><p>常见的三种分层：感知层、传输层（网络层）、应用层</p>
+<ul>
+<li>感知层：数据hash</li>
+<li>传输层：区块链</li>
+<li>应用层：智能合约+属性加密实现访问控制</li>
+</ul>
+</li>
+<li><p>注意哦，智能合约可以调用其他智能合约，那就意味着，每个节点可以写自己的智能合约用于其他节点访问自己的数据，其他节点访问自己的时候，可以直接调用这个合约。</p>
+</li>
+<li><p>一个有意思的例子：Seyoung等，提出基于以太坊的区块链平台，其中智能合约用于跟踪电表使用情况和设置策略来控制空调和灯泡的开关，以节省能源消耗，从而管理物联网设备。</p>
+<ul>
+<li>意味着智能合约中可以定义策略来执行某些操作。</li>
+</ul>
+</li>
+<li><p>在共识协议上进行小的修改：</p>
+<ul>
+<li>PoX类</li>
+<li>BFT类</li>
+<li>CFT类协议，如Raft是典型的崩溃容错共识协议，以强可用性著称<ul>
+<li>部分许可链可以选择降低可信需求，将拜占庭容错转换为崩溃容错，从而提升了共识速度（论文里可以与BFT进行对比）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="和老师交流的收获与想法"><a href="#和老师交流的收获与想法" class="headerlink" title="和老师交流的收获与想法"></a>和老师交流的收获与想法</h1><h2 id="2021-12-10"><a href="#2021-12-10" class="headerlink" title="2021-12-10"></a>2021-12-10</h2><ul>
+<li><p>尽量不要涉及雾计算，雾计算是一种计算范式，如果引入雾计算，全文就都要以雾计算为基础来做，这样就扯的太远了，老师不想让我扯的太远</p>
+</li>
+<li><p>我们之前讨论的三点1.数据防篡改 2.访问控制 3.数据防泄漏/泄漏追踪  老俞建议将题目命名为《基于区块链的工业物联网安全数据共享技术研究》，现在的当务之急是要去看“安全数据共享”这个概念在IIoT中是否有意义，其次要去看数据防泄漏相关概念和技术以及是否能与区块链相结合。</p>
+</li>
+<li><p>老师说，三点之中，第一点没什么好做的，因为区块链自带放篡改性质，这一点到时候直接继承到系统中，在论文中提一下就行了。第二点访问控制，要考虑做到什么程度，深了做不了，浅了没意义。第三点，数据防泄漏</p>
+</li>
+<li><p>老师说</p>
+<ul>
+<li>不要局限自己的思想， 即不要看到一篇文章用了什么技术，就自己也非得用那个技术（如雾计算）</li>
+<li>你再看看，还是要结合具体问题深入一点，不要仅仅局限在区块链的简单实现上；深入一点就是，有专家会问，你用区块链做防篡改，是不是你的方法能用于所有数据的防篡改？和工业物联网有什么关系？以此类推，所有你给出的方法，都要紧密结合工业物联网的特点。</li>
+</ul>
+</li>
+<li><p>我问”我们论文的工作量主要应该在哪里，是方案的设计？还是别的技术移植到我的场景，我对这个技术进行优化/改造？或者说是方案的实现，具体的实验过程的描述？“</p>
+<ul>
+<li>老师答：方法研究；不同的应用场景下必然会有特定的问题出现；不是，其实你这样考虑，工业物联网环境下安全数据共享，存在哪些问题？例如，数据的防篡改、访问控制、防泄露等。那么，下面你要给出方法，解决这个问题。我们准备的方法就是区块链，包括区块链的各项技术，<strong>但要注意，我不能做一个普通的区块链，或者放到哪里都能用的区块链</strong>，我们是要用区块链的各项技术来解决安全数据共享问题，即解决我们想要解决的防篡改、访问控制、防泄露等问题。对于你论文来说，有两个问题差不多了。</li>
+<li>其实，你可以关注一下，如果数据共享了，如何解决泄露/追踪问题。这个问题其实应该是最有意思的。比防篡改有意思多了，防篡改用区块链解决，其实就是篡改后能检测。</li>
+</ul>
+</li>
+</ul>
+<h1 id="待办任务"><a href="#待办任务" class="headerlink" title="待办任务"></a>待办任务</h1><ul>
+<li>《A Secure and Fine-Grained Scheme for Data Security in Industrial IoT Platforms for Smart City》写一篇总结，IIoT数据安全的概念，产生的原因，相应的解决方案。 （过时了，要看安全数据共享 或者 数据共享 或信息共享）</li>
+<li>现在的当务之急是要去看“安全数据共享”这个概念在IIoT/IoT中是否有意义，其次要去看数据防泄漏相关概念和技术以及是否能与区块链相结合。、</li>
+<li>我现在有哪些问题<ul>
+<li>安全数据共享共享在IIoT或IoT中是否有意义<ul>
+<li>《区块链在数据安全领域的研究进展》一文中谈到，”共享场景下的数据安全解决方案和具体的应用场景紧密关联,通常是上述数据安全方案的融合“</li>
+<li>《Cross-domain secure data sharing using blockchain for industrial IoT》一文说明<strong>跨域安全数据共享</strong>是有意义的，文章是CCF B类的<ul>
+<li>虽然这篇论文谈了<strong>跨域安全数据共享</strong>这个问题，并且也结合了区块链来做，但是其并未讨论所谓的防篡改、身份认证、访问控制、防泄露，而是说使用智能合约对跨域数据共享中的有行为不端的实体进行惩罚，设计了一种跨域数据共享的框架和平台。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>什么是数据防泄露技术，有哪些，是否能和区块链结合</li>
+<li>IIoT中存在哪些安全问题，哪些可以结合区块链来解决</li>
+<li>数据防泄露在IIoT中能有什么特殊之处？可能无法做到结合IIoT的特殊场景来做研究，这是个问题</li>
+<li>我所理解的数据防泄露，就是防止数据明文传输被窃取（加密）、或者数据加密了但是被破解（密钥泄露）、防止对数据的非法访问（访问控制），难道不就是加密、保护密钥、进行访问控制，这些手段吗？老师理解的数据防泄露、或者说公认的定义是什么，有什么常见的技术？</li>
+</ul>
+</li>
+</ul>
+<h1 id="日常随笔"><a href="#日常随笔" class="headerlink" title="日常随笔"></a>日常随笔</h1><h2 id="2021-12-14"><a href="#2021-12-14" class="headerlink" title="2021-12-14"></a>2021-12-14</h2><ul>
+<li><p>我要做IIoT的访问控制、数据放篡改、数据泄露追踪、安全数据共享、数据安全传输，那么这些问题是IIoT独有的吗？或者说这些问题在IIoT上有什么特殊性吗？</p>
+</li>
+<li><p>将下面这种算法，融入到区块链中，实现数据泄露的防御和追踪？</p>
+</li>
+</ul>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211214003737937.png" alt="image-20211214003737937"></p>
+<h2 id="2021-12-8"><a href="#2021-12-8" class="headerlink" title="2021-12-8"></a>2021-12-8</h2><ul>
+<li>今日任务：<ul>
+<li>把老俞问的问题：数据安全概念和组成、相关技术热点这个问题解决了，写成文档<ul>
+<li>先看数据安全/安全数据管理</li>
+<li>然后看物联网领域的数据安全/安全数据管理</li>
+</ul>
+</li>
+<li>做PPT，包括回答老俞的问题、我这一周的工作内容、IIoT的介绍、我的想法、我的问题、接下来的工作方向</li>
+</ul>
+</li>
+</ul>
+<h2 id="2021-12-6"><a href="#2021-12-6" class="headerlink" title="2021-12-6"></a>2021-12-6</h2><ul>
+<li>IIoT的可以做的应用<ul>
+<li>一是改进库存管理-基于云的库存系统。IIoT以各种 方式使库存规划流程受益。例如，当耗材低于特定阈 值时，可以使用货架级传感器订购，考虑存储成本、 过期材料等因素，减少过度订购造成的浪费，保持了 生产线移动所需的供应。</li>
+<li>二是获得供应链的可见性。 IIoT技术使用户可以通过跟踪材料、制造周期和单个 产品在全球供应链中移动获取实时信息，这些数据可 以帮助制造商预测潜在问题，基于各种因素做出采购 决策。在供应商方面，IIoT支持更高的透明度，从而 准确评估周转时间、可用材料和工作进度等状态。</li>
+<li>三是改进产品设计和质量控制。IIoT传感器可用于收 集与产品周期中每个阶段关联的产品数据和第三方数 据，帮助确定外部因素对最终产品的影响。例如，工 厂温度、使用哪种原材料以及其他环境因素。跟踪浪 费或运输影响等情况，以努力创建更可持续的最终产 品。</li>
+<li>四是实时洞察提供业务敏捷性。IIoT通过从各种 “事物”收集数据，与高级分析软件以及交易信息、 客户反馈和市场信号共同进行分析，能够在宏观层面 上评估数据，从而能够就维护需求、潜在供应链中断 和流程改进方面做出明智决策。</li>
+<li>五是位置跟踪提供的 成本节约。IIoT传感器允许组织在设备上启用位置跟 踪，帮助工人能够很方便地找到设备所在位置。跟踪 设备可以减少步行时间，帮助组织减少盗窃行为。这 对于在非工作时间将设备留在工地的建筑公司来说非 常有帮助。</li>
+<li>六是通过预测性维护减少停机时间和维修 成本。设备监控是一种预防性工作，无论是否需要服 务，都是根据时间安排手动完成。IIoT预测性维护使 组织能够节省与预防性维护相关的不必要的人工成 本，使用IIoT技术确定何时需要服务，帮助公司提前 发现系统故障，延长昂贵设备的使用寿命，降低与零 件、人工和停机时间相关的成本。</li>
+<li>七是保障安全和合 规。IIoT可用于保护工人和消费者的安全。在能源部 门，传感器可用于指示气体泄漏。或者，它可能会提 醒操作员某个油井正在接近危险的压力水平，在爆炸 前发出警告。IIoT可以帮助确保制造设施内的工人安 全，传感器可用于在操作危险设备或在设施的远程部 分执行维修时监控工人的位置，连接到IIoT的安全设 备可以提醒附近人员，确保立即采取安全行动</li>
+<li>八是 捕获实时动态并立即采取行动。IIoT是更大的物联网 生态系统的一部分，该生态系统由收集和传输数据的设备、计算机和对象网络组成，然后将该信息发送 到云。边缘计算优化了IIoT系统中使用的传感器、 计算机和设备，使计算更接近那些主动生成数据， 捕获实时动态并及时发现安全威胁，从而减少系统 中的故障点。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2021-12-5"><a href="#2021-12-5" class="headerlink" title="2021-12-5"></a>2021-12-5</h2><ul>
+<li>区块链溯源，提供了一种好处叫，可审计性，至于审什么，俺不管</li>
+<li>搜索工业物联网相关内容如安全、区块链、雾计算等，不好搜的时候，搜<strong>物联网</strong>或者<strong>工业互联网</strong>，也未尝不可</li>
+</ul>
+<h2 id="2021-12-4"><a href="#2021-12-4" class="headerlink" title="2021-12-4"></a>2021-12-4</h2><ul>
+<li><p>现在的思路应该是，比如做secure data management，那么就应该看传统的安全数据管理有哪些方法，然后再看iiot在安全数据管理方面有什么特殊需求，然后结合区块链，加以应用。</p>
+</li>
+<li><p>看了几篇论文，懂了什么叫安全数据管理管理，主要是为了解决大量物联网设备产生的大量数据的管理问题，通常涉及的技术</p>
+<ul>
+<li>可搜索加密</li>
+<li>SDN</li>
+<li>雾计算/边缘计算</li>
+<li>云计算</li>
+<li>IOTA：为了解决传统区块链低效、需要代币、吞吐量低等问题</li>
+</ul>
+</li>
+<li><p>两种比较好的物联网平台，AWS iot，Azure iot</p>
+</li>
+<li><p>今天看到一篇硕士论文对IIoT做了比较好的定义：</p>
+<ul>
+<li>工业物联网是工业自动化和物联网系统的融合，具有全面感知、互联传输、智能处理以及自组织与自维护等特点。</li>
+<li>其应用遍及智能交通、智慧工厂、智能电网、智能环境监测等众多领域。</li>
+</ul>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211204204729250.png" alt="image-20211204204729250"></p>
+</li>
+<li><p>写论文的时候，可以引入一些国内发布的物联网/工业物联网方面的报告/白皮书。</p>
+</li>
+</ul>
+<h2 id="2021-12-3"><a href="#2021-12-3" class="headerlink" title="2021-12-3"></a>2021-12-3</h2><ul>
+<li>今天跟老俞聊天的收获<ul>
+<li>接下来的任务：去看数据安全领域的最新论文在做什么，然后再看工业物联网数据安全在做什么，然后再根据他们提的问题，看看结合区块链能解决什么问题。（主要看数据安全，隐私保护简单看一下，可能都是比较老的问题了）</li>
+<li>启发<ul>
+<li>把溯源扔掉，只是利用其中的一些观点，比如在工业物联网的数据安全方面，用区块链实现可追溯性</li>
+<li>数据安全的内涵，可能包括数据的CIA（机密性、完整性、可用性），数据的可追溯性（老俞补充的）</li>
+<li>不要想着解决很多问题，数据安全已经是一个很大的领域了</li>
+<li>很多的加密方法如可搜索加密、属性加密等，我们直接拿来用，应用在区块链/结合到我们的方法上，不要在加密方法上进行创新</li>
+</ul>
+</li>
+<li>额外的启发<ul>
+<li>以后汇报可以做ppt</li>
+<li>以后写毕业论文，要注重摘要的表述，因为评审有可能看看摘要就定基本分和评语了，要把要解决的问题讲清楚，并且后面文章的主题内容不能偏离摘要</li>
+</ul>
+</li>
+<li><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211204132910912.png" alt="image-20211204132910912"></li>
+</ul>
+</li>
+</ul>
+<h2 id="2021-12-1"><a href="#2021-12-1" class="headerlink" title="2021-12-1"></a>2021-12-1</h2><ul>
+<li>今天跟老俞聊天的收获<ul>
+<li>溯源是我们研究的对象（要去解决的问题），需要用什么样的方法来实现溯源，而非是用溯源去解决什么问题，溯源本身就是安全下面的一个问题（就像对排序的研究，不是排序去解决什么问题，而是研究怎样排序更高效，比如冒泡、快速排序）</li>
+<li>我们需要解决两个具体的问题，使用什么样的方法，可以将溯源作为一个具体的问题，然后再找另一个问题，凑成两个问题写论文；也可以在溯源下，找两个需要解决的问题，例如如何保证溯源数据的完整性不可篡改性、如何更高效查询、如何减少压缩溯源数据。</li>
+<li>我们要解决工业物联网中的数据安全、隐私保护、访问控制问题，这些说法都太笼统了，比如解决iiot中的溯源问题，其属于数据安全问题范畴之下，就很棒。比如解决在提高工业设施/设备互操作性的过程中，进行访问控制。（举个例子，可能并不恰当）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>为什么IoHT比车联网更加适合应用区块链数据溯源</p>
+<ul>
+<li>健康物联网比车联网更有价值，车联网能做的事情，智能手机已经可以完成，如获取导航、路况、加油站排队、停车场空位的等信息。</li>
+<li>因为溯源的目的是为了</li>
+<li>考虑到实验更好做QAQ</li>
+</ul>
+</li>
+<li><p>由于iot设备存储有限，因此大量数据要被传送到云端</p>
+<ul>
+<li><p>溯源，溯什么源</p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125171531091.png" alt="image-20211125171531091"></p>
+</li>
+<li><p>区块链与IoHT相结合，怎么结合？区块链部署在每个物联网设备上？还是部署在云端？</p>
+<ul>
+<li>部署在云上：传感器收集了数据，则将数据交给网关，同时将此transaction提交给云中的区块链平台，加以记录</li>
+<li>部署在每个相关节点上（设备、云、机构、医生），但存储问题如何解决？记录元数据，定期清理</li>
+<li>用户以及医疗机构处，都安装有一个设施，专门用于存储本地数据和充当区块链节点（来自BIoMT_Blockchain_for_the_Internet_of_Medical_Things的idea）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>IoHT(health)/IoMT(medical)相关</p>
+<ul>
+<li><p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125095238312.png" alt="image-20211125095238312"></p>
+</li>
+<li><p>健康物联网设备包括了</p>
+<ul>
+<li>可穿戴设备</li>
+<li>无线传感器</li>
+<li>智能手机</li>
+</ul>
+</li>
+<li><p>收集什么数据</p>
+<ul>
+<li>血压，体温，心率，呼吸频率，血糖，位置和时间（作为实时数据）</li>
+<li>作息时间</li>
+<li>饮水量</li>
+<li>药物使用情况</li>
+<li>智能马桶</li>
+<li>视频、图像（防止老人摔倒）</li>
+<li>个人信息（身体信息、病历等）</li>
+<li>跟踪预防慢性病</li>
+</ul>
+</li>
+<li><p>三层架构</p>
+<ul>
+<li>感知层</li>
+<li>网络层</li>
+<li>应用层</li>
+</ul>
+</li>
+<li><p>需要解决的问题</p>
+<ul>
+<li>数据真实性、完整性</li>
+<li>数据的机密性（隐私保护，未授权数据不允许访问、未授权不可修改数据）</li>
+<li>设备身份认证（区块链平台实现）、</li>
+<li>人员身份认证（患者、医生、医疗机构）</li>
+<li>密钥管理</li>
+<li>数据泄露的追责</li>
+</ul>
+</li>
+<li><p>区块链及溯源可以解决的问题</p>
+<ul>
+<li>溯源以保证数据真实性、完整性（智能合约方便地进行溯源数据收集和查询）</li>
+<li>产生错误数据时，追溯相关设备（传感器、医疗设备）或医生或医疗机构（数据流转可能经过医生、医疗机构、云健康分析中心）</li>
+<li>身份认证+访问控制（区块链智能合约实现，简单统一的接口）</li>
+</ul>
+</li>
+<li><p>健康物联网进行溯源的目的</p>
+<ul>
+<li>追溯数据的收集、流转过程，提高数据的可信度</li>
+<li>隐私保护</li>
+<li>发生错误时，追溯发生问题的设备，追溯相关公司的责任</li>
+<li>敏感信息泄露追责（数据流转也可能经过医疗机构或者医生）</li>
+<li>药物实验等，制药厂可以进行实时数据追踪</li>
+</ul>
+</li>
+<li><p>可采用的技术</p>
+<ul>
+<li><p>IBC机制（基于身份的凭证identity-based credential)</p>
+</li>
+<li><p>Pufs物理不可克隆</p>
+</li>
+<li><p>FRID</p>
+</li>
+<li><p>云/雾计算</p>
+</li>
+<li><p>MQTT</p>
+</li>
+<li><p>PKI公钥基础设施</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">区块链技术可以确保通信系统的安全，而不需要第三方认证，因为它被用作一种可信的通信和计算平台，而无需中央实体(Pustiek等人，2016年)。应为要添加到区块链平台的每个区块生成智能合同。智能合约具有代理块的凭证，该凭证在每个交易中得到验证，以供证明和处理(博济奇等人，2016；Kapitonov等人，2017年；Ramezan和Leung，2018)。区块链可以保护参与物联网系统的每个设备身份，没有单点故障。它还使用公钥基础设施保护去中心化网络中的用户和设备身份(Ernest和石光，2020年；Kshetri，2017年；李等，2019)。   来自文章Authentication and Identity Management of IoHT Devices:Achievements,Challenges,and Futrue Directions</span><br></pre></td></tr></table></figure></li>
+<li><p>以太坊</p>
+</li>
+</ul>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125112719498.png" alt="image-20211125112719498"></p>
+<ul>
+<li>雾计算：以高扩展性、可用性、安全保证减少了发生的延迟和事件延迟。</li>
+</ul>
+</li>
+<li><p>溯源不是全部，我们需要解决一个应用场景中的两个问题，溯源解决其中一个就可以了？其他问题用其他技术来解决。</p>
+</li>
+<li><p>健康物联网可能遭受的攻击</p>
+<ul>
+<li>健康物联网可能遭受的攻击<ul>
+<li>Sybil attacks，女巫攻击（大量伪造节点）</li>
+<li>cyberattacks，网络攻击</li>
+<li>malicious users，恶意用户</li>
+<li>malicious devices，恶意设备</li>
+<li>DDoS，分布式拒绝攻击</li>
+<li>spoofing，IP地址欺骗</li>
+<li>eavesdropping，窃听</li>
+<li>man-in-the-middle（MitM）attacks，中间人攻击</li>
+<li>ransomware，勒索病毒</li>
+<li>misconfiguration，错误配置</li>
+<li>inside threats，内部威胁</li>
+<li>identity and credential theft，身份和凭据盗窃</li>
+<li>malicious code，恶意代码</li>
+<li>function interruptions，功能中断</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>物联网模拟平台</p>
+<ul>
+<li>Micrsoft Azure IoT<ul>
+<li>Azure物联网是一种基于云的服务，用于测试、部署和管理物联网应用程序。Azure提供基础设施即服务(IaaS)和平台即服务(PaaS)技术，分别提供完全控制和管理</li>
+</ul>
+</li>
+<li>Amazon Web Services IoT Device Simulator<ul>
+<li>AWS通过图形用户界面(GUI)提供无服务器的物联网应用模拟解决方案，以帮助用户收集、处理、管理和分析物联网设备，而无需管理物联网基础设施和提供安全的、可扩展的物联网应用程序</li>
+</ul>
+</li>
+<li>Oracle IoT Platform<ul>
+<li>Oracle基于平台即服务(PaaS)技术，提供实时数据分析、物联网设备管理和快速消息传递服务</li>
+</ul>
+</li>
+<li>Hyperledger Fabric from IBM<ul>
+<li>Hyperledger  fabric是一个开源模拟器，它使用智能合约以三种模式对物联网设备进行身份验证:设备合约(DCs)、策略合约(pc)和访问合约(ACs)。超级账本具有较高的安全性、可访问性和可扩展性，并具有较高的接受率和大规模的高吞吐量;它比传统的应急接入系统具有更好的性能</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>关于iot中的设备认证和身份认证，可以阅读论文《Authentication and Identity Management of IoHT Devices: Achievements, Challenges, and Future Directions》</p>
+</li>
+<li><p><strong>溯源的意义</strong></p>
+<ul>
+<li>提供数据起源和演变的信息，例如数据创建和数据修改的各个阶段，是谁发起的，何时以及如何发生的。通过这样的溯源，可以提高数据的可信度。（健康物联网中则可以追溯健康数据是从哪个设备收集的，又流转经过哪些设备，这些设备是否受信任，对数据进行了什么操作，有无泄露的风险）</li>
+<li>物联网中需要确保各种设备收集的信息的可信度，所以需要进行溯源</li>
+<li>取证</li>
+<li>如果iot中要将数据传送到云端，云端建立区块链溯源机制，可以提高用户对云服务商的信任。</li>
+<li>区块链+溯源，是为了保证<strong>溯源数据的真实性</strong></li>
+</ul>
+</li>
+<li><p>车辆之间的通信方式</p>
+<ul>
+<li>无线网络</li>
+<li>蜂窝网络</li>
+<li>DSRC专用短程通信</li>
+</ul>
+</li>
+<li><p>周五要找老俞，聊啥呢？</p>
+<ul>
+<li>确定研究领域：健康物联网还是车联网，如果是车联网应该是车内总线数据溯源、还是v2v、v2i的溯源？</li>
+<li>怎么确定？看这两个领域，哪个更需要溯源，更好做溯源（V2C的溯源，进行隐私保护和数据的真实性）</li>
+<li>溯源的意义在哪里：<ul>
+<li>可以追溯责任人</li>
+<li>验证产品、结果可复制性、知识共享与冲用、评估数据质量和有效性</li>
+</ul>
+</li>
+<li>区块俩溯源的作用：保证数据的不可篡改性</li>
+<li>区块链是为了建立信任的，车联网就是一个缺乏信任的去中心化的网络，但是区块链溯源？</li>
+<li>车联网存在的问题<ul>
+<li>信任问题</li>
+<li>数据的完整性、真实性</li>
+<li>隐私保护（车主信息、车辆信息、出行数据、车内多媒体数据）</li>
+</ul>
+</li>
+<li><strong>需要问老俞，车联网的实验好做吗？模拟实验，以节点模拟车辆或者路边基础设施可以吗？</strong></li>
+<li>解决两个问题<ul>
+<li>v2v,v2I的隐私问题、数据的真实性完整性</li>
+<li>v2C，车辆数据上传云端，进行故障的检测，车辆保养的规划</li>
+<li>通过区块链、智能合约、溯源、多种加密技术来实现</li>
+</ul>
+</li>
+<li>我做的是一种基础设施性的服务，在保护隐私的前提下，提供车辆网服务（v2v,v2I）</li>
+</ul>
+</li>
+<li><p>车联网的意义</p>
+<ul>
+<li>所有下面说的，比如获取路况信息、停车信息、加油站服务区的排队信息，都不应该是v2v，应该是v2C(cloud)或者v2I更加合适</li>
+<li>比如通过其他车辆来获取加油站车辆排队的等待时间，来判断去哪个加油站（或者直接同加油站进行v2i的交流）</li>
+<li>获取交通信息（交通信息共享）、缓解拥堵（前车或者基础设施直接给出拥堵信息），车位信息，气象信息，限速信息提前预警、超速警告、路况提示（直接与基础设施联系，优于导航的提示，因为导航的信息有可可能会过时）、公交车调度</li>
+<li>共享车速，可以预判路况的拥塞程度</li>
+<li>本车在停车场通过v2I获取停车场空位信息，然后可以将此信息共享给想要到此停车场的车。（从云端获取更加合理）</li>
+<li>结队出行</li>
+<li>但是在用户不知情的情况下，车辆自主与其他车或基础设施建立关系，是否会侵犯隐私？<ul>
+<li>假名实现用户和数据的匿名话</li>
+<li>差分隐私</li>
+<li>零知识证明</li>
+<li>安全多方计算</li>
+<li>加密</li>
+<li>雾计算</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>同态加密是否有用？</p>
+</li>
+<li><p>车辆上的隐私信息</p>
+<ul>
+<li>车主私人信息</li>
+<li>车内网络上的传感器包括车内车主的驾驶视频和语音</li>
+<li>图片、地点、活动等。</li>
+<li>可以在车载社交平台上分享，移动保健应用程序也将收集车主生理健康数据</li>
+</ul>
+</li>
+<li><p>相关论文搜索关键字</p>
+<ul>
+<li>Internet of Vehicles 车联网</li>
+<li>vechicle-to-vehicle(v2v)</li>
+<li>v2p,v2x(vehicle-to-everything)</li>
+<li>Vehicular ad hoc networks (VANETs) 车辆自组织网络</li>
+</ul>
+</li>
+<li><p>物联网安全存在的五大技术挑战</p>
+<ul>
+<li>数据共享的隐私保护方法</li>
+<li>有限资源的设备安全保护方法</li>
+<li>更加有效的入侵检测系统与设备测试方法</li>
+<li>针对自动化操作的访问控制策略</li>
+<li>移动设备的跨域认证方法</li>
+</ul>
+</li>
 <li><p>物联网几个典型的应用场景</p>
 <ol>
 <li>智慧城市</li>
-<li>智慧交通</li>
+<li>智慧交通（车联网）</li>
 <li>智慧医疗</li>
+<li>智能家居</li>
+<li>智能电网</li>
+<li>工业与公共基础设施</li>
 </ol>
 </li>
 <li><p>物联网中进行溯源的目的</p>
 <ul>
-<li>溯源能检测数据的真实性、完整性</li>
+<li>溯源能检测数据的真实性、完整性，创造可靠可信的物联网系统。</li>
 <li>溯源能识别数据在物联网网络中的路径，以检测可能的威胁（数据经过风险节点，或者经过未授权的节点）</li>
+<li>随着复杂（工业）物联网系统中异构现场设备和软件组件之间连接的增加，需要信息技术和操作技术的融合来协调整个自动化执行，例如：<ul>
+<li>为了检查特定制造过程在多大程度上增加了现场设备的退化和维护成本，工厂经理需要以下溯源信息：<ul>
+<li>该过程的产量报告位于何处</li>
+<li>使用了什么控制逻辑</li>
+<li>涉及哪些现场设备</li>
+<li>这些设备的背景是什么</li>
+<li>它们在车间里是如何相互关联的</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>iot溯源关注的几个热点问题</p>
 <ul>
-<li>iot网络中收集和使用的数据具有很强的异构性，iot网络又具有很强的扩展性和弹性，如何设计溯源机制以满足iot网络的需求</li>
-<li>iot设备计算和存储资源有限，如何设计溯源机制以满足iot网络的特殊环境</li>
-<li>iot设备收集了大量个人数据，溯源过程中如何保护隐私</li>
-<li>溯源机制本身可能会被攻击，如何保护？（结合区块链）</li>
+<li>iot网络中收集和使用的数据具有很强的异构性，如何设计溯源机制以满足iot网络的需求（如溯源数据的模型设计）</li>
+<li>iot设备计算和存储资源有限，如何设计溯源机制以满足iot网络的特殊环境（比如轻量级的传输协议，溯源数据上传到云）</li>
+<li>iot设备收集了大量个人数据，溯源过程中如何保护隐私/如何实现政策合规性</li>
+<li>如何保证数据的真实性和完整性</li>
+<li>溯源数据本身可能会被攻击，如何保护溯源数据的完整性？</li>
+<li>溯源即服务，使得溯源成为一个可拔插的工具，可以组装在任意的iot网络中</li>
+</ul>
+</li>
+<li><p>iot溯源在做三件事（可以创新的三个地方）</p>
+<ul>
+<li>收集溯源数据</li>
+<li>管理溯源数据</li>
+<li>分析/查询溯源数据</li>
 </ul>
 </li>
 </ul>
-</div><div class="article-licensing box"><div class="licensing-title"><p>物联网溯源相关论文</p><p><a href="https://fxgood.gitee.io/2021/11/14/论文-物联网溯源相关论文/">https://fxgood.gitee.io/2021/11/14/论文-物联网溯源相关论文/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>余丰旭</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-11-14</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-11-14</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/11/09/%E8%AE%BA%E6%96%87-%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/"><span class="level-item">论文精读</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/icon.jpg" alt="余丰旭"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">余丰旭</p><p class="is-size-6 is-block">一名奋斗的程序员</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">80</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/fxgood" target="_blank" rel="noopener">关注我</a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/C/"><span class="level-start"><span class="level-item">C++</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/"><span class="level-start"><span class="level-item">我的项目</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">技术</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="level-start"><span class="level-item">数据结构</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">37</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%BA%E6%96%87/"><span class="level-start"><span class="level-item">论文</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-14T07:53:49.731Z">2021-11-14</time></p><p class="title"><a href="/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/">物联网溯源相关论文</a></p><p class="categories"><a href="/categories/%E8%AE%BA%E6%96%87/">论文</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-09T07:42:50.917Z">2021-11-09</time></p><p class="title"><a href="/2021/11/09/%E8%AE%BA%E6%96%87-%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">论文精读</a></p><p class="categories"><a href="/categories/%E8%AE%BA%E6%96%87/">论文</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-16T08:50:13.744Z">2021-10-16</time></p><p class="title"><a href="/2021/10/16/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E6%80%A7/">排序算法稳定性</a></p><p class="categories"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-29T07:12:48.509Z">2021-09-29</time></p><p class="title"><a href="/2021/09/29/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE-%E5%86%9B%E7%94%A8%E7%94%B5%E5%AD%90%E6%89%8B%E5%86%8C%E9%A1%B9%E7%9B%AE/">军用电子手册项目</a></p><p class="categories"><a href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/">我的项目</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-26T02:50:54.893Z">2021-09-26</time></p><p class="title"><a href="/2021/09/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">内存管理</a></p><p class="categories"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">五月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/B%E6%A0%91/"><span class="tag">B树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OS/"><span class="tag">OS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dfs/"><span class="tag">dfs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/leetcode/"><span class="tag">leetcode</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="tag">中间件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%88%86/"><span class="tag">二分</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"><span class="tag">二叉树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"><span class="tag">优先级队列</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="tag">动态规划</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"><span class="tag">单调栈</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"><span class="tag">单调队列</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"><span class="tag">双指针</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%88%E5%B8%8C/"><span class="tag">哈希</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%9E%E6%BA%AF/"><span class="tag">回溯</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A0%86/"><span class="tag">堆</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8E%92%E5%BA%8F/"><span class="tag">排序</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"><span class="tag">最小生成树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"><span class="tag">最短路径</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A0%88/"><span class="tag">栈</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"><span class="tag">滑动窗口</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span class="tag">编程语言</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"><span class="tag">背包问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B4%AA%E5%BF%83/"><span class="tag">贪心</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AC%E5%8C%96%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98/"><span class="tag">转化等价问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%80%92%E5%BD%92/"><span class="tag">递归</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%9F%E5%88%97/"><span class="tag">队列</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a><p class="is-size-7"><span>&copy; 2021 余丰旭</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+<ul>
+<li><p>物联网设备之间的消息通讯，可以通过发布/订阅的方式</p>
+</li>
+<li><p>传统的溯源都是集中式的，iot系统需要分布式的溯源，所以我的论文题目可以写成<em>基于区跨链的iot分布式溯源xxx</em></p>
+</li>
+<li><p>PAAS，Provenance as a service溯源即服务，溯源作为一种服务/插件，可以集成在任意的iot系统中（分布式和松耦合的物联网溯源，鲜有研究）</p>
+<ul>
+<li>来自会议文章Genoma: Distributed Provenance as a Service for IoT-based Systems</li>
+</ul>
+</li>
+<li><p>非常好的体系结构设计，来自论文<em>Securing Data Provenance in Internet of Things Systems</em></p>
+<ul>
+<li><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211116092830991.png" alt="image-20211116092830991"></li>
+<li>这里的区块链部分，可以改为云上存储</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>溯源可以构建DAG图，来进行可视化</p>
+</li>
+<li><p>边缘计算，和我这个有关吗？</p>
+</li>
+<li><p>区块链在身份认证方面的作用</p>
+</li>
+</ul>
+<ul>
+<li>基于区块链的分布式身份认证技术研究，魏老师学生王佳贺</li>
+</ul>
+<p>  <img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125154302128.png" alt="image-20211125154302128"></p>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="iot相关工具和软件、报告"><a href="#iot相关工具和软件、报告" class="headerlink" title="iot相关工具和软件、报告"></a>iot相关工具和软件、报告</h2><ul>
+<li>可以参考的报告<ul>
+<li>Palo Alto Networks发布的《2020年物联网威胁报告》</li>
+</ul>
+</li>
+<li>Apache Atlas或许可以用于溯源元数据的管理<ul>
+<li>atlas 是apache下的大数据的元数据管理和数据治理平台，是Hadoop社区为解决Hadoop生态系统的元数据治理问题而产生的开源项目，它为Hadoop集群提供了包括数据分类、集中策略引擎、数据血缘、安全和生命周期管理在内的元数据治理核心能力。支持对hive、storm、kafka、hbase、sqoop等进行元数据管理以及以<strong>图库的形式展示数据的血缘关系</strong>。</li>
+</ul>
+</li>
+<li>MQTT:<ul>
+<li>轻量级的iot通信协议</li>
+</ul>
+</li>
+<li>Apache Pulasr<ul>
+<li>企业级的发布-订阅消息系统</li>
+</ul>
+</li>
+<li>sNSP和WireShark，可以模拟通信行为数据的抓取和分析</li>
+<li>Arduino<ul>
+<li>Arduino是一款便捷灵活、方便上手的开源电子原型平台。包含硬件（各种型号的Arduino板）和软件（ArduinoIDE）。构建于开放原始码simple I/O介面版，并且具有使用类似<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Java/85979">Java</a>、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/C/7252092">C</a>语言的Processing/Wiring开发环境。主要包含两个的部分：硬件部分是可以用来做电路连接的Arduino电路板；另外一个则是Arduino IDE，你的计算机中的程序开发环境。你只要在IDE中编写程序代码，将程序上传到Arduino电路板后，程序便会告诉Arduino电路板要做些什么了。</li>
+</ul>
+</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>物联网溯源相关论文</p><p><a href="https://fxgood.gitee.io/2021/11/14/论文-物联网溯源相关论文/">https://fxgood.gitee.io/2021/11/14/论文-物联网溯源相关论文/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>余丰旭</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-11-14</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-12-14</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/12/04/%E6%8A%80%E6%9C%AF-ssh%E4%B8%8ERAS%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">SSH和RSA非对称加密算法</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/11/09/%E8%AE%BA%E6%96%87-%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/"><span class="level-item">论文精读</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/icon.jpg" alt="余丰旭"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">余丰旭</p><p class="is-size-6 is-block">一名奋斗的程序员</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">82</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/fxgood" target="_blank" rel="noopener">关注我</a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/C/"><span class="level-start"><span class="level-item">C++</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/"><span class="level-start"><span class="level-item">我的项目</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">技术</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="level-start"><span class="level-item">数据结构</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">37</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%BA%E6%96%87/"><span class="level-start"><span class="level-item">论文</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-01-06T10:55:33.860Z">2022-01-06</time></p><p class="title"><a href="/2022/01/06/Java-%E7%AE%80%E5%8D%95%E8%81%8A%E5%A4%A9%E7%A8%8B%E5%BA%8F/">Java简单聊天程序</a></p><p class="categories"><a href="/categories/Java/">Java</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-04T02:22:30.205Z">2021-12-04</time></p><p class="title"><a href="/2021/12/04/%E6%8A%80%E6%9C%AF-ssh%E4%B8%8ERAS%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">SSH和RSA非对称加密算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-14T07:53:49.731Z">2021-11-14</time></p><p class="title"><a href="/2021/11/14/%E8%AE%BA%E6%96%87-%E7%89%A9%E8%81%94%E7%BD%91%E6%BA%AF%E6%BA%90%E7%9B%B8%E5%85%B3%E8%AE%BA%E6%96%87/">物联网溯源相关论文</a></p><p class="categories"><a href="/categories/%E8%AE%BA%E6%96%87/">论文</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-09T07:42:50.917Z">2021-11-09</time></p><p class="title"><a href="/2021/11/09/%E8%AE%BA%E6%96%87-%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">论文精读</a></p><p class="categories"><a href="/categories/%E8%AE%BA%E6%96%87/">论文</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-20T13:26:51.065Z">2021-10-20</time></p><p class="title"><a href="/2021/10/20/Java-java%E9%AB%98%E7%BA%A7/"> </a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">一月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">十二月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">五月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/B%E6%A0%91/"><span class="tag">B树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OS/"><span class="tag">OS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dfs/"><span class="tag">dfs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/leetcode/"><span class="tag">leetcode</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="tag">中间件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%88%86/"><span class="tag">二分</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"><span class="tag">二叉树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"><span class="tag">优先级队列</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="tag">动态规划</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"><span class="tag">单调栈</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"><span class="tag">单调队列</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"><span class="tag">双指针</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%88%E5%B8%8C/"><span class="tag">哈希</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%9E%E6%BA%AF/"><span class="tag">回溯</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A0%86/"><span class="tag">堆</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8E%92%E5%BA%8F/"><span class="tag">排序</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"><span class="tag">最小生成树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"><span class="tag">最短路径</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A0%88/"><span class="tag">栈</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"><span class="tag">滑动窗口</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span class="tag">编程语言</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"><span class="tag">背包问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B4%AA%E5%BF%83/"><span class="tag">贪心</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AC%E5%8C%96%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98/"><span class="tag">转化等价问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%80%92%E5%BD%92/"><span class="tag">递归</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%9F%E5%88%97/"><span class="tag">队列</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a><p class="is-size-7"><span>&copy; 2022 余丰旭</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
