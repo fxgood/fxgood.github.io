@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Spring - 余丰旭的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="余丰旭的博客"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="余丰旭的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="记录Spring的基础与原理学习心得，为后续学习SSM、Spring Boot、Spring Cloud做准备。"><meta property="og:type" content="blog"><meta property="og:title" content="Spring"><meta property="og:url" content="https://fxgood.gitee.io/2020/05/06/%E6%8A%80%E6%9C%AF-Spring/"><meta property="og:site_name" content="余丰旭的博客"><meta property="og:description" content="记录Spring的基础与原理学习心得，为后续学习SSM、Spring Boot、Spring Cloud做准备。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102104630482.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102141123873.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102141722190.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102144057399.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102154334695.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103223515546.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103223548776.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211104210333558.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211104211134028.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211104211418808.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102162813308.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102162856901.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102164607391.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102164641632.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102194507329.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102194532747.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102200122222.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102211636236.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102213109793.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102215137539.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102220024846.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102220228560.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102220248851.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212054364.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212509728.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212625460.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212643009.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103214942019.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103215007067.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103220531339.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103220628060.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110202453165.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110202518453.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110212257345.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110213353812.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110212334044.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110212403889.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110214906284.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110214954465.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110215137364.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110215435271.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211124101158905.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211124101731004.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211124101210026.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125140021182.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211130143414516.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211130143441043.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202105505615.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202110247596.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202110302698.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112443608.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112456184.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112521015.png"><meta property="og:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112529858.png"><meta property="article:published_time" content="2020-05-05T16:00:00.000Z"><meta property="article:modified_time" content="2022-04-12T07:57:12.382Z"><meta property="article:author" content="余丰旭"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102104630482.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://fxgood.gitee.io/2020/05/06/%E6%8A%80%E6%9C%AF-Spring/"},"headline":"Spring","image":["https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102104630482.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102141123873.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102141722190.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102144057399.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102154334695.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103223515546.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103223548776.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211104210333558.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211104211134028.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211104211418808.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102162813308.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102162856901.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102164607391.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102164641632.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102194507329.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102194532747.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102200122222.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102211636236.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102213109793.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102215137539.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102220024846.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102220228560.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102220248851.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212054364.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212509728.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212625460.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212643009.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103214942019.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103215007067.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103220531339.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103220628060.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110202453165.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110202518453.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110212257345.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110213353812.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110212334044.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110212403889.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110214906284.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110214954465.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110215137364.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110215435271.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211124101158905.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211124101731004.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211124101210026.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125140021182.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211130143414516.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211130143441043.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202105505615.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202110247596.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202110302698.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112443608.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112456184.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112521015.png","https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112529858.png"],"datePublished":"2020-05-05T16:00:00.000Z","dateModified":"2022-04-12T07:57:12.382Z","author":{"@type":"Person","name":"余丰旭"},"publisher":{"@type":"Organization","name":"余丰旭的博客","logo":{"@type":"ImageObject","url":"https://fxgood.gitee.io/img/logo.svg"}},"description":"记录Spring的基础与原理学习心得，为后续学习SSM、Spring Boot、Spring Cloud做准备。"}</script><link rel="canonical" href="https://fxgood.gitee.io/2020/05/06/%E6%8A%80%E6%9C%AF-Spring/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-05-05T16:00:00.000Z" title="2020/5/6 上午12:00:00">2020-05-06</time>发表</span><span class="level-item"><time dateTime="2022-04-12T07:57:12.382Z" title="2022/4/12 下午3:57:12">2022-04-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span><span class="level-item">24 分钟读完 (大约3535个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Spring</h1><div class="content"><h1 id="Spring概念"><a href="#Spring概念" class="headerlink" title="Spring概念"></a>Spring概念</h1><ol>
+<li>Spring是轻量级的开源的JavaEE框架<ul>
+<li>轻量级：引入Jar包少，体积小，可以独立进行使用</li>
+</ul>
+</li>
+<li>Spring出现的目的：解决企业应用开发的复杂性</li>
+<li>Spring有两大核心特性：<ul>
+<li>IOC：<strong>控制反转，把创建对象过程交给Spring进行管理</strong></li>
+<li>AOP：面相切面编程，在不改变源代码的情况下扩展功能（增强了可扩展性）</li>
+</ul>
+</li>
+<li>Spring特点<ol>
+<li>方便解耦、简化开发</li>
+<li>支持AOP编程</li>
+<li>方便程序的测试（整合了Junit4）</li>
+<li>方便和其他框架进行整合</li>
+<li>方便进行事务操作</li>
+<li>降低API开发难度（比如对JDBC进行了封装）</li>
+<li>Spring的源码，是Java学习的经典范例</li>
+</ol>
+</li>
+<li>Spring的组成部分</li>
+</ol>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102104630482.png" alt="image-20211102104630482"></p>
+<h1 id="IOC容器"><a href="#IOC容器" class="headerlink" title="IOC容器"></a>IOC容器</h1><h2 id="什么是IOC"><a href="#什么是IOC" class="headerlink" title="什么是IOC"></a>什么是IOC</h2><ol>
+<li><p>控制反转，把对象创建和对象之间的调用过程，交给Spring进行管理</p>
+</li>
+<li><p>使用IOC目的：将对象创建和对象之间的调用，都统一交给Spring进行管理。简化了代码开发过程，降低了耦合度。如果以原始方式构建代码，效果如下： </p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102141123873.png" alt="image-20211102141123873" style="zoom: 50%;" /></li>
+</ol>
+<p>两个类之间耦合度过高，如果UserDao发生改变（修改方法，增加方法等扩展行为），则会牵一发动全身，不利于程序的扩展性。</p>
+<p>我们追求的是程序的<strong>高内聚、低耦合</strong>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SpringIOC的好处：全称是Inversion of Control 简称 IoC，控制反转。是指程序中对象的获取方式发生反转，由最初的new方式创建，转为由框架创建、注入，这样可以降低对象之间的耦合度。</span><br><span class="line"></span><br><span class="line">IoC（Inversion of Control，控制反转）也称为依赖注入（Dependency Injection），作为Spring的一个核心思想，是一种设计对象之间依赖关系的原则及其相关技术。先来看看字面上怎么来解释：当一个对象创建时，它所依赖的对象由外部传递给它，而非自己去创建所依赖的对象（比如通过new操作）。因此，也可以说在对象如何获取它的依赖对象这件事情上，控制权反转了。这便不难理解控制反转和依赖注入这两个名字的由来了。</span><br></pre></td></tr></table></figure>
+
+<h2 id="IOC底层原理"><a href="#IOC底层原理" class="headerlink" title="IOC底层原理"></a>IOC底层原理</h2><ol>
+<li>xml解析</li>
+<li>工厂模式<ul>
+<li>工厂模式出现的目的就是为了实现低耦合<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102141722190.png" alt="image-20211102141722190" style="zoom: 50%;" /></li>
+<li>并没有将耦合度降低到最低，工厂类和UserService仍然具有较强的耦合度</li>
+</ul>
+</li>
+<li>反射<ul>
+<li>反射：<code>.java</code>文件编译成<code>.class</code>字节码文件后，获取字节码文件，以实现对类的控制</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102144057399.png" alt="image-20211102144057399"></p>
+<h2 id="IOC接口（BeanFactory）"><a href="#IOC接口（BeanFactory）" class="headerlink" title="IOC接口（BeanFactory）"></a>IOC接口（BeanFactory）</h2><ol>
+<li><p>IOC思想基于IOC容器完成，IOC容器底层就是对象工厂</p>
+</li>
+<li><p>Spring提供IOC容器实现两种方式：（两个接口）</p>
+<ol>
+<li>BeanFactory：IOC容器基本实现，是Spring内部使用的接口，一般不提供给开发人员使用。<ul>
+<li>加载配置文件时，不会创建对象；在获取（使用）对象时，才会创建对象</li>
+</ul>
+</li>
+<li>ApplicationContext：BeanFactory接口的子接口，提供了更多更强大的功能，一般面向开发人员进行使用<ul>
+<li>加载配置文件时，就创建对象</li>
+<li>将耗时耗资源的过程在服务器启动的时候就完成，执行过程中直接用就可以了</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>ApplicationContext实现类</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102154334695.png" alt="image-20211102154334695" style="zoom:50%;"   /></li>
+</ol>
+<h2 id="IOC操作Bean管理"><a href="#IOC操作Bean管理" class="headerlink" title="IOC操作Bean管理"></a>IOC操作Bean管理</h2><ul>
+<li>什么是Bean管理<ol>
+<li>Spring创建对象</li>
+<li>Spring进行属性注入</li>
+</ol>
+</li>
+<li>两种实现方式<ul>
+<li>基于XML</li>
+<li>基于注解</li>
+</ul>
+</li>
+</ul>
+<h3 id="两种类型bean"><a href="#两种类型bean" class="headerlink" title="两种类型bean"></a>两种类型bean</h3><p>1.Spring有两种类型bean，一种是普通bean，一种是工厂bean（FactoryBean）</p>
+<ul>
+<li>普通bean：在配置文件中定义的bean类型，就是返回类型</li>
+<li>工厂bean：在配置文件中定义的bean类型可以和返回类型不同<ol>
+<li>创建类，让这个类作为工厂bean，实现FactoryBean接口</li>
+<li>实现接口里的方法，让实现的方法中定义返回的bean类型</li>
+</ol>
+</li>
+</ul>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103223515546.png" alt="image-20211103223515546" style="zoom:80%;" />
+
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103223548776.png" alt="image-20211103223548776" style="zoom:80%;"  />
+
+
+<blockquote>
+<p>注意，context.getBean的第二个参数用的不是MyBean.class,而是Person.class</p>
+</blockquote>
+<h3 id="bean作用域"><a href="#bean作用域" class="headerlink" title="bean作用域"></a>bean作用域</h3><ol>
+<li><p>在Spring中，设置创建bean实例是单实例还是多实例（如何验证：连续两次使用 <code>new ClassPathXmlApplicationContext()返回对象，看地址值是否相同</code>）</p>
+</li>
+<li><p>bean中有个属性，有个<code>scope</code>属性，用于设置单实例还是多实例（默认是单实例）</p>
+<ul>
+<li><code>singleton</code>：单实例，加载spring配置文件时(<code>new ClassPathXmlApplicationContext()</code>)，就会创建单实例对象</li>
+<li><code>prototype</code>：多实例，在调用getBean方法时创建多实例对象</li>
+<li><code>request</code>：了解，每次创建对象会放入request中</li>
+<li><code>session</code>：了解，每次创建对象会放入session中</li>
+</ul>
+</li>
+</ol>
+<h3 id="bean生命周期"><a href="#bean生命周期" class="headerlink" title="bean生命周期"></a>bean生命周期</h3><blockquote>
+<p>生命周期：从对象创建到销毁的过程</p>
+</blockquote>
+<ol>
+<li>通过构造器创建bean实例（无参构造）</li>
+<li>为bean的属性设置值和对其他bean引用（调用set方法）</li>
+<li>调用bean的初始化方法（bean标签<code>init-method</code>指定方法名）</li>
+<li>bean可以使用（对象获取到了）</li>
+<li>当容器关闭的时候，调用bean的销毁方法（bean标签<code>destroy-method</code>指定方法名，使用<code>ClassPathXmlApplicationContext</code>接口的close方法会自动调用指定的方法）</li>
+</ol>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211104210333558.png" alt="image-20211104210333558" style="zoom:50%;" />
+
+<p>（注意，<code>ClassPathXmlApplicationContext</code>是<code>ApplicationContext</code>的子接口，其中close是子接口的特有方法）</p>
+<h3 id="bean的后置处理器"><a href="#bean的后置处理器" class="headerlink" title="bean的后置处理器"></a>bean的后置处理器</h3><p>加上后置处理器以后，bean的生命周期由五步变成七步</p>
+<ol>
+<li>通过构造器创建bean实例（无参构造）</li>
+<li>为bean的属性设置值和对其他bean引用（调用set方法）</li>
+<li><strong>把bean实例传递到bean后置处理器方法</strong><code>postProcessBeforeInitialization</code></li>
+<li>调用bean的初始化方法（bean标签<code>init-method</code>指定方法名）、</li>
+<li><strong>把bean实例传递给bean后置处理器的方法</strong><code>postProcessAfterInitialization</code></li>
+<li>bean可以使用（对象获取到了）</li>
+<li>当容器关闭的时候，调用bean的销毁方法（bean标签<code>destroy-method</code>指定方法名，使用<code>ClassPathXmlApplicationContext</code>接口的close方法会自动调用指定的方法）</li>
+</ol>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211104211134028.png" alt="image-20211104211134028"></p>
+<p><strong>配置后置处理器后，同一个xml中所有bean都添加了后置处理器</strong>。（如下，orders对象就被自动配置了后置处理器）</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211104211418808.png" alt="image-20211104211418808" style="zoom:50%;"   />
+
+<h3 id="IOC操作Bean管理（基于xml）"><a href="#IOC操作Bean管理（基于xml）" class="headerlink" title="IOC操作Bean管理（基于xml）"></a>IOC操作Bean管理（基于xml）</h3><h4 id="基于xml方式创建对象"><a href="#基于xml方式创建对象" class="headerlink" title="基于xml方式创建对象"></a>基于xml方式创建对象</h4><ul>
+<li>在spring配置文件中，使用bean标签，标签里边添加对应属性，就可以实现对象创建</li>
+<li>在bean标签中有很多属性<ul>
+<li>id属性：唯一标识</li>
+<li>class属性：类全路径</li>
+</ul>
+</li>
+<li>创建对象时，默认执行无参构造函数完成对象创建</li>
+</ul>
+<h4 id="基于xml方式注入属性"><a href="#基于xml方式注入属性" class="headerlink" title="基于xml方式注入属性"></a>基于xml方式注入属性</h4><ul>
+<li>DI：依赖注入，就是注入属性(需要先创建对象)</li>
+</ul>
+<blockquote>
+<p>IOC与 DI的区别，DI是IOC的一种实现方式</p>
+</blockquote>
+<p>（1）基于setter的注入</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102162813308.png" alt="image-20211102162813308" style="zoom:80%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102162856901.png" alt="image-20211102162856901" style="zoom:80%;"   />
+
+<p>（2）基于构造函数的注入</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102164607391.png" alt="image-20211102164607391" style="zoom:80%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102164641632.png" alt="image-20211102164641632" style="zoom:80%;"   />
+
+<p>(3) p名称空间注入（了解）</p>
+<p>可以<strong>简化基于xml配置方式</strong>。(但仍然是基于setter的注入)</p>
+<ol>
+<li>在配置文件中添加p名称空间</li>
+<li>进行属性注入，在bean标签里进行操作</li>
+</ol>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102194507329.png" alt="image-20211102194507329" style="zoom:80%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102194532747.png" alt="image-20211102194532747" style="zoom:80%;"   />
+
+<p>（4）注入null或特殊符号<br><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102200122222.png" alt="image-20211102200122222" style="zoom:80%;"  /></p>
+<h4 id="注入外部bean与级联赋值"><a href="#注入外部bean与级联赋值" class="headerlink" title="注入外部bean与级联赋值"></a>注入外部bean与级联赋值</h4><p>需要使用setter来进行注入</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102211636236.png" alt="image-20211102211636236" style="zoom:67%;"   />
+
+<h4 id="注入内部bean"><a href="#注入内部bean" class="headerlink" title="注入内部bean"></a>注入内部bean</h4><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102213109793.png" alt="image-20211102213109793" style="zoom:100%;"   />
+
+<h4 id="级联赋值"><a href="#级联赋值" class="headerlink" title="级联赋值"></a>级联赋值</h4><p>即使用外部bean注入属性（使用ref），外部的bean中也已经注入了属性</p>
+<p>方式一：</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102215137539.png" alt="image-20211102215137539" style="zoom:80%;"   />
+
+<p>方式二：</p>
+<p><strong>注意：在Employee类中必须为成员Department dpt设置Getter</strong>，注意是getter，否则<code>dept.name</code>会报错</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102220024846.png" alt="image-20211102220024846" style="zoom:80%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102220228560.png" alt="image-20211102220228560" style="zoom:80%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211102220248851.png" alt="image-20211102220248851" style="zoom:80%;"   />
+
+<h4 id="注入集合属性"><a href="#注入集合属性" class="headerlink" title="注入集合属性"></a>注入集合属性</h4><p>1.数组</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212054364.png" alt="image-20211103212054364" style="zoom:67%;"   />
+
+<p>2.List</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212509728.png" alt="image-20211103212509728" style="zoom:80%;"   />
+
+<p>3.Map</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212625460.png" alt="image-20211103212625460" style="zoom:80%;"   />
+
+<p>4.Set</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103212643009.png" alt="image-20211103212643009" style="zoom:80%;"   />
+
+<blockquote>
+<p>注：name随便取的，和类中成员的名字相同即可</p>
+</blockquote>
+<p>5.注入集合的元素是对象</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103214942019.png" alt="image-20211103214942019" style="zoom:67%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103215007067.png" alt="image-20211103215007067" style="zoom:67%;"   />
+
+<p><strong>进阶：将集合注入部分抽取出来，用于复用</strong></p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103220531339.png" alt="image-20211103220531339" style="zoom:80%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211103220628060.png" alt="image-20211103220628060" style="zoom:80%;"   />
+
+
+
+<h4 id="xml自动装配"><a href="#xml自动装配" class="headerlink" title="xml自动装配"></a>xml自动装配</h4><p>自动装配：根据指定装配规则（属性名称或者属性类型），Spring自动将匹配的属性值进行注入</p>
+<p>实现方式：增加<code>autowire</code>属性，值可以选择<code>byname</code> or <code>bytype</code></p>
+<p><strong>根据属性名称进行自动装配</strong></p>
+<p>xml中用于自动装配的bean的<code>id</code>需要和属性名相同</p>
+<p><strong>根据属性类型进行自动装配</strong></p>
+<p>相同类型的bean不能定义多个（会报错，因为会冲突）</p>
+<blockquote>
+<p>xml自动装配实际用的很少，一般都用注解方式进行实现</p>
+</blockquote>
+<h4 id="引入外部属性文件"><a href="#引入外部属性文件" class="headerlink" title="引入外部属性文件"></a>引入外部属性文件</h4><p>首先导入druid连接池jar包（在projectStructure里导入）</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110202453165.png" alt="image-20211110202453165" style="zoom:80%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110202518453.png" alt="image-20211110202518453" style="zoom:80%;"   />
+
+
+
+<h3 id="IOC操作Bean管理（基于注解）"><a href="#IOC操作Bean管理（基于注解）" class="headerlink" title="IOC操作Bean管理（基于注解）"></a>IOC操作Bean管理（基于注解）</h3><p>使用注解的目的：简化xml配置</p>
+<blockquote>
+</blockquote>
+<h4 id="基于注解方式创建对象"><a href="#基于注解方式创建对象" class="headerlink" title="基于注解方式创建对象"></a>基于注解方式创建对象</h4><p><strong>四个注解</strong></p>
+<ol>
+<li><code>@Component</code></li>
+<li><code>@Service</code></li>
+<li><code>@Controller</code></li>
+<li><code>@Repository</code></li>
+</ol>
+<blockquote>
+<p>注：上面四个注解功能一样，都可以用来创建bean实例。</p>
+</blockquote>
+<p><strong>基于注解创建对象过程</strong></p>
+<ol>
+<li>引入依赖<code>spring-aop-5.2.6.RELEASE.jar</code></li>
+<li>开启组件扫描<ul>
+<li>需要在xml文件中添加<code>xmlns:context=&quot;http://www.springframework.org/schema/context</code></li>
+<li><code>http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd</code></li>
+</ul>
+</li>
+<li>创建类，在类上添加创建对象注解<ul>
+<li>value属性值可以省略，默认值是类名称，首字母小写</li>
+</ul>
+</li>
+</ol>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110212257345.png" alt="image-20211110212257345" style="zoom:80%;"   />
+
+<p>其中扫描包的过滤器可以自定义，见下图</p>
+<p>（use-default-filters=’false’ 表示不使用默认的filter，默认会扫描指定包下的所有类）</p>
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110213353812.png" alt="image-20211110213353812" style="zoom: 67%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110212334044.png" alt="image-20211110212334044" style="zoom:100%;"   />
+
+<img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110212403889.png" alt="image-20211110212403889" style="zoom:80%;"   />
+
+
+
+<h4 id="基于注解方式注入属性"><a href="#基于注解方式注入属性" class="headerlink" title="基于注解方式注入属性"></a>基于注解方式注入属性</h4><p><strong>相关注解</strong></p>
+<ol>
+<li><p><code>@AutoWired</code>：根据属性<strong>类型</strong>进行自动注入</p>
+<ul>
+<li><p>注意不需要添加set方法哦</p>
+</li>
+<li><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110214906284.png" alt="image-20211110214906284" style="zoom:67%;"   /></li>
+</ul>
+</li>
+<li><p><code>@Qualifier</code>：根据属性<strong>名称</strong>进行自动注入</p>
+<ul>
+<li>需要配合autowired一起使用</li>
+<li><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110214954465.png" alt="image-20211110214954465" style="zoom:80%;"   /></li>
+</ul>
+</li>
+<li><p><code>@Resource</code>：根据属性<strong>类型/名称</strong>进行自动注入</p>
+<ul>
+<li><p>它是<code>javax.annotation</code>扩展包下的，不是spring下的</p>
+</li>
+<li><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110215137364.png" alt="image-20211110215137364" style="zoom:80%;"   /></li>
+</ul>
+</li>
+<li><p><code>@Value</code>：注入<strong>普通数据类型</strong>（上面三种都是注入对象类型）</p>
+<ul>
+<li><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211110215435271.png" alt="image-20211110215435271" style="zoom:80%;"   /></li>
+</ul>
+</li>
+</ol>
+<h4 id="纯注解开发"><a href="#纯注解开发" class="headerlink" title="纯注解开发"></a>纯注解开发</h4><ol>
+<li>创建配置类，替代xml的配置文件</li>
+<li>测试时，有所不同</li>
+</ol>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211124101158905.png" alt="image-20211124101158905"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211124101731004.png" alt="image-20211124101731004"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211124101210026.png" alt="image-20211124101210026"></p>
+<blockquote>
+<p>实际开发中，会使用SpringBoot来完成这些工作，SpringBoot本质就是Spring</p>
+</blockquote>
+<h1 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ol>
+<li>面相切面编程，利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。</li>
+<li>通俗描述：不通过修改源代码方式，在主干功能里面添加新功能。</li>
+<li>使用登录案例说明AOP：</li>
+</ol>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211125140021182.png" alt="image-20211125140021182"></p>
+<h2 id="底层原理"><a href="#底层原理" class="headerlink" title="底层原理"></a>底层原理</h2><p>原理：使用动态代理，在不改变原有代码基础上增强功能</p>
+<ol>
+<li><p>有接口</p>
+<ul>
+<li><p>使用JDK动态代理</p>
+</li>
+<li><pre><code class="java">public interface Animal &#123;
+    public void speak();
+
+    public int calculate(int a,int b);
+&#125;
+
+public class Cat implements Animal&#123;
+
+    @Override
+    public void speak() &#123;
+        System.out.println(&quot;喵喵喵&quot;);
+    &#125;
+
+    @Override
+    public int calculate(int a, int b) &#123;
+        System.out.println(&quot;正在计算...&quot;);
+        return a+b;
+    &#125;
+&#125;
+
+public class Test &#123;
+    public static void main(String[] args) &#123;
+        Class[]interfaces=&#123;Animal.class&#125;;
+        Object cat=new Cat();
+        Animal animal=(Animal)Proxy.newProxyInstance(Test.class.getClassLoader(),interfaces,new AnimalProxy(cat));
+        animal.speak();
+        animal.calculate(1,2);
+    &#125;
+&#125;
+
+class AnimalProxy implements InvocationHandler&#123;
+    private Object obj; //将要代理的对象传入
+    public AnimalProxy(Object obj)&#123;
+        this.obj=obj;
+    &#125;
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable &#123;
+        //方法执行前
+        if(method.getName()==&quot;speak&quot;)&#123;
+            System.out.println(&quot;叫之前...&quot;);
+        &#125;
+        //执行原有的方法
+        Object res = method.invoke(obj, args);
+
+        //方法执行后
+        if(method.getName()==&quot;speak&quot;)&#123;
+            System.out.println(&quot;叫之后...&quot;);
+        &#125;
+        else if(method.getName()==&quot;calculate&quot;)&#123;
+            System.out.println(&quot;计算结果是&quot;+res);
+        &#125;
+        return res;
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li><p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211130143414516.png" alt="image-20211130143414516"></p>
+</li>
+</ul>
+</li>
+<li><p>无接口</p>
+<ul>
+<li>使用GCLIB动态代理</li>
+<li><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211130143441043.png" alt="image-20211130143441043"></li>
+</ul>
+</li>
+</ol>
+<h2 id="AOP术语"><a href="#AOP术语" class="headerlink" title="AOP术语"></a>AOP术语</h2><p><strong>连接点</strong></p>
+<ul>
+<li>类中<strong>可以</strong>被增强的方法，就被称为连接点</li>
+</ul>
+<p><strong>切入点</strong></p>
+<ul>
+<li>实际真正被增强的方法，成为切入点</li>
+</ul>
+<p><strong>通知（增强）</strong></p>
+<ul>
+<li>实际增强的逻辑部分成为通知（增强）</li>
+<li>通知有多重类型<ul>
+<li>前置通知</li>
+<li>后置通知</li>
+<li>环绕通知：在被增强的方法的前后都有执行</li>
+<li>异常通知：当被增强的方法出现异常时，执行</li>
+<li>最终通知：类似finally</li>
+</ul>
+</li>
+</ul>
+<p><strong>切面</strong></p>
+<ul>
+<li>把通知应用到切入点的过程，就称为切面（切面是一个动作）</li>
+</ul>
+<h2 id="AOP操作"><a href="#AOP操作" class="headerlink" title="AOP操作"></a>AOP操作</h2><ol>
+<li>Spring框架一般都是基于AspectJ实现AOP操作<ul>
+<li>什么是AspectJ：它不是Spring的组成部分，是一个独立的AOP框架，一般把AspectJ和Spring框架一起使用，进行AOP操作</li>
+</ul>
+</li>
+<li>基于AspectJ实现AOP操作<ul>
+<li>基于xml配置文件实现</li>
+<li>基于注解实现（实际使用）</li>
+</ul>
+</li>
+<li>在项目工程里引入AOP相关依赖</li>
+</ol>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202105505615.png" alt="image-20211202105505615"></p>
+<blockquote>
+<p>导入lib后，需要在project struct中Add。 各种依赖在百度网盘-编程相关-各种软件包里有</p>
+</blockquote>
+<ol start="4">
+<li><p>切入点表达式</p>
+<ul>
+<li>作用：知道对哪个类中的哪个方法进行增强</li>
+<li>语法结构<br><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202110247596.png" alt="image-20211202110247596"><br><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202110302698.png" alt="image-20211202110302698"></li>
+</ul>
+</li>
+<li><p>基本流程</p>
+</li>
+</ol>
+<p>(1)创建类，定义方法</p>
+<p>(2)创建增强类，编写增强逻辑</p>
+<p>(3)在增强类上添加注解<code>@Aspect</code></p>
+<p>(4)在spring配置文件中开启生成代理对象  </p>
+<p>(5)配置不同类型的通知</p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112443608.png" alt="image-20211202112443608"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112456184.png" alt="image-20211202112456184"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112521015.png" alt="image-20211202112521015"></p>
+<p><img src="https://yfx-blog-image.oss-cn-hangzhou.aliyuncs.com/img/image-20211202112529858.png" alt="image-20211202112529858"></p>
+<h1 id="JdbcTemplate"><a href="#JdbcTemplate" class="headerlink" title="JdbcTemplate"></a>JdbcTemplate</h1><h1 id="事务管理"><a href="#事务管理" class="headerlink" title="事务管理"></a>事务管理</h1><h1 id="Spring5新特性"><a href="#Spring5新特性" class="headerlink" title="Spring5新特性"></a>Spring5新特性</h1></div><div class="article-licensing box"><div class="licensing-title"><p>Spring</p><p><a href="https://fxgood.gitee.io/2020/05/06/技术-Spring/">https://fxgood.gitee.io/2020/05/06/技术-Spring/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>余丰旭</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-05-06</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-04-12</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/05/12/%E6%8A%80%E6%9C%AF-jdbc%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">JDBC学习笔记</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/04/29/%E6%8A%80%E6%9C%AF-html%E5%92%8Ccss/"><span class="level-item">HTML与CSS学习笔记</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/icon.jpg" alt="余丰旭"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">余丰旭</p><p class="is-size-6 is-block">砥砺奋进，持之以恒</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">97</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">30</p></a></div></div></nav></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/C/"><span class="level-start"><span class="level-item">C++</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/java/"><span class="level-start"><span class="level-item">java</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/"><span class="level-start"><span class="level-item">我的项目</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">技术</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="level-start"><span class="level-item">数据结构</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="level-start"><span class="level-item">计算机基础</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%BA%E6%96%87/"><span class="level-start"><span class="level-item">论文</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-15T02:53:31.630Z">2022-04-15</time></p><p class="title"><a href="/2022/04/15/%E7%AE%97%E6%B3%95-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/">leetcode滑动窗口的最大值</a></p><p class="categories"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-14T01:49:31.610Z">2022-04-14</time></p><p class="title"><a href="/2022/04/14/%E7%AE%97%E6%B3%95-leetcode-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/">leetcode-数组中数字出现的次数</a></p><p class="categories"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-13T14:35:48.102Z">2022-04-13</time></p><p class="title"><a href="/2022/04/13/%E7%AE%97%E6%B3%95-leetcode-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/">数组中的逆序对</a></p><p class="categories"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-12T13:12:21.753Z">2022-04-12</time></p><p class="title"><a href="/2022/04/12/%E7%AE%97%E6%B3%95-leetcode-%E6%95%B0%E6%8D%AE%E6%B5%81%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/">leetcode-数据流的中位数</a></p><p class="categories"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-12T09:38:42.731Z">2022-04-12</time></p><p class="title"><a href="/2022/04/12/%E7%AE%97%E6%B3%95-leetcode-%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97/">leetcode-数组中出现次数超过一半的数字</a></p><p class="categories"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">三月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">二月 2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">一月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">十二月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">五月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/B%E6%A0%91/"><span class="tag">B树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OS/"><span class="tag">OS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dfs/"><span class="tag">dfs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/leetcode/"><span class="tag">leetcode</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="tag">中间件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%88%86/"><span class="tag">二分</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"><span class="tag">二叉树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/"><span class="tag">优先级队列</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="tag">动态规划</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"><span class="tag">单调栈</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"><span class="tag">单调队列</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"><span class="tag">双指针</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%88%E5%B8%8C/"><span class="tag">哈希</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%9E%E6%BA%AF/"><span class="tag">回溯</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A0%86/"><span class="tag">堆</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8E%92%E5%BA%8F/"><span class="tag">排序</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"><span class="tag">最小生成树</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/"><span class="tag">最短路径</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A0%88/"><span class="tag">栈</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"><span class="tag">滑动窗口</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span class="tag">编程语言</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"><span class="tag">背包问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B4%AA%E5%BF%83/"><span class="tag">贪心</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AC%E5%8C%96%E7%AD%89%E4%BB%B7%E9%97%AE%E9%A2%98/"><span class="tag">转化等价问题</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%80%92%E5%BD%92/"><span class="tag">递归</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%98%9F%E5%88%97/"><span class="tag">队列</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="余丰旭的博客" height="28"></a><p class="is-size-7"><span>&copy; 2022 余丰旭</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
