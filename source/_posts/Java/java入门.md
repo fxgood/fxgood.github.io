@@ -4,7 +4,6 @@ title: Java入门
 category: Java
 tag: 编程语言
 excerpt: 将大一学习的java重新拿出来学一遍，同时做一些笔记。
-top: 1
 ---
 
 # 第一章 IDEA基本配置和快捷键
