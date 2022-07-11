@@ -625,6 +625,9 @@ sscanf(line,"%d:%d:%d (+%d)",&h,&m,&s,&d);
   * long long仍然是`%lld`
 
 # 字符串相关问题
+
+- c++分割字符串的方法stringstream和getline；stringstream，需要.str仅仅clear并没有释放内存，会导致内存使用超出
+
 - 根据分隔符分割字符串
 ```cpp
 //将一个字符串，根据分隔符来切分

@@ -25,7 +25,24 @@ category: Java
 # 数组相关
 
 - Arrays.copyOf(arr,[len])可以复制数组，可以指定长度
+
 - Arrays.copyOfRange(T[] arr,int from,int to)，复制数组，可以指定范围，左闭右开
+
+- 比较数组是否相等不能直接用equals,得用`Arrays.equals`
+
+- 生成数组对象的hash用`Arrays.hashCode(T[])`
+
+- int数组反向排序
+
+  - ```java
+    int[]arr={1,2,3,4,5,6,7,7,1,0,-2,0,0,13};
+    List<Integer> collect = Arrays.stream(arr).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+    System.out.println(collect);
+    //Arrays.stream(arr).boxed().sorted(Comparator.comparingInt(a->-a)).forEach(System.out::println);
+    ```
+
+
+
 
 
 

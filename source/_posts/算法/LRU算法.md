@@ -3,6 +3,7 @@ title: LRU缓存
 category: 算法
 tag: 
 - leetcode
+excerpt: Least recently used 最近最少使用,即最近使用的最后替换.
 ---
 
 [leetcode146LRU缓存](https://leetcode-cn.com/problems/lru-cache/)，这题可以直接用Java的LinkedHashMap来写，或者自己实现hash+双向链表。
